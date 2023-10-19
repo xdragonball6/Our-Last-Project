@@ -22,7 +22,7 @@
 		C251CCB5DA1CBEB75402FF27E8BC3A93 /* Pods-Last Project-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Last Project-Info.plist"; sourceTree = "<group>"; };
 		E099DFBB4D32978DFFA5FEB08E9E9A29 /* Pods-Last Project-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Last Project-acknowledgements.plist"; sourceTree = "<group>"; };
 		E5DF615A64AE2BF769D8FAB8E1D7F5FE /* Pods-Last Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Last Project.release.xcconfig"; sourceTree = "<group>"; };
-		EC15294801884E6A5F793F2F94E76CEE /* Pods-Last Project */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Last Project"; path = Pods_Last_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC15294801884E6A5F793F2F94E76CEE /* Pods_Last_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Last_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC59136BE087FD4CE2C149D901FF23B3 /* Pods-Last Project-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Last Project-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,7 +49,7 @@
 		3FF6E9759DBD251AF30754985B5C1A22 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EC15294801884E6A5F793F2F94E76CEE /* Pods-Last Project */,
+				EC15294801884E6A5F793F2F94E76CEE /* Pods_Last_Project.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,7 +125,7 @@
 			);
 			name = "Pods-Last Project";
 			productName = Pods_Last_Project;
-			productReference = EC15294801884E6A5F793F2F94E76CEE /* Pods-Last Project */;
+			productReference = EC15294801884E6A5F793F2F94E76CEE /* Pods_Last_Project.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
