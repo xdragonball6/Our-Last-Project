@@ -12,7 +12,7 @@
         <!--Log In View Controller-->
         <scene sceneID="aTy-Nc-S35">
             <objects>
-                <viewController id="jQs-Mh-BRZ" customClass="LogIn_ViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogIn" id="jQs-Mh-BRZ" customClass="LogIn_ViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X9k-q1-M9N">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +59,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="rKl-QC-3Sg" kind="show" id="LFP-dy-fQZ"/>
+                                    <segue destination="rKl-QC-3Sg" kind="show" id="WQZ-VZ-r19"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -332,7 +332,7 @@
         <!--Navigation Controller-->
         <scene sceneID="J0U-1S-FAF">
             <objects>
-                <navigationController storyboardIdentifier="LogIn" automaticallyAdjustsScrollViewInsets="NO" id="5qa-QS-Uvn" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5qa-QS-Uvn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hUw-1C-Bme">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
