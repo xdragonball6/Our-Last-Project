@@ -51,17 +51,6 @@
                                     <segue destination="ZJG-DQ-oeM" kind="show" id="yag-18-0hc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHn-Cd-gxC">
-                                <rect key="frame" x="124" y="729" width="146" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="나중에 가입할래요">
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="rKl-QC-3Sg" kind="show" id="WQZ-VZ-r19"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uzi-Q2-l6n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -74,16 +63,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anp-ZD-qqt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1220.6106870229007" y="-49.295774647887328"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="oao-GV-jZ4">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Home" storyboardName="Home" referencedIdentifier="Home" id="rKl-QC-3Sg" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="AWh-Ss-Wg0"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2HQ-4u-X0W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1220" y="404"/>
         </scene>
         <!--이메일 회원가입-->
         <scene sceneID="p2E-G8-LU7">

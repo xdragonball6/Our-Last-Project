@@ -12,7 +12,7 @@
         <!--Navigation Controller-->
         <scene sceneID="B21-IU-bB9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="w0F-Pn-17H" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Home" automaticallyAdjustsScrollViewInsets="NO" id="w0F-Pn-17H" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HgG-ZI-08j">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -30,7 +30,7 @@
         <!--Main-->
         <scene sceneID="dzX-Ft-Ycg">
             <objects>
-                <viewController storyboardIdentifier="Home" id="CHP-lP-Z86" customClass="HomeViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CHP-lP-Z86" customClass="HomeViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CI6-W1-ysB">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
