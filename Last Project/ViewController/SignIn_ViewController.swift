@@ -18,9 +18,18 @@ class SignIn_ViewController: UIViewController {
     @IBOutlet weak var tfPhone: UITextField!
     // 버튼정리
     @IBOutlet weak var btnAll: UIButton!
+    @IBOutlet weak var btnAll2: UIButton!
     @IBOutlet weak var btnOver: UIButton!
+    @IBOutlet weak var btnOver2: UIButton!
     @IBOutlet weak var btnService: UIButton!
+    @IBOutlet weak var btnService2: UIButton!
     @IBOutlet weak var btnPrivate: UIButton!
+    @IBOutlet weak var btnPrivate2: UIButton!
+    
+    var first : Bool = false
+    var second : Bool = false
+    var third : Bool = false
+    var forth: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +68,37 @@ class SignIn_ViewController: UIViewController {
             }
         }
     }
+    
+    
+    
+    @IBAction func btnAllChange(_ sender: UIButton) {
+        if first == false{
+            first = true
+        }else{
+            first = false
+        }
+        changeAll()
+    }
+    
+    func changeAll(){
+        if first == true{
+            btnAll.tintColor = .red
+            btnOver.tintColor = .red
+            btnService.tintColor = .red
+            btnPrivate.tintColor = .red
+        }else{
+            btnAll.tintColor = .lightGray
+            btnOver.tintColor = .lightGray
+            btnService.tintColor = .lightGray
+            btnPrivate.tintColor = .lightGray
+        }
+    }
+    
+    
+    
+    
+    
+    
     
     
     // keyboard 세팅

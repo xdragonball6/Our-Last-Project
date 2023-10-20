@@ -141,18 +141,19 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPG-9L-c1O">
                                                 <rect key="frame" x="8" y="345" width="44" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.74197274319999995" green="0.74197274319999995" blue="0.74197274319999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.gobackward" catalog="system">
-                                                    <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
+                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.gobackward" catalog="system"/>
+                                                <connections>
+                                                    <action selector="btnAllChange:" destination="ZJG-DQ-oeM" eventType="touchUpInside" id="gjt-v8-scO"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7du-aC-8UE">
                                                 <rect key="frame" x="8" y="406" width="44" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.74197274319999995" green="0.74197274319999995" blue="0.74197274319999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.gobackward" catalog="system">
-                                                    <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
+                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.gobackward" catalog="system"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfa-iU-Igw">
                                                 <rect key="frame" x="49" y="345" width="132" height="35"/>
@@ -182,10 +183,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31H-jG-6Dv">
                                                 <rect key="frame" x="8" y="450" width="44" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.74197274319999995" green="0.74197274319999995" blue="0.74197274319999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.gobackward" catalog="system">
-                                                    <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
+                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.gobackward" catalog="system"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibf-ME-WrI">
                                                 <rect key="frame" x="49" y="493" width="254" height="35"/>
@@ -198,10 +198,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4G-ph-baE">
                                                 <rect key="frame" x="8" y="493" width="44" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.74197274319999995" green="0.74197274319999995" blue="0.74197274319999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.gobackward" catalog="system">
-                                                    <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
+                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.gobackward" catalog="system"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awm-87-zPN">
                                                 <rect key="frame" x="15" y="569" width="363" height="35"/>
@@ -260,9 +259,13 @@
                     <navigationItem key="navigationItem" title="이메일 회원가입" id="1U2-d7-8Qe"/>
                     <connections>
                         <outlet property="btnAll" destination="vPG-9L-c1O" id="0ad-o2-Ixr"/>
-                        <outlet property="btnOver" destination="7du-aC-8UE" id="3DH-gA-heD"/>
+                        <outlet property="btnAll2" destination="lfa-iU-Igw" id="kZf-1l-E6D"/>
+                        <outlet property="btnOver" destination="7du-aC-8UE" id="1JF-QR-mu9"/>
+                        <outlet property="btnOver2" destination="kdp-D3-r4H" id="aNQ-sc-LeF"/>
                         <outlet property="btnPrivate" destination="l4G-ph-baE" id="eag-Eh-ePe"/>
-                        <outlet property="btnService" destination="31H-jG-6Dv" id="TcV-U5-aPF"/>
+                        <outlet property="btnPrivate2" destination="ibf-ME-WrI" id="MPJ-oS-9g5"/>
+                        <outlet property="btnService" destination="31H-jG-6Dv" id="Agh-Kn-1U5"/>
+                        <outlet property="btnService2" destination="ESe-r3-R7S" id="tgt-c2-AsQ"/>
                         <outlet property="tfID" destination="6nW-1o-Xc1" id="W70-jI-nNM"/>
                         <outlet property="tfNickName" destination="hHF-dU-eGs" id="ERz-yl-dLs"/>
                         <outlet property="tfPW" destination="7Op-yO-UGe" id="l43-LG-bkx"/>
