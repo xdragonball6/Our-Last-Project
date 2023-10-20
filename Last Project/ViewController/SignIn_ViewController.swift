@@ -37,6 +37,9 @@ class SignIn_ViewController: UIViewController {
 
     
     @IBAction func btnAgreeAndSignIn(_ sender: UIButton) {
+//        if first == true {
+//            
+//        }
         let userid = tfID.text ?? ""
         let name = tfNickName.text ?? ""
         let password = tfPW.text ?? ""
@@ -70,6 +73,7 @@ class SignIn_ViewController: UIViewController {
     }
     
     
+    // 버튼 액션 정리
     
     @IBAction func btnAllChange(_ sender: UIButton) {
         if first == false{
@@ -82,18 +86,78 @@ class SignIn_ViewController: UIViewController {
     
     func changeAll(){
         if first == true{
+            second = true
+            third = true
+            forth = true
+            changeColor()
+        }else{
+            second = false
+            third = false
+            forth = false
+            changeColor()
+        }
+    }
+    
+    func changeColor(){
+        if first == true{
             btnAll.tintColor = .red
             btnOver.tintColor = .red
             btnService.tintColor = .red
             btnPrivate.tintColor = .red
+        }
+        if second == true{
+            btnOver.tintColor = .red
         }else{
-            btnAll.tintColor = .lightGray
             btnOver.tintColor = .lightGray
+        }
+        if third == true{
+            btnService.tintColor = .red
+        }else{
             btnService.tintColor = .lightGray
+        }
+        if forth == true{
+            btnPrivate.tintColor = .red
+        }else{
             btnPrivate.tintColor = .lightGray
+        }
+        if second == true && third == true && forth == true{
+            first = true
+            btnAll.tintColor = .red
+        }else{
+            first = false
+            btnAll.tintColor = .lightGray
         }
     }
     
+    
+    @IBAction func btnOverAge(_ sender: UIButton) {
+        if second == false{
+            second = true
+        }else{
+            second = false
+        }
+        changeColor()
+    }
+    
+    
+    @IBAction func btnServiceAgree(_ sender: UIButton) {
+        if third == false{
+            third = true
+        }else{
+            third = false
+        }
+        changeColor()
+    }
+    
+    
+    @IBAction func btnPrivateAgree(_ sender: UIButton) {
+        if forth == false{
+            forth = true
+        }else{
+            forth = false
+        }
+        changeColor()
+    }
     
     
     

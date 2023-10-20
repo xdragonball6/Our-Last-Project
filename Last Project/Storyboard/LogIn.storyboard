@@ -154,6 +154,9 @@
                                                 <color key="tintColor" red="0.74197274319999995" green="0.74197274319999995" blue="0.74197274319999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.gobackward" catalog="system"/>
+                                                <connections>
+                                                    <action selector="btnOverAge:" destination="ZJG-DQ-oeM" eventType="touchUpInside" id="OR0-JC-f8x"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfa-iU-Igw">
                                                 <rect key="frame" x="49" y="345" width="132" height="35"/>
@@ -186,6 +189,9 @@
                                                 <color key="tintColor" red="0.74197274319999995" green="0.74197274319999995" blue="0.74197274319999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.gobackward" catalog="system"/>
+                                                <connections>
+                                                    <action selector="btnServiceAgree:" destination="ZJG-DQ-oeM" eventType="touchUpInside" id="UTe-Bt-fZI"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibf-ME-WrI">
                                                 <rect key="frame" x="49" y="493" width="254" height="35"/>
@@ -201,6 +207,9 @@
                                                 <color key="tintColor" red="0.74197274319999995" green="0.74197274319999995" blue="0.74197274319999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="checkmark.gobackward" catalog="system"/>
+                                                <connections>
+                                                    <action selector="btnPrivateAgree:" destination="ZJG-DQ-oeM" eventType="touchUpInside" id="imB-3E-hOb"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awm-87-zPN">
                                                 <rect key="frame" x="15" y="569" width="363" height="35"/>
