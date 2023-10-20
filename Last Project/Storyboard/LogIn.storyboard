@@ -261,7 +261,7 @@
         <!--이메일 로그인-->
         <scene sceneID="sGX-Hp-Fft">
             <objects>
-                <viewController id="4aZ-RG-qLR" sceneMemberID="viewController">
+                <viewController id="4aZ-RG-qLR" customClass="LogIn_with_Email_ViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iIf-dK-Efy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
