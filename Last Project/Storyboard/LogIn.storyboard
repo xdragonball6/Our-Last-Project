@@ -36,6 +36,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="이메일로 로그인">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="4aZ-RG-qLR" kind="show" id="cQp-WD-Lt2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l58-rl-YXh">
                                 <rect key="frame" x="192" y="546" width="146" height="35"/>
@@ -44,6 +47,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="이메일로 회원가입">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="ZJG-DQ-oeM" kind="show" id="yag-18-0hc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHn-Cd-gxC">
                                 <rect key="frame" x="124" y="729" width="146" height="35"/>
@@ -52,6 +58,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="나중에 가입할래요">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="rKl-QC-3Sg" kind="show" id="LFP-dy-fQZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uzi-Q2-l6n"/>
@@ -65,6 +74,102 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anp-ZD-qqt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1220.6106870229007" y="-49.295774647887328"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="oao-GV-jZ4">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Home" storyboardName="Home" referencedIdentifier="Home" id="rKl-QC-3Sg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="AWh-Ss-Wg0"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2HQ-4u-X0W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1220" y="404"/>
+        </scene>
+        <!--이메일 회원가입-->
+        <scene sceneID="p2E-G8-LU7">
+            <objects>
+                <viewController id="ZJG-DQ-oeM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sHI-NI-a8D">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aaA-OT-2rs">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2x6-v3-M9h">
+                                        <rect key="frame" x="76" y="291" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="liH-Ud-zOF"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="7xF-ly-yoH"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qYh-nb-gjv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qYh-nb-gjv" firstAttribute="trailing" secondItem="aaA-OT-2rs" secondAttribute="trailing" id="75B-LR-fC2"/>
+                            <constraint firstAttribute="bottom" secondItem="aaA-OT-2rs" secondAttribute="bottom" constant="34" id="JWM-w0-AbD"/>
+                            <constraint firstItem="aaA-OT-2rs" firstAttribute="leading" secondItem="qYh-nb-gjv" secondAttribute="leading" id="RAW-w3-JmW"/>
+                            <constraint firstItem="aaA-OT-2rs" firstAttribute="top" secondItem="qYh-nb-gjv" secondAttribute="top" id="wg0-1o-6ZX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="이메일 회원가입" id="1U2-d7-8Qe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FTp-n0-gP5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2416.030534351145" y="311.97183098591552"/>
+        </scene>
+        <!--이메일 로그인-->
+        <scene sceneID="sGX-Hp-Fft">
+            <objects>
+                <viewController id="4aZ-RG-qLR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iIf-dK-Efy">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8q4-tx-s5P">
+                                <rect key="frame" x="16" y="188" width="361" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VXO-VN-gRN">
+                                <rect key="frame" x="16" y="245" width="361" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hA-r2-Wze">
+                                <rect key="frame" x="16" y="321" width="361" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="로그인">
+                                    <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6H-za-wr3">
+                                <rect key="frame" x="65" y="388" width="102" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="아이디 찾기"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="us0-KD-hTE">
+                                <rect key="frame" x="213" y="388" width="117" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="비밀번호 찾기"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IOs-Vq-btM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="이메일 로그인" id="BCq-4t-eDQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ig-Dp-WpX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2422.1374045801526" y="-392.25352112676057"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="J0U-1S-FAF">
@@ -91,6 +196,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -49,6 +49,7 @@
 		1EFFECAD2AE145B9006EBD97 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1EFFECAC2AE145B9006EBD97 /* SnapKit */; };
 		1EFFECAF2AE145B9006EBD97 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 1EFFECAE2AE145B9006EBD97 /* SnapKit-Dynamic */; };
 		1EFFECB12AE1503A006EBD97 /* MyPage_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFFECB02AE1503A006EBD97 /* MyPage_ViewController.swift */; };
+		1EFFECB42AE21125006EBD97 /* TossPayments in Frameworks */ = {isa = PBXBuildFile; productRef = 1EFFECB32AE21125006EBD97 /* TossPayments */; };
 		8EC746068B46A5F24550DB60 /* Pods_Last_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB242311D2451ECFA37036D /* Pods_Last_Project.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,7 @@
 				1EFFEC9B2AE13E73006EBD97 /* KakaoSDKNavi in Frameworks */,
 				1EFFEC872AE13E58006EBD97 /* KakaoSDKTalk in Frameworks */,
 				1EFFEC8B2AE13E58006EBD97 /* KakaoSDKUser in Frameworks */,
+				1EFFECB42AE21125006EBD97 /* TossPayments in Frameworks */,
 				1EFFEC8D2AE13E73006EBD97 /* KakaoSDK in Frameworks */,
 				1EFFEC7B2AE13E58006EBD97 /* KakaoSDKCommon in Frameworks */,
 				1EFFEC892AE13E58006EBD97 /* KakaoSDKTemplate in Frameworks */,
@@ -275,6 +277,7 @@
 				1EFFECA42AE13E73006EBD97 /* KakaoSDKUser */,
 				1EFFECAC2AE145B9006EBD97 /* SnapKit */,
 				1EFFECAE2AE145B9006EBD97 /* SnapKit-Dynamic */,
+				1EFFECB32AE21125006EBD97 /* TossPayments */,
 			);
 			productName = "Last Project";
 			productReference = 1ECD9DE02ADD34E5008DC85F /* Last Project.app */;
@@ -307,6 +310,7 @@
 			packageReferences = (
 				1EFFEC712AE13E58006EBD97 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 				1EFFECAB2AE145B9006EBD97 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				1EFFECB22AE21125006EBD97 /* XCRemoteSwiftPackageReference "payment-sdk-ios" */,
 			);
 			productRefGroup = 1ECD9DE12ADD34E5008DC85F /* Products */;
 			projectDirPath = "";
@@ -615,6 +619,14 @@
 				minimumVersion = 5.6.0;
 			};
 		};
+		1EFFECB22AE21125006EBD97 /* XCRemoteSwiftPackageReference "payment-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tosspayments/payment-sdk-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.25;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -757,6 +769,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1EFFECAB2AE145B9006EBD97 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
+		};
+		1EFFECB32AE21125006EBD97 /* TossPayments */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EFFECB22AE21125006EBD97 /* XCRemoteSwiftPackageReference "payment-sdk-ios" */;
+			productName = TossPayments;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
