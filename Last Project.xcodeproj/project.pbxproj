@@ -52,6 +52,8 @@
 		1EFFECB12AE1503A006EBD97 /* MyPage_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFFECB02AE1503A006EBD97 /* MyPage_ViewController.swift */; };
 		1EFFECB42AE21125006EBD97 /* TossPayments in Frameworks */ = {isa = PBXBuildFile; productRef = 1EFFECB32AE21125006EBD97 /* TossPayments */; };
 		1EFFED992AE22DBE006EBD97 /* LogIn_with_Email_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFFED982AE22DBE006EBD97 /* LogIn_with_Email_ViewController.swift */; };
+		1EFFEDE82AE25A9A006EBD97 /* SignIn_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFFEDE72AE25A9A006EBD97 /* SignIn_ViewController.swift */; };
+		1EFFEDEA2AE25BC8006EBD97 /* FirebaseSignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFFEDE92AE25BC8006EBD97 /* FirebaseSignInModel.swift */; };
 		E04D21952AE23FA80049D6A3 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E04D21942AE23FA80049D6A3 /* Config.xcconfig */; };
 		E04D21972AE242610049D6A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E04D21962AE242610049D6A3 /* GoogleService-Info.plist */; };
 		E04D219A2AE243940049D6A3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E04D21992AE243940049D6A3 /* FirebaseAnalytics */; };
@@ -80,6 +82,8 @@
 		1EFFECA92AE1455C006EBD97 /* LogIn_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn_ViewController.swift; sourceTree = "<group>"; };
 		1EFFECB02AE1503A006EBD97 /* MyPage_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage_ViewController.swift; sourceTree = "<group>"; };
 		1EFFED982AE22DBE006EBD97 /* LogIn_with_Email_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn_with_Email_ViewController.swift; sourceTree = "<group>"; };
+		1EFFEDE72AE25A9A006EBD97 /* SignIn_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn_ViewController.swift; sourceTree = "<group>"; };
+		1EFFEDE92AE25BC8006EBD97 /* FirebaseSignInModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseSignInModel.swift; sourceTree = "<group>"; };
 		4CB0A68C5194AF1C37EA3529 /* Pods-Last Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Last Project.release.xcconfig"; path = "Target Support Files/Pods-Last Project/Pods-Last Project.release.xcconfig"; sourceTree = "<group>"; };
 		5D0565A67BD928B93AD56D70 /* Pods-Last Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Last Project.debug.xcconfig"; path = "Target Support Files/Pods-Last Project/Pods-Last Project.debug.xcconfig"; sourceTree = "<group>"; };
 		7C995F11CC5E3EB95ECE9346 /* Pods_Last_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Last_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,7 +150,6 @@
 			children = (
 				1ECD9DE92ADD34E5008DC85F /* Main.storyboard */,
 				1E75DD0B2ADD3A2C0053B4EF /* Home.storyboard */,
-				1EFFECA62AE13F7D006EBD97 /* Config.xcconfig */,
 				1E75DD0D2ADD3F000053B4EF /* User.storyboard */,
 				1E75DD0F2ADD3F140053B4EF /* Products.storyboard */,
 				1E75DD112ADD3F1E0053B4EF /* MyPage.storyboard */,
@@ -161,6 +164,7 @@
 				1EFFECA92AE1455C006EBD97 /* LogIn_ViewController.swift */,
 				1EFFECB02AE1503A006EBD97 /* MyPage_ViewController.swift */,
 				1EFFED982AE22DBE006EBD97 /* LogIn_with_Email_ViewController.swift */,
+				1EFFEDE72AE25A9A006EBD97 /* SignIn_ViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -199,6 +203,7 @@
 		1E75DD1A2ADD401E0053B4EF /* DBModel */ = {
 			isa = PBXGroup;
 			children = (
+				1EFFEDE92AE25BC8006EBD97 /* FirebaseSignInModel.swift */,
 			);
 			path = DBModel;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 				1ECD9DE72ADD34E5008DC85F /* HomeViewController.swift */,
 				1ECD9DEC2ADD34E6008DC85F /* Assets.xcassets */,
 				1ECD9DEE2ADD34E6008DC85F /* LaunchScreen.storyboard */,
+				1EFFECA62AE13F7D006EBD97 /* Config.xcconfig */,
 				1ECD9DF12ADD34E6008DC85F /* Info.plist */,
 				E04D21942AE23FA80049D6A3 /* Config.xcconfig */,
 				E04D21962AE242610049D6A3 /* GoogleService-Info.plist */,
@@ -400,6 +406,8 @@
 				1ECD9DE82ADD34E5008DC85F /* HomeViewController.swift in Sources */,
 				1EFFECAA2AE1455C006EBD97 /* LogIn_ViewController.swift in Sources */,
 				1EFFECB12AE1503A006EBD97 /* MyPage_ViewController.swift in Sources */,
+				1EFFEDE82AE25A9A006EBD97 /* SignIn_ViewController.swift in Sources */,
+				1EFFEDEA2AE25BC8006EBD97 /* FirebaseSignInModel.swift in Sources */,
 				1ECD9DE42ADD34E5008DC85F /* AppDelegate.swift in Sources */,
 				1ECD9DE62ADD34E5008DC85F /* SceneDelegate.swift in Sources */,
 				1EFFED992AE22DBE006EBD97 /* LogIn_with_Email_ViewController.swift in Sources */,

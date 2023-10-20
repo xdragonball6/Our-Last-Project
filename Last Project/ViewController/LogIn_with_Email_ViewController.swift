@@ -6,24 +6,68 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class LogIn_with_Email_ViewController: UIViewController {
 
+    
+    @IBOutlet weak var tfID: UITextField!
+    @IBOutlet weak var tfPassword: UITextField!
+    var id = ""
+    var pw = ""
+    
+    
+    @IBOutlet weak var nvTitle: UINavigationItem!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
-        // Do any additional setup after loading the view.
+    
+    @IBAction func btnLogIN(_ sender: UIButton) {
+        let email: String = tfID.text!.description
+        let pw: String = tfPassword.text!.description
+        Auth.auth().signIn(withEmail: email, password: pw) {authResult, error in
+            if authResult != nil {
+                print("log in")
+                let resultAlert = UIAlertController(title: "결과", message: "로그인 되었습니다.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "네", style: .default,handler: {ACTION in
+                    self.performSegue(withIdentifier: "sgLogin", sender: nil)
+                })
+                resultAlert.addAction(okAction)
+                self.present(resultAlert, animated: true)
+            }else{
+                print("log in failed")
+                let resultAlert = UIAlertController(title: "결과", message: "해당 아이디는 존재하지 않습니다. 다시 입력해주세요.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "네", style: .default)
+                resultAlert.addAction(okAction)
+                self.present(resultAlert, animated: true)
+            }
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+                self.view.endEditing(true)
+            }
+    
+    func setKeyboardEvent(){
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear(_ :)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear(_ :)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    */
-
+    
+    
+    @objc func keyboardWillAppear(_ sender: NotificationCenter){
+        self.view.frame.origin.y = -250 //키보드가 나타나면서 어디까지 나타날지 y의 값을 나타내는 녀석
+        self.navigationItem.titleView?.alpha = 0.0
+        nvTitle.title = ""
+    }
+    
+    @objc func keyboardWillDisappear(_ sender: NotificationCenter){
+        self.view.frame.origin.y = 0 // y좌표를 0으로 돌려 원래 화면 나오게 하기
+        nvTitle.title = "이메일 로그인"
+    }
+    
+    
+    
 }

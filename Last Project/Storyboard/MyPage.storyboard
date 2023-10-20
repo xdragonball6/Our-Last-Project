@@ -12,7 +12,7 @@
         <!--My Page-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="MyPage_ViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyPage" id="Y6W-OH-hqX" customClass="MyPage_ViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,21 +57,10 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="수정"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T86-Qb-aOb">
-                                <rect key="frame" x="302" y="667" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Button"/>
-                                <connections>
-                                    <action selector="ONLY_FOR_TEST:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZOb-uI-DxZ"/>
-                                    <segue destination="ifc-kg-LU5" kind="show" id="acD-WK-MAz"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="MyPage" image="person.fill" catalog="system" id="pXa-6V-r46"/>
                     <navigationItem key="navigationItem" title="My Page" id="ISr-Dd-yHb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -79,20 +68,10 @@
             </objects>
             <point key="canvasLocation" x="1052.6717557251909" y="-34.507042253521128"/>
         </scene>
-        <!--LogIn-->
-        <scene sceneID="ThB-M0-9lg">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="LogIn" storyboardName="LogIn" referencedIdentifier="LogIn" id="ifc-kg-LU5" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="epL-3x-QHS"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JmZ-Bi-qam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1897" y="30"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ywi-Jp-M1V">
             <objects>
-                <navigationController storyboardIdentifier="MyPage" automaticallyAdjustsScrollViewInsets="NO" id="qaW-sA-nkC" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qaW-sA-nkC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jsK-IO-Hq1">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -109,7 +88,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

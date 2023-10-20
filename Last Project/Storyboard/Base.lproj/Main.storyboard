@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="280" y="420"/>
         </scene>
-        <!--MyPage-->
+        <!--LogIn-->
         <scene sceneID="epP-T9-dAj">
             <objects>
-                <viewControllerPlaceholder storyboardName="MyPage" referencedIdentifier="MyPage" id="DNw-Ay-uw0" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="LogIn" referencedIdentifier="LogIn" id="DNw-Ay-uw0" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Ef7-1E-GU9"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bui-DR-UgD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

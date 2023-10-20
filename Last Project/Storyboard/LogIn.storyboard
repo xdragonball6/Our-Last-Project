@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Log In View Controller-->
+        <!--LogIn-->
         <scene sceneID="aTy-Nc-S35">
             <objects>
-                <viewController storyboardIdentifier="LogIn" id="jQs-Mh-BRZ" customClass="LogIn_ViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jQs-Mh-BRZ" customClass="LogIn_ViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X9k-q1-M9N">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,7 +55,9 @@
                         <viewLayoutGuide key="safeArea" id="Uzi-Q2-l6n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="LogIn" image="person.fill" catalog="system" id="sI3-n3-SUR"/>
                     <navigationItem key="navigationItem" id="XKU-ne-Ang"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="btn_KAKAO_LogIN" destination="kDg-iK-U44" id="gAx-YX-bph"/>
                     </connections>
@@ -67,7 +69,7 @@
         <!--이메일 회원가입-->
         <scene sceneID="p2E-G8-LU7">
             <objects>
-                <viewController id="ZJG-DQ-oeM" sceneMemberID="viewController">
+                <viewController id="ZJG-DQ-oeM" customClass="SignIn_ViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sHI-NI-a8D">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,6 +210,9 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="동의하고 가입하기">
                                                     <color key="baseBackgroundColor" red="0.84587093911220124" green="0.84587093911220124" blue="0.84587093911220124" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btnAgreeAndSignIn:" destination="ZJG-DQ-oeM" eventType="touchUpInside" id="82i-No-3ED"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snD-XJ-PA7">
                                                 <rect key="frame" x="321" y="450" width="54" height="35"/>
@@ -253,6 +258,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="이메일 회원가입" id="1U2-d7-8Qe"/>
+                    <connections>
+                        <outlet property="btnAll" destination="vPG-9L-c1O" id="0ad-o2-Ixr"/>
+                        <outlet property="btnOver" destination="7du-aC-8UE" id="3DH-gA-heD"/>
+                        <outlet property="btnPrivate" destination="l4G-ph-baE" id="eag-Eh-ePe"/>
+                        <outlet property="btnService" destination="31H-jG-6Dv" id="TcV-U5-aPF"/>
+                        <outlet property="tfID" destination="6nW-1o-Xc1" id="W70-jI-nNM"/>
+                        <outlet property="tfNickName" destination="hHF-dU-eGs" id="ERz-yl-dLs"/>
+                        <outlet property="tfPW" destination="7Op-yO-UGe" id="l43-LG-bkx"/>
+                        <outlet property="tfPW_Twice" destination="uqv-7O-Oco" id="N9c-YD-AFG"/>
+                        <outlet property="tfPhone" destination="T3k-k8-DMP" id="DcX-pv-xjx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FTp-n0-gP5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -285,6 +301,10 @@
                                 <buttonConfiguration key="configuration" style="filled" title="로그인">
                                     <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnLogIN:" destination="4aZ-RG-qLR" eventType="touchUpInside" id="F6p-OI-Ya6"/>
+                                    <segue destination="5fS-uL-nT9" kind="show" id="Wep-Vy-Tdp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6H-za-wr3">
                                 <rect key="frame" x="65" y="388" width="102" height="35"/>
@@ -303,15 +323,31 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="이메일 로그인" id="BCq-4t-eDQ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="nvTitle" destination="BCq-4t-eDQ" id="y6Y-sT-PQP"/>
+                        <outlet property="tfID" destination="8q4-tx-s5P" id="bUC-Cg-idT"/>
+                        <outlet property="tfPassword" destination="VXO-VN-gRN" id="9wH-Bm-fnI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ig-Dp-WpX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2422.1374045801526" y="-392.25352112676057"/>
         </scene>
+        <!--MyPage-->
+        <scene sceneID="JrU-82-96Q">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyPage" referencedIdentifier="MyPage" id="5fS-uL-nT9" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="LGC-cn-IsI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7MW-T4-y02" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3201" y="-445"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="J0U-1S-FAF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5qa-QS-Uvn" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LogIn" automaticallyAdjustsScrollViewInsets="NO" id="5qa-QS-Uvn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hUw-1C-Bme">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -329,6 +365,7 @@
     </scenes>
     <resources>
         <image name="checkmark.gobackward" catalog="system" width="119" height="128"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
