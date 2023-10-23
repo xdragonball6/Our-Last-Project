@@ -61,6 +61,9 @@
 		E04D219E2AE243940049D6A3 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E04D219D2AE243940049D6A3 /* FirebaseAuthCombine-Community */; };
 		E04D21A02AE243940049D6A3 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = E04D219F2AE243940049D6A3 /* FirebaseDatabase */; };
 		E04D21A22AE243940049D6A3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E04D21A12AE243940049D6A3 /* FirebaseFirestore */; };
+		E073F70C2AE5A4CD0064BB3F /* FirebaseMainPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073F70B2AE5A4CD0064BB3F /* FirebaseMainPageModel.swift */; };
+		E073F70E2AE5A6710064BB3F /* FirebaseMainPageMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073F70D2AE5A6710064BB3F /* FirebaseMainPageMessage.swift */; };
+		E073F7102AE5A6D80064BB3F /* FirebaseMainPageImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073F70F2AE5A6D80064BB3F /* FirebaseMainPageImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +92,9 @@
 		7C995F11CC5E3EB95ECE9346 /* Pods_Last_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Last_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E04D21942AE23FA80049D6A3 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		E04D21962AE242610049D6A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E073F70B2AE5A4CD0064BB3F /* FirebaseMainPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMainPageModel.swift; sourceTree = "<group>"; };
+		E073F70D2AE5A6710064BB3F /* FirebaseMainPageMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMainPageMessage.swift; sourceTree = "<group>"; };
+		E073F70F2AE5A6D80064BB3F /* FirebaseMainPageImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMainPageImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				1EFFECA72AE14441006EBD97 /* KakaoAuthVM.swift */,
+				E073F70F2AE5A6D80064BB3F /* FirebaseMainPageImage.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -204,6 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				1EFFEDE92AE25BC8006EBD97 /* FirebaseSignInModel.swift */,
+				E073F70B2AE5A4CD0064BB3F /* FirebaseMainPageModel.swift */,
+				E073F70D2AE5A6710064BB3F /* FirebaseMainPageMessage.swift */,
 			);
 			path = DBModel;
 			sourceTree = "<group>";
@@ -402,8 +411,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E073F7102AE5A6D80064BB3F /* FirebaseMainPageImage.swift in Sources */,
+				E073F70E2AE5A6710064BB3F /* FirebaseMainPageMessage.swift in Sources */,
 				1EFFECA82AE14441006EBD97 /* KakaoAuthVM.swift in Sources */,
 				1ECD9DE82ADD34E5008DC85F /* HomeViewController.swift in Sources */,
+				E073F70C2AE5A4CD0064BB3F /* FirebaseMainPageModel.swift in Sources */,
 				1EFFECAA2AE1455C006EBD97 /* LogIn_ViewController.swift in Sources */,
 				1EFFECB12AE1503A006EBD97 /* MyPage_ViewController.swift in Sources */,
 				1EFFEDE82AE25A9A006EBD97 /* SignIn_ViewController.swift in Sources */,
