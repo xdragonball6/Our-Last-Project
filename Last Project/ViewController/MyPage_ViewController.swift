@@ -9,15 +9,20 @@ import UIKit
 
 class MyPage_ViewController: UIViewController {
 
+    @IBOutlet weak var imgView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
     
-    @IBAction func ONLY_FOR_TEST(_ sender: UIButton) {
+    @IBAction func bringImages_Btn(_ sender: UIButton) {
+        let vc = UIImagePickerController()
+        vc.sourceType = .photoLibrary
+        vc.delegate = self
+        vc.allowsEditing = true
+        present(vc, animated: true)
     }
     
     
@@ -31,4 +36,20 @@ class MyPage_ViewController: UIViewController {
     }
     */
 
+}// MyPage_ViewController
+extension MyPage_ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage{
+        imgView.image = image
+    }
+        
+    print("\(info)")
+
+    picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+    picker.dismiss(animated: true, completion: nil)
+    }
 }

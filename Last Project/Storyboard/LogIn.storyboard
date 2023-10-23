@@ -315,7 +315,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="btnLogIN:" destination="4aZ-RG-qLR" eventType="touchUpInside" id="F6p-OI-Ya6"/>
-                                    <segue destination="5fS-uL-nT9" kind="show" id="Wep-Vy-Tdp"/>
+                                    <segue destination="5fS-uL-nT9" kind="show" identifier="sgLogin" id="Wep-Vy-Tdp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6H-za-wr3">
