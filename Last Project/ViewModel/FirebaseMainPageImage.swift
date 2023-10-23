@@ -27,7 +27,6 @@ class FirebaseMainPageImage{
                 
                 for document in querySnapshot!.documents{
                     guard let data = document.data()["image"] else {return}
-                    print("\(document.documentID)  => \(data)")
                     
                     let query = MainPageDBModel(
                         image: document.data()["image"] as! String
