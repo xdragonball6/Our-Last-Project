@@ -13,8 +13,9 @@
 		1E75DD102ADD3F140053B4EF /* Products.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD0F2ADD3F140053B4EF /* Products.storyboard */; };
 		1E75DD122ADD3F1E0053B4EF /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD112ADD3F1E0053B4EF /* MyPage.storyboard */; };
 		1E75DD142ADD3F290053B4EF /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD132ADD3F290053B4EF /* LogIn.storyboard */; };
-		1ECD9DE42ADD34E5008DC85F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD9DE32ADD34E5008DC85F /* AppDelegate.swift */; };
-		1ECD9DE62ADD34E5008DC85F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD9DE52ADD34E5008DC85F /* SceneDelegate.swift */; };
+		1E79F2D32AE625A50016B226 /* SingIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E79F2D22AE625A50016B226 /* SingIn.swift */; };
+		1EB34E7B2AE6264500BBC7D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB34E7A2AE6264500BBC7D4 /* AppDelegate.swift */; };
+		1EB34E7D2AE6266600BBC7D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB34E7C2AE6266600BBC7D4 /* SceneDelegate.swift */; };
 		1ECD9DE82ADD34E5008DC85F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD9DE72ADD34E5008DC85F /* HomeViewController.swift */; };
 		1ECD9DEB2ADD34E5008DC85F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ECD9DE92ADD34E5008DC85F /* Main.storyboard */; };
 		1ECD9DED2ADD34E6008DC85F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ECD9DEC2ADD34E6008DC85F /* Assets.xcassets */; };
@@ -54,7 +55,6 @@
 		1EFFED992AE22DBE006EBD97 /* LogIn_with_Email_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFFED982AE22DBE006EBD97 /* LogIn_with_Email_ViewController.swift */; };
 		1EFFEDE82AE25A9A006EBD97 /* SignIn_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFFEDE72AE25A9A006EBD97 /* SignIn_ViewController.swift */; };
 		1EFFEDEA2AE25BC8006EBD97 /* FirebaseSignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFFEDE92AE25BC8006EBD97 /* FirebaseSignInModel.swift */; };
-		E04D21952AE23FA80049D6A3 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E04D21942AE23FA80049D6A3 /* Config.xcconfig */; };
 		E04D21972AE242610049D6A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E04D21962AE242610049D6A3 /* GoogleService-Info.plist */; };
 		E04D219A2AE243940049D6A3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E04D21992AE243940049D6A3 /* FirebaseAnalytics */; };
 		E04D219C2AE243940049D6A3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E04D219B2AE243940049D6A3 /* FirebaseAuth */; };
@@ -72,9 +72,10 @@
 		1E75DD0F2ADD3F140053B4EF /* Products.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Products.storyboard; sourceTree = "<group>"; };
 		1E75DD112ADD3F1E0053B4EF /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		1E75DD132ADD3F290053B4EF /* LogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
+		1E79F2D22AE625A50016B226 /* SingIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingIn.swift; sourceTree = "<group>"; };
+		1EB34E7A2AE6264500BBC7D4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../../../../Downloads/AppDelegate.swift; sourceTree = "<group>"; };
+		1EB34E7C2AE6266600BBC7D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../../../../../Downloads/SceneDelegate.swift; sourceTree = "<group>"; };
 		1ECD9DE02ADD34E5008DC85F /* Last Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Last Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1ECD9DE32ADD34E5008DC85F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1ECD9DE52ADD34E5008DC85F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1ECD9DE72ADD34E5008DC85F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1ECD9DEA2ADD34E5008DC85F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1ECD9DEC2ADD34E6008DC85F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -178,6 +179,8 @@
 		1E75DD162ADD3FF60053B4EF /* Serviece */ = {
 			isa = PBXGroup;
 			children = (
+				1EB34E7C2AE6266600BBC7D4 /* SceneDelegate.swift */,
+				1EB34E7A2AE6264500BBC7D4 /* AppDelegate.swift */,
 			);
 			path = Serviece;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				1EFFEDE92AE25BC8006EBD97 /* FirebaseSignInModel.swift */,
 				E073F70B2AE5A4CD0064BB3F /* FirebaseMainPageModel.swift */,
 				E073F70D2AE5A6710064BB3F /* FirebaseMainPageMessage.swift */,
+				1E79F2D22AE625A50016B226 /* SingIn.swift */,
 			);
 			path = DBModel;
 			sourceTree = "<group>";
@@ -243,8 +247,6 @@
 				1E75DD162ADD3FF60053B4EF /* Serviece */,
 				1E75DD152ADD3FEB0053B4EF /* ViewController */,
 				1E75DD0A2ADD39CC0053B4EF /* Storyboard */,
-				1ECD9DE32ADD34E5008DC85F /* AppDelegate.swift */,
-				1ECD9DE52ADD34E5008DC85F /* SceneDelegate.swift */,
 				1ECD9DE72ADD34E5008DC85F /* HomeViewController.swift */,
 				1ECD9DEC2ADD34E6008DC85F /* Assets.xcassets */,
 				1ECD9DEE2ADD34E6008DC85F /* LaunchScreen.storyboard */,
@@ -370,7 +372,6 @@
 				1E75DD102ADD3F140053B4EF /* Products.storyboard in Resources */,
 				1ECD9DF02ADD34E6008DC85F /* LaunchScreen.storyboard in Resources */,
 				1E75DD0E2ADD3F000053B4EF /* User.storyboard in Resources */,
-				E04D21952AE23FA80049D6A3 /* Config.xcconfig in Resources */,
 				1ECD9DED2ADD34E6008DC85F /* Assets.xcassets in Resources */,
 				1E75DD122ADD3F1E0053B4EF /* MyPage.storyboard in Resources */,
 				E04D21972AE242610049D6A3 /* GoogleService-Info.plist in Resources */,
@@ -415,13 +416,14 @@
 				E073F70E2AE5A6710064BB3F /* FirebaseMainPageMessage.swift in Sources */,
 				1EFFECA82AE14441006EBD97 /* KakaoAuthVM.swift in Sources */,
 				1ECD9DE82ADD34E5008DC85F /* HomeViewController.swift in Sources */,
+				1EB34E7B2AE6264500BBC7D4 /* AppDelegate.swift in Sources */,
 				E073F70C2AE5A4CD0064BB3F /* FirebaseMainPageModel.swift in Sources */,
 				1EFFECAA2AE1455C006EBD97 /* LogIn_ViewController.swift in Sources */,
 				1EFFECB12AE1503A006EBD97 /* MyPage_ViewController.swift in Sources */,
+				1EB34E7D2AE6266600BBC7D4 /* SceneDelegate.swift in Sources */,
 				1EFFEDE82AE25A9A006EBD97 /* SignIn_ViewController.swift in Sources */,
+				1E79F2D32AE625A50016B226 /* SingIn.swift in Sources */,
 				1EFFEDEA2AE25BC8006EBD97 /* FirebaseSignInModel.swift in Sources */,
-				1ECD9DE42ADD34E5008DC85F /* AppDelegate.swift in Sources */,
-				1ECD9DE62ADD34E5008DC85F /* SceneDelegate.swift in Sources */,
 				1EFFED992AE22DBE006EBD97 /* LogIn_with_Email_ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
