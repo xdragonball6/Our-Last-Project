@@ -31,15 +31,16 @@ class SignIn_ViewController: UIViewController {
     var third : Bool = false
     var forth: Bool = false
     
+    
+    @IBOutlet weak var btnAgree: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     
     @IBAction func btnAgreeAndSignIn(_ sender: UIButton) {
-//        if first == true {
-//            
-//        }
         let userid = tfID.text ?? ""
         let name = tfNickName.text ?? ""
         let password = tfPW.text ?? ""
@@ -59,7 +60,7 @@ class SignIn_ViewController: UIViewController {
                 let resultAlert = UIAlertController(title: "완료", message: "해당 이메일로 가입이 완료되었습니다", preferredStyle: .actionSheet)
                 let onAction = UIAlertAction(title: "완료", style: .default, handler: {
                     ACTION in
-                    self.navigationController?.popViewController(animated: true)
+                    self.performSegue(withIdentifier: "sgSignIn", sender: nil)
                 })
                 resultAlert.addAction(onAction)
                 present(resultAlert, animated: true)
@@ -104,6 +105,9 @@ class SignIn_ViewController: UIViewController {
             btnOver.tintColor = .red
             btnService.tintColor = .red
             btnPrivate.tintColor = .red
+            btnAgree.isEnabled = true
+        }else{
+            btnAgree.isEnabled = false
         }
         if second == true{
             btnOver.tintColor = .red
@@ -123,9 +127,11 @@ class SignIn_ViewController: UIViewController {
         if second == true && third == true && forth == true{
             first = true
             btnAll.tintColor = .red
+            btnAgree.isEnabled = true
         }else{
             first = false
             btnAll.tintColor = .lightGray
+            btnAgree.isEnabled = false
         }
     }
     

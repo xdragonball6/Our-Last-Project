@@ -16,6 +16,7 @@
 		1E79F2D32AE625A50016B226 /* SingIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E79F2D22AE625A50016B226 /* SingIn.swift */; };
 		1EB34E7B2AE6264500BBC7D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB34E7A2AE6264500BBC7D4 /* AppDelegate.swift */; };
 		1EB34E7D2AE6266600BBC7D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB34E7C2AE6266600BBC7D4 /* SceneDelegate.swift */; };
+		1EB34E7F2AE6388E00BBC7D4 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB34E7E2AE6388E00BBC7D4 /* CustomTabBarController.swift */; };
 		1ECD9DE82ADD34E5008DC85F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD9DE72ADD34E5008DC85F /* HomeViewController.swift */; };
 		1ECD9DEB2ADD34E5008DC85F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ECD9DE92ADD34E5008DC85F /* Main.storyboard */; };
 		1ECD9DED2ADD34E6008DC85F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ECD9DEC2ADD34E6008DC85F /* Assets.xcassets */; };
@@ -75,6 +76,7 @@
 		1E79F2D22AE625A50016B226 /* SingIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingIn.swift; sourceTree = "<group>"; };
 		1EB34E7A2AE6264500BBC7D4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../../../../Downloads/AppDelegate.swift; sourceTree = "<group>"; };
 		1EB34E7C2AE6266600BBC7D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../../../../../Downloads/SceneDelegate.swift; sourceTree = "<group>"; };
+		1EB34E7E2AE6388E00BBC7D4 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		1ECD9DE02ADD34E5008DC85F /* Last Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Last Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ECD9DE72ADD34E5008DC85F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1ECD9DEA2ADD34E5008DC85F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				1ECD9DF12ADD34E6008DC85F /* Info.plist */,
 				E04D21942AE23FA80049D6A3 /* Config.xcconfig */,
 				E04D21962AE242610049D6A3 /* GoogleService-Info.plist */,
+				1EB34E7E2AE6388E00BBC7D4 /* CustomTabBarController.swift */,
 			);
 			path = "Last Project";
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				E073F70C2AE5A4CD0064BB3F /* FirebaseMainPageModel.swift in Sources */,
 				1EFFECAA2AE1455C006EBD97 /* LogIn_ViewController.swift in Sources */,
 				1EFFECB12AE1503A006EBD97 /* MyPage_ViewController.swift in Sources */,
+				1EB34E7F2AE6388E00BBC7D4 /* CustomTabBarController.swift in Sources */,
 				1EB34E7D2AE6266600BBC7D4 /* SceneDelegate.swift in Sources */,
 				1EFFEDE82AE25A9A006EBD97 /* SignIn_ViewController.swift in Sources */,
 				1E79F2D32AE625A50016B226 /* SingIn.swift in Sources */,

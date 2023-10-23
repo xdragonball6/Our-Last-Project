@@ -14,7 +14,7 @@
             <objects>
                 <viewController id="jQs-Mh-BRZ" customClass="LogIn_ViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X9k-q1-M9N">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDg-iK-U44">
@@ -72,11 +72,11 @@
             <objects>
                 <viewController id="ZJG-DQ-oeM" customClass="SignIn_ViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sHI-NI-a8D">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aaA-OT-2rs">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="808"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2x6-v3-M9h">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="720"/>
@@ -144,7 +144,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.74197274319999995" green="0.74197274319999995" blue="0.74197274319999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.gobackward" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system"/>
                                                 <connections>
                                                     <action selector="btnAllChange:" destination="ZJG-DQ-oeM" eventType="touchUpInside" id="gjt-v8-scO"/>
                                                 </connections>
@@ -154,7 +154,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.74197274319999995" green="0.74197274319999995" blue="0.74197274319999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.gobackward" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system"/>
                                                 <connections>
                                                     <action selector="btnOverAge:" destination="ZJG-DQ-oeM" eventType="touchUpInside" id="OR0-JC-f8x"/>
                                                 </connections>
@@ -189,7 +189,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.74197274319999995" green="0.74197274319999995" blue="0.74197274319999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.gobackward" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system"/>
                                                 <connections>
                                                     <action selector="btnServiceAgree:" destination="ZJG-DQ-oeM" eventType="touchUpInside" id="UTe-Bt-fZI"/>
                                                 </connections>
@@ -207,17 +207,17 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.74197274319999995" green="0.74197274319999995" blue="0.74197274319999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.gobackward" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system"/>
                                                 <connections>
                                                     <action selector="btnPrivateAgree:" destination="ZJG-DQ-oeM" eventType="touchUpInside" id="imB-3E-hOb"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awm-87-zPN">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awm-87-zPN">
                                                 <rect key="frame" x="15" y="569" width="363" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="동의하고 가입하기">
-                                                    <color key="baseBackgroundColor" red="0.84587093911220124" green="0.84587093911220124" blue="0.84587093911220124" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="baseBackgroundColor" systemColor="tintColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="btnAgreeAndSignIn:" destination="ZJG-DQ-oeM" eventType="touchUpInside" id="82i-No-3ED"/>
@@ -268,6 +268,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="이메일 회원가입" id="1U2-d7-8Qe"/>
                     <connections>
+                        <outlet property="btnAgree" destination="Awm-87-zPN" id="Sxv-cA-ldD"/>
                         <outlet property="btnAll" destination="vPG-9L-c1O" id="0ad-o2-Ixr"/>
                         <outlet property="btnAll2" destination="lfa-iU-Igw" id="kZf-1l-E6D"/>
                         <outlet property="btnOver" destination="7du-aC-8UE" id="1JF-QR-mu9"/>
@@ -281,18 +282,19 @@
                         <outlet property="tfPW" destination="7Op-yO-UGe" id="l43-LG-bkx"/>
                         <outlet property="tfPW_Twice" destination="uqv-7O-Oco" id="N9c-YD-AFG"/>
                         <outlet property="tfPhone" destination="T3k-k8-DMP" id="DcX-pv-xjx"/>
+                        <segue destination="jQs-Mh-BRZ" kind="show" identifier="sgSignIn" id="aDz-ci-lgg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FTp-n0-gP5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2416.030534351145" y="311.97183098591552"/>
+            <point key="canvasLocation" x="2422" y="299"/>
         </scene>
         <!--이메일 로그인-->
         <scene sceneID="sGX-Hp-Fft">
             <objects>
                 <viewController id="4aZ-RG-qLR" customClass="LogIn_with_Email_ViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iIf-dK-Efy">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8q4-tx-s5P">
@@ -376,8 +378,11 @@
             <point key="canvasLocation" x="293.89312977099235" y="-49.295774647887328"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="aDz-ci-lgg"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <image name="checkmark.gobackward" catalog="system" width="119" height="128"/>
+        <image name="checkmark.circle" catalog="system" width="128" height="123"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -386,10 +391,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemCyanColor">
-            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
