@@ -37,7 +37,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eVa-Ig-uSd">
-                                <rect key="frame" x="9" y="362" width="375" height="218"/>
+                                <rect key="frame" x="9" y="362" width="375" height="227"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WuD-dp-58B">
@@ -56,6 +56,10 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="flW-Tz-uO4">
                                                     <rect key="frame" x="0.0" y="0.0" width="172" height="85.666666666666671"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="85.670000000000002" id="fPu-5n-YhI"/>
+                                                        <constraint firstAttribute="width" constant="172" id="up5-dh-u0B"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwB-5G-0jM">
                                                     <rect key="frame" x="0.0" y="85.666666666666671" width="172" height="20.333333333333329"/>
@@ -69,6 +73,8 @@
                                                 <constraint firstItem="pwB-5G-0jM" firstAttribute="top" secondItem="flW-Tz-uO4" secondAttribute="bottom" constant="1.4210854715202004e-14" id="LcE-99-Xz8"/>
                                                 <constraint firstAttribute="bottom" secondItem="pwB-5G-0jM" secondAttribute="bottom" constant="-1.4210854715202004e-14" id="MHz-CO-6CT"/>
                                                 <constraint firstAttribute="trailing" secondItem="flW-Tz-uO4" secondAttribute="trailing" id="Yo4-GR-wI3"/>
+                                                <constraint firstItem="flW-Tz-uO4" firstAttribute="leading" secondItem="x0t-PS-zOM" secondAttribute="leading" id="aj4-IY-RJk"/>
+                                                <constraint firstAttribute="trailing" secondItem="flW-Tz-uO4" secondAttribute="trailing" id="bTw-3y-g7G"/>
                                                 <constraint firstItem="flW-Tz-uO4" firstAttribute="top" secondItem="x0t-PS-zOM" secondAttribute="top" id="c7h-Xw-FCM"/>
                                                 <constraint firstItem="pwB-5G-0jM" firstAttribute="leading" secondItem="x0t-PS-zOM" secondAttribute="leading" id="jUe-zQ-olb"/>
                                                 <constraint firstAttribute="trailing" secondItem="pwB-5G-0jM" secondAttribute="trailing" id="ubq-sa-sKF"/>
