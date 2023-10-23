@@ -13,6 +13,8 @@ class LogIn_ViewController: UIViewController {
     var subscriptions = Set<AnyCancellable>()
     
     
+    @IBOutlet weak var kakaoLoginStatuslabel: UILabel!
+    
     @IBOutlet weak var BarItem: UITabBarItem!
     
     
@@ -31,6 +33,13 @@ class LogIn_ViewController: UIViewController {
     }
     	
     
+    @IBAction func btn_KAKAO_Logout(_ sender: UIButton) {
+        kakaoAuthVM.kakaoLogout()
+    }
+    
+    
+    
+    
     //MARK: - 버튼액션
     @objc func loginBtnClicked() {
         print("loginBtnClicked() called")
@@ -43,21 +52,24 @@ class LogIn_ViewController: UIViewController {
     }
 
     
+    
+    
+    
 }// LogIn_ViewController
 
 // MARK: - 뷰모델 바인딩
 extension LogIn_ViewController {
     fileprivate func setBindings(){
-        self.kakaoAuthVM.$isLoggedIn.sink { [weak self] isLoggedIn in
-            guard let self = self else { return }
-            
-        }
-        .store(in: &subscriptions)
-//        self.kakaoAuthVM.loginStatusInfo
-//            .receive(on: DispatchQueue.main)
-//            .assign(to: \.text. on: self.kakaoLoginStatusLabel)
-//            .store(in: &subscriptions)
-//        
+//        self.kakaoAuthVM.$isLoggedIn.sink { [weak self] isLoggedIn in
+//            guard let self = self else { return }
+//            self.kakaoLoginStatuslabel.text = isLoggedIn ? "로그인 상태" : "로그아웃 상태"
+//        }
+//        .store(in: &subscriptions)
+        self.kakaoAuthVM.loginStatusInfo
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.text, on: self.kakaoLoginStatuslabel)
+            .store(in: &subscriptions)
+        
     }
 }
 

@@ -45,33 +45,45 @@ class SignIn_ViewController: UIViewController {
         let name = tfNickName.text ?? ""
         let password = tfPW.text ?? ""
         let phone = tfPhone.text ?? ""
-        if !userid.trimmingCharacters(in: .whitespaces).isEmpty{
-            let signInModel = FirebaseSignInModel()
-            let result = signInModel.insertItems(userid: userid, name: name, password: password, phone: phone)
-            if result{
-                Auth.auth().createUser(withEmail: userid, password: password) {(authResut, error) in
-                            guard let user = authResut?.user else {
-                                return
+        // 이메일 주소가 비어있지 않고 유효한 경우에만 처리 진행
+            if !userid.trimmingCharacters(in: .whitespaces).isEmpty, isValidEmail(email: userid) {
+                let signInModel = FirebaseSignInModel()
+                
+                // Firebase에서 이미 존재하는 userid를 확인하고, 존재하면 실패 메시지 표시
+                signInModel.insertItems(userid: userid, name: name, password: password, phone: phone) { success in
+                    if success {
+                        Auth.auth().createUser(withEmail: userid, password: password) { (authResult, error) in
+                            if let error = error {
+                                print("Error creating user: \(error.localizedDescription)")
+                                self.showErrorMessage(message: "이미 존재하는 이메일 주소 또는 회원가입 중에 오류가 발생했습니다")
+                            } else if let user = authResult?.user {
+                                print(user)
+                                self.dismiss(animated: true, completion: nil)
+                                self.performSegue(withIdentifier: "sgSignIn", sender: nil)
                             }
-
-                            print(user)
-                            self.dismiss(animated: true, completion: nil)
                         }
-                let resultAlert = UIAlertController(title: "완료", message: "해당 이메일로 가입이 완료되었습니다", preferredStyle: .actionSheet)
-                let onAction = UIAlertAction(title: "완료", style: .default, handler: {
-                    ACTION in
-                    self.performSegue(withIdentifier: "sgSignIn", sender: nil)
-                })
-                resultAlert.addAction(onAction)
-                present(resultAlert, animated: true)
-            }else{
-                    let resultAlert = UIAlertController(title: "실패", message: "에러가 발생 되었습니다", preferredStyle: .alert)
-                    let onAction = UIAlertAction(title: "OK", style: .default)
-                    resultAlert.addAction(onAction)
-                    present(resultAlert, animated: true)
+                    } else {
+                        self.showErrorMessage(message: "이미 존재하는 이메일 주소 또는 회원가입 중에 오류가 발생했습니다")
+                    }
+                }
+            } else {
+                showErrorMessage(message: "올바른 이메일 주소를 입력해주세요")
             }
         }
-    }
+
+        func showErrorMessage(message: String) {
+            let resultAlert = UIAlertController(title: "실패", message: message, preferredStyle: .alert)
+            let onAction = UIAlertAction(title: "OK", style: .default)
+            resultAlert.addAction(onAction)
+            present(resultAlert, animated: true)
+        }
+
+        // Email 주소 형태를 확인하는 함수
+        func isValidEmail(email: String) -> Bool {
+            let emailRegex = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$"
+            let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+            return emailPredicate.evaluate(with: email)
+        }
     
     
     // 버튼 액션 정리

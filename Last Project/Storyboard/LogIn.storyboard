@@ -14,7 +14,7 @@
             <objects>
                 <viewController id="jQs-Mh-BRZ" customClass="LogIn_ViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X9k-q1-M9N">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDg-iK-U44">
@@ -51,6 +51,22 @@
                                     <segue destination="ZJG-DQ-oeM" kind="show" id="yag-18-0hc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="로그인 여부 라벨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snE-Wb-nkJ">
+                                <rect key="frame" x="140" y="277" width="112" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sC0-S7-etJ">
+                                <rect key="frame" x="159" y="360" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="btn_KAKAO_Logout:" destination="jQs-Mh-BRZ" eventType="touchUpInside" id="B7u-jI-UIl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uzi-Q2-l6n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -61,6 +77,7 @@
                     <connections>
                         <outlet property="BarItem" destination="sI3-n3-SUR" id="xWf-0t-qPi"/>
                         <outlet property="btn_KAKAO_LogIN" destination="kDg-iK-U44" id="gAx-YX-bph"/>
+                        <outlet property="kakaoLoginStatuslabel" destination="snE-Wb-nkJ" id="fvy-sL-2n4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anp-ZD-qqt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -72,11 +89,11 @@
             <objects>
                 <viewController id="ZJG-DQ-oeM" customClass="SignIn_ViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sHI-NI-a8D">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aaA-OT-2rs">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="808"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2x6-v3-M9h">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="720"/>
@@ -105,13 +122,13 @@
                                                 <rect key="frame" x="22" y="108" width="349" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호를 한번 더 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uqv-7O-Oco">
                                                 <rect key="frame" x="22" y="150" width="349" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPb-yH-PfU">
                                                 <rect key="frame" x="22" y="192" width="45" height="21"/>
@@ -137,7 +154,7 @@
                                                 <rect key="frame" x="22" y="292" width="349" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPG-9L-c1O">
                                                 <rect key="frame" x="8" y="345" width="44" height="35"/>
@@ -282,19 +299,19 @@
                         <outlet property="tfPW" destination="7Op-yO-UGe" id="l43-LG-bkx"/>
                         <outlet property="tfPW_Twice" destination="uqv-7O-Oco" id="N9c-YD-AFG"/>
                         <outlet property="tfPhone" destination="T3k-k8-DMP" id="DcX-pv-xjx"/>
-                        <segue destination="jQs-Mh-BRZ" kind="show" identifier="sgSignIn" id="aDz-ci-lgg"/>
+                        <segue destination="4aZ-RG-qLR" kind="show" identifier="sgSignIn" id="maj-se-GAI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FTp-n0-gP5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2422" y="299"/>
+            <point key="canvasLocation" x="2581" y="318"/>
         </scene>
         <!--이메일 로그인-->
         <scene sceneID="sGX-Hp-Fft">
             <objects>
                 <viewController id="4aZ-RG-qLR" customClass="LogIn_with_Email_ViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iIf-dK-Efy">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8q4-tx-s5P">
@@ -379,7 +396,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aDz-ci-lgg"/>
+        <segue reference="cQp-WD-Lt2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="checkmark.circle" catalog="system" width="128" height="123"/>
