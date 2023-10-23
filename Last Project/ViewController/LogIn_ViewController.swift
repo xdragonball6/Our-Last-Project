@@ -69,7 +69,6 @@ extension LogIn_ViewController {
             .receive(on: DispatchQueue.main)
             .assign(to: \.text, on: self.kakaoLoginStatuslabel)
             .store(in: &subscriptions)
-        
     }
 }
 

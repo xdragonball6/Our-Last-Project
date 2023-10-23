@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E49BD652AE655A100E16AF1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1E49BD642AE655A100E16AF1 /* Alamofire */; };
+		1E6020152AE65E890082F67C /* KakaoUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6020142AE65E890082F67C /* KakaoUserResponse.swift */; };
 		1E75DD0C2ADD3A2C0053B4EF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD0B2ADD3A2C0053B4EF /* Home.storyboard */; };
 		1E75DD0E2ADD3F000053B4EF /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD0D2ADD3F000053B4EF /* User.storyboard */; };
 		1E75DD102ADD3F140053B4EF /* Products.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD0F2ADD3F140053B4EF /* Products.storyboard */; };
@@ -69,6 +70,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E6020142AE65E890082F67C /* KakaoUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoUserResponse.swift; sourceTree = "<group>"; };
 		1E75DD0B2ADD3A2C0053B4EF /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		1E75DD0D2ADD3F000053B4EF /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		1E75DD0F2ADD3F140053B4EF /* Products.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Products.storyboard; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 		1E75DD192ADD40160053B4EF /* JSONModel */ = {
 			isa = PBXGroup;
 			children = (
+				1E6020142AE65E890082F67C /* KakaoUserResponse.swift */,
 			);
 			path = JSONModel;
 			sourceTree = "<group>";
@@ -338,10 +341,10 @@
 			mainGroup = 1ECD9DD72ADD34E5008DC85F;
 			packageReferences = (
 				1EFFEC712AE13E58006EBD97 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
-				1EFFECAB2AE145B9006EBD97 /* XCRemoteSwiftPackageReference "SnapKit.git" */,
-				1EFFECB22AE21125006EBD97 /* XCRemoteSwiftPackageReference "payment-sdk-ios.git" */,
+				1EFFECAB2AE145B9006EBD97 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				1EFFECB22AE21125006EBD97 /* XCRemoteSwiftPackageReference "payment-sdk-ios" */,
 				E04D21982AE243940049D6A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				1E49BD632AE655A100E16AF1 /* XCRemoteSwiftPackageReference "Alamofire.git" */,
+				1E49BD632AE655A100E16AF1 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 1ECD9DE12ADD34E5008DC85F /* Products */;
 			projectDirPath = "";
@@ -379,6 +382,7 @@
 			files = (
 				E073F7102AE5A6D80064BB3F /* FirebaseMainPageImage.swift in Sources */,
 				E073F70E2AE5A6710064BB3F /* FirebaseMainPageMessage.swift in Sources */,
+				1E6020152AE65E890082F67C /* KakaoUserResponse.swift in Sources */,
 				1EFFECA82AE14441006EBD97 /* KakaoAuthVM.swift in Sources */,
 				1ECD9DE82ADD34E5008DC85F /* HomeViewController.swift in Sources */,
 				1EB34E7B2AE6264500BBC7D4 /* AppDelegate.swift in Sources */,
@@ -617,7 +621,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1E49BD632AE655A100E16AF1 /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
+		1E49BD632AE655A100E16AF1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -633,7 +637,7 @@
 				minimumVersion = 2.18.0;
 			};
 		};
-		1EFFECAB2AE145B9006EBD97 /* XCRemoteSwiftPackageReference "SnapKit.git" */ = {
+		1EFFECAB2AE145B9006EBD97 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -641,7 +645,7 @@
 				minimumVersion = 5.6.0;
 			};
 		};
-		1EFFECB22AE21125006EBD97 /* XCRemoteSwiftPackageReference "payment-sdk-ios.git" */ = {
+		1EFFECB22AE21125006EBD97 /* XCRemoteSwiftPackageReference "payment-sdk-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tosspayments/payment-sdk-ios.git";
 			requirement = {
@@ -662,7 +666,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		1E49BD642AE655A100E16AF1 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1E49BD632AE655A100E16AF1 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
+			package = 1E49BD632AE655A100E16AF1 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 		1EFFEC722AE13E58006EBD97 /* KakaoSDK */ = {
@@ -797,17 +801,17 @@
 		};
 		1EFFECAC2AE145B9006EBD97 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1EFFECAB2AE145B9006EBD97 /* XCRemoteSwiftPackageReference "SnapKit.git" */;
+			package = 1EFFECAB2AE145B9006EBD97 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 		1EFFECAE2AE145B9006EBD97 /* SnapKit-Dynamic */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1EFFECAB2AE145B9006EBD97 /* XCRemoteSwiftPackageReference "SnapKit.git" */;
+			package = 1EFFECAB2AE145B9006EBD97 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
 		};
 		1EFFECB32AE21125006EBD97 /* TossPayments */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1EFFECB22AE21125006EBD97 /* XCRemoteSwiftPackageReference "payment-sdk-ios.git" */;
+			package = 1EFFECB22AE21125006EBD97 /* XCRemoteSwiftPackageReference "payment-sdk-ios" */;
 			productName = TossPayments;
 		};
 		E04D21992AE243940049D6A3 /* FirebaseAnalytics */ = {
