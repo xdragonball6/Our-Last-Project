@@ -26,25 +26,31 @@ class LogIn_with_Email_ViewController: UIViewController {
     
     @IBAction func btnLogIN(_ sender: UIButton) {
         let email: String = tfID.text!.description
-        let pw: String = tfPassword.text!.description
-        Auth.auth().signIn(withEmail: email, password: pw) {authResult, error in
-            if authResult != nil {
-                print("log in")
-                let resultAlert = UIAlertController(title: "결과", message: "로그인 되었습니다.", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "네", style: .default,handler: {ACTION in
-                    self.performSegue(withIdentifier: "sgLogin", sender: nil)
-                })
-                resultAlert.addAction(okAction)
-                self.present(resultAlert, animated: true)
-            }else{
-                print("log in failed")
-                let resultAlert = UIAlertController(title: "결과", message: "해당 아이디는 존재하지 않습니다. 다시 입력해주세요.", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "네", style: .default)
-                resultAlert.addAction(okAction)
-                self.present(resultAlert, animated: true)
+            let pw: String = tfPassword.text!.description
+            Auth.auth().signIn(withEmail: email, password: pw) { authResult, error in
+                if error != nil {
+                    // 로그인 실패
+                    print("log in failed")
+                    let resultAlert = UIAlertController(title: "결과", message: "해당 아이디는 존재하지 않습니다. 다시 입력해주세요.", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "네", style: .default)
+                    resultAlert.addAction(okAction)
+                    self.present(resultAlert, animated: true)
+                } else {
+                    // 로그인 성공
+                    print("log in")
+                    let resultAlert = UIAlertController(title: "결과", message: "로그인 되었습니다.", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "네", style: .default, handler: { ACTION in
+                        self.performSegue(withIdentifier: "sgLogin", sender: nil)
+                        let tabBar = self.tabBarController!.tabBar
+                        let mypage = tabBar.items![3]
+                        mypage.title = "MyPage"
+                    })
+                    resultAlert.addAction(okAction)
+                    self.present(resultAlert, animated: true)
+                    SignIn.logIn_Out = true
+                }
             }
         }
-    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
                 self.view.endEditing(true)

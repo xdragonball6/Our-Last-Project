@@ -9,8 +9,12 @@ import UIKit
 import SnapKit
 import Combine
 class LogIn_ViewController: UIViewController {
-
+    
     var subscriptions = Set<AnyCancellable>()
+    
+    
+    @IBOutlet weak var BarItem: UITabBarItem!
+    
     
     @IBOutlet weak var btn_KAKAO_LogIN: UIButton!
     

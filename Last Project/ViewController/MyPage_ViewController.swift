@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyPage_ViewController: UIViewController {
+class MyPageViewController: UIViewController {
 
     @IBOutlet weak var imgView: UIImageView!
     override func viewDidLoad() {
@@ -37,7 +37,7 @@ class MyPage_ViewController: UIViewController {
     */
 
 }// MyPage_ViewController
-extension MyPage_ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension MyPageViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
 func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
     if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage{
