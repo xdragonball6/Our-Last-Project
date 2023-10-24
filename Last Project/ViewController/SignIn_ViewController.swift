@@ -37,6 +37,12 @@ class SignIn_ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tfPW.textContentType = .none
+        tfPW_Twice.textContentType = .none
+        tfPW.isSecureTextEntry = true
+        tfPW.textContentType = .oneTimeCode
+        tfPW_Twice.isSecureTextEntry = true
+        tfPW_Twice.textContentType = .oneTimeCode
     }
 
     
@@ -57,9 +63,14 @@ class SignIn_ViewController: UIViewController {
                                 print("Error creating user: \(error.localizedDescription)")
                                 self.showErrorMessage(message: "이미 존재하는 이메일 주소 또는 회원가입 중에 오류가 발생했습니다")
                             } else if let user = authResult?.user {
-                                print(user)
-                                self.dismiss(animated: true, completion: nil)
-                                self.performSegue(withIdentifier: "sgSignIn", sender: nil)
+                                let resultAlert = UIAlertController(title: "회원가입 성공", message: "\(name)님 회원가입 해주셔서 감사합니다.", preferredStyle: .alert)
+                                self.present(resultAlert, animated: true, completion: nil)
+                                // Add a completion handler to perform actions after the alert is dismissed
+                                resultAlert.addAction(UIAlertAction(title: "OK", style: .default) { _ in
+                                        self.dismiss(animated: true, completion: {
+                                            self.performSegue(withIdentifier: "sgSignIn", sender: nil)
+                                        })
+                                    })
                             }
                         }
                     } else {
