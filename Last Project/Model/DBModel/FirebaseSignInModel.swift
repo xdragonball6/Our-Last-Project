@@ -2,13 +2,12 @@
 //  SignInModel.swift
 //  HomeWork_JSON
 //
-//  Created by 박지환 on 2023/08/27.
+//  Created by 박지환 on 2023/10/25.
 //
 import Foundation
 import Firebase
 class FirebaseSignInModel{
     let db = Firestore.firestore()
-        
     func insertItems(userid: String, name: String, password: String, phone: String, completion: @escaping (Bool) -> Void) {
             // Firebase에서 해당 userid로 사용자가 이미 존재하는지 확인
             Auth.auth().fetchSignInMethods(forEmail: userid) { [self] (methods, error) in

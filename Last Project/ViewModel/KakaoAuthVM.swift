@@ -81,6 +81,7 @@ class KakaoAuthVM: ObservableObject {
                 // 사용자 정보를 처리하는 코드 추가
                 // 이 예시에서는 콘솔에 출력합니다.
                 print("User Name: \(name), User profileImageURL: \(profileImageURL), User thumbnailImageURL: \(thumbnailImageURL)")
+                SignIn.username = name
             }
         }
     }// login

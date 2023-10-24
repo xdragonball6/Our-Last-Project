@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E6020162AE672F90082F67C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1E49BD642AE655A100E16AF1 /* Alamofire */; };
+		1E6020192AE673E50082F67C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6020172AE673E50082F67C /* SceneDelegate.swift */; };
+		1E60201A2AE673E50082F67C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6020182AE673E50082F67C /* AppDelegate.swift */; };
+		1E60201C2AE74F6F0082F67C /* KakaoSignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60201B2AE74F6F0082F67C /* KakaoSignInModel.swift */; };
+		1E60201E2AE767510082F67C /* FindPassword_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60201D2AE767510082F67C /* FindPassword_ViewController.swift */; };
+		1E6020202AE76B000082F67C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60201F2AE76B000082F67C /* Service.swift */; };
+		1E6020222AE78D800082F67C /* FindID_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6020212AE78D800082F67C /* FindID_ViewController.swift */; };
+		1E6020232AE78FD00082F67C /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD132ADD3F290053B4EF /* LogIn.storyboard */; };
 		1E75DD0C2ADD3A2C0053B4EF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD0B2ADD3A2C0053B4EF /* Home.storyboard */; };
 		1E75DD0E2ADD3F000053B4EF /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD0D2ADD3F000053B4EF /* User.storyboard */; };
 		1E75DD102ADD3F140053B4EF /* Products.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD0F2ADD3F140053B4EF /* Products.storyboard */; };
 		1E75DD122ADD3F1E0053B4EF /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD112ADD3F1E0053B4EF /* MyPage.storyboard */; };
-		1E75DD142ADD3F290053B4EF /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD132ADD3F290053B4EF /* LogIn.storyboard */; };
 		1E79F2D32AE625A50016B226 /* SingIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E79F2D22AE625A50016B226 /* SingIn.swift */; };
 		1ECD9DE82ADD34E5008DC85F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD9DE72ADD34E5008DC85F /* HomeViewController.swift */; };
 		1ECD9DEB2ADD34E5008DC85F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ECD9DE92ADD34E5008DC85F /* Main.storyboard */; };
@@ -53,7 +60,6 @@
 		1EFFEDE82AE25A9A006EBD97 /* SignIn_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFFEDE72AE25A9A006EBD97 /* SignIn_ViewController.swift */; };
 		1EFFEDEA2AE25BC8006EBD97 /* FirebaseSignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFFEDE92AE25BC8006EBD97 /* FirebaseSignInModel.swift */; };
 		B875A2097E15AFF1912611FA /* Pods_Last_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609BA085BC5C98558F25ADEA /* Pods_Last_Project.framework */; };
-		E02EB2062AE633FC0036CB4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02EB2052AE633FC0036CB4B /* SceneDelegate.swift */; };
 		E04D21972AE242610049D6A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E04D21962AE242610049D6A3 /* GoogleService-Info.plist */; };
 		E04D219A2AE243940049D6A3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E04D21992AE243940049D6A3 /* FirebaseAnalytics */; };
 		E04D219C2AE243940049D6A3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E04D219B2AE243940049D6A3 /* FirebaseAuth */; };
@@ -63,7 +69,6 @@
 		E073F70C2AE5A4CD0064BB3F /* FirebaseMainPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073F70B2AE5A4CD0064BB3F /* FirebaseMainPageModel.swift */; };
 		E073F70E2AE5A6710064BB3F /* FirebaseMainPageMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073F70D2AE5A6710064BB3F /* FirebaseMainPageMessage.swift */; };
 		E073F7102AE5A6D80064BB3F /* FirebaseMainPageImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073F70F2AE5A6D80064BB3F /* FirebaseMainPageImage.swift */; };
-		E0BE10182AE63447003192D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BE10172AE63447003192D9 /* AppDelegate.swift */; };
 		E0BE101A2AE63CA7003192D9 /* MainPageBtnCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BE10192AE63CA7003192D9 /* MainPageBtnCollectionViewCell.swift */; };
 		E0BE101C2AE63FC9003192D9 /* FirebaseMainPageBtnModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BE101B2AE63FC9003192D9 /* FirebaseMainPageBtnModel.swift */; };
 		E0BE101E2AE64164003192D9 /* FirebaseMainPageBtnMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BE101D2AE64164003192D9 /* FirebaseMainPageBtnMessage.swift */; };
@@ -72,6 +77,12 @@
 
 /* Begin PBXFileReference section */
 		1E6020142AE65E890082F67C /* KakaoUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoUserResponse.swift; sourceTree = "<group>"; };
+		1E6020172AE673E50082F67C /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../../../../../Downloads/SceneDelegate.swift; sourceTree = "<group>"; };
+		1E6020182AE673E50082F67C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../../../../Downloads/AppDelegate.swift; sourceTree = "<group>"; };
+		1E60201B2AE74F6F0082F67C /* KakaoSignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoSignInModel.swift; sourceTree = "<group>"; };
+		1E60201D2AE767510082F67C /* FindPassword_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPassword_ViewController.swift; sourceTree = "<group>"; };
+		1E60201F2AE76B000082F67C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		1E6020212AE78D800082F67C /* FindID_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindID_ViewController.swift; sourceTree = "<group>"; };
 		1E75DD0B2ADD3A2C0053B4EF /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		1E75DD0D2ADD3F000053B4EF /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		1E75DD0F2ADD3F140053B4EF /* Products.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Products.storyboard; sourceTree = "<group>"; };
@@ -94,13 +105,10 @@
 		609BA085BC5C98558F25ADEA /* Pods_Last_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Last_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CD57A96B5913FF7F2568A8 /* Pods-Last Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Last Project.debug.xcconfig"; path = "Target Support Files/Pods-Last Project/Pods-Last Project.debug.xcconfig"; sourceTree = "<group>"; };
 		E02237FF2AE6335000665505 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
-		E02EB2052AE633FC0036CB4B /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../../../Downloads/SceneDelegate.swift; sourceTree = "<group>"; };
-		E04D21942AE23FA80049D6A3 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		E04D21962AE242610049D6A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E073F70B2AE5A4CD0064BB3F /* FirebaseMainPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMainPageModel.swift; sourceTree = "<group>"; };
 		E073F70D2AE5A6710064BB3F /* FirebaseMainPageMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMainPageMessage.swift; sourceTree = "<group>"; };
 		E073F70F2AE5A6D80064BB3F /* FirebaseMainPageImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMainPageImage.swift; sourceTree = "<group>"; };
-		E0BE10172AE63447003192D9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../../Downloads/AppDelegate.swift; sourceTree = "<group>"; };
 		E0BE10192AE63CA7003192D9 /* MainPageBtnCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageBtnCollectionViewCell.swift; sourceTree = "<group>"; };
 		E0BE101B2AE63FC9003192D9 /* FirebaseMainPageBtnModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMainPageBtnModel.swift; sourceTree = "<group>"; };
 		E0BE101D2AE64164003192D9 /* FirebaseMainPageBtnMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMainPageBtnMessage.swift; sourceTree = "<group>"; };
@@ -112,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E6020162AE672F90082F67C /* Alamofire in Frameworks */,
 				1EFFEC7D2AE13E58006EBD97 /* KakaoSDKFriend in Frameworks */,
 				1EFFEC732AE13E58006EBD97 /* KakaoSDK in Frameworks */,
 				1EFFEC972AE13E73006EBD97 /* KakaoSDKFriend in Frameworks */,
@@ -121,7 +130,6 @@
 				1EFFEC852AE13E58006EBD97 /* KakaoSDKStory in Frameworks */,
 				1EFFEC7F2AE13E58006EBD97 /* KakaoSDKFriendCore in Frameworks */,
 				1EFFEC8F2AE13E73006EBD97 /* KakaoSDKAuth in Frameworks */,
-				1E49BD652AE655A100E16AF1 /* Alamofire in Frameworks */,
 				1EFFEC932AE13E73006EBD97 /* KakaoSDKCertCore in Frameworks */,
 				1EFFECA32AE13E73006EBD97 /* KakaoSDKTemplate in Frameworks */,
 				E04D219A2AE243940049D6A3 /* FirebaseAnalytics in Frameworks */,
@@ -183,6 +191,8 @@
 				1EFFED982AE22DBE006EBD97 /* LogIn_with_Email_ViewController.swift */,
 				1EFFEDE72AE25A9A006EBD97 /* SignIn_ViewController.swift */,
 				E0BE10192AE63CA7003192D9 /* MainPageBtnCollectionViewCell.swift */,
+				1E60201D2AE767510082F67C /* FindPassword_ViewController.swift */,
+				1E6020212AE78D800082F67C /* FindID_ViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -190,8 +200,8 @@
 		1E75DD162ADD3FF60053B4EF /* Serviece */ = {
 			isa = PBXGroup;
 			children = (
-				E0BE10172AE63447003192D9 /* AppDelegate.swift */,
-				E02EB2052AE633FC0036CB4B /* SceneDelegate.swift */,
+				1E6020182AE673E50082F67C /* AppDelegate.swift */,
+				1E6020172AE673E50082F67C /* SceneDelegate.swift */,
 			);
 			path = Serviece;
 			sourceTree = "<group>";
@@ -232,6 +242,7 @@
 				E0BE101B2AE63FC9003192D9 /* FirebaseMainPageBtnModel.swift */,
 				E0BE101D2AE64164003192D9 /* FirebaseMainPageBtnMessage.swift */,
 				1E79F2D22AE625A50016B226 /* SingIn.swift */,
+				1E60201B2AE74F6F0082F67C /* KakaoSignInModel.swift */,
 			);
 			path = DBModel;
 			sourceTree = "<group>";
@@ -263,6 +274,7 @@
 				1E75DD152ADD3FEB0053B4EF /* ViewController */,
 				1E75DD0A2ADD39CC0053B4EF /* Storyboard */,
 				1ECD9DE72ADD34E5008DC85F /* HomeViewController.swift */,
+				1E60201F2AE76B000082F67C /* Service.swift */,
 				1ECD9DEC2ADD34E6008DC85F /* Assets.xcassets */,
 				1ECD9DEE2ADD34E6008DC85F /* LaunchScreen.storyboard */,
 				1ECD9DF12ADD34E6008DC85F /* Info.plist */,
@@ -384,15 +396,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E75DD142ADD3F290053B4EF /* LogIn.storyboard in Resources */,
 				1E75DD102ADD3F140053B4EF /* Products.storyboard in Resources */,
 				1ECD9DF02ADD34E6008DC85F /* LaunchScreen.storyboard in Resources */,
 				1E75DD0E2ADD3F000053B4EF /* User.storyboard in Resources */,
 				1ECD9DED2ADD34E6008DC85F /* Assets.xcassets in Resources */,
 				1E75DD122ADD3F1E0053B4EF /* MyPage.storyboard in Resources */,
-				1EB34E812AE63E2F00BBC7D4 /* Config.xcconfig in Resources */,
 				E04D21972AE242610049D6A3 /* GoogleService-Info.plist in Resources */,
 				1ECD9DEB2ADD34E5008DC85F /* Main.storyboard in Resources */,
+				1E6020232AE78FD00082F67C /* LogIn.storyboard in Resources */,
 				1E75DD0C2ADD3A2C0053B4EF /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,22 +442,25 @@
 			files = (
 				E073F7102AE5A6D80064BB3F /* FirebaseMainPageImage.swift in Sources */,
 				E073F70E2AE5A6710064BB3F /* FirebaseMainPageMessage.swift in Sources */,
-				1E6020152AE65E890082F67C /* KakaoUserResponse.swift in Sources */,
 				1EFFECA82AE14441006EBD97 /* KakaoAuthVM.swift in Sources */,
 				1ECD9DE82ADD34E5008DC85F /* HomeViewController.swift in Sources */,
 				E073F70C2AE5A4CD0064BB3F /* FirebaseMainPageModel.swift in Sources */,
 				1EFFECAA2AE1455C006EBD97 /* LogIn_ViewController.swift in Sources */,
 				E0BE10202AE64185003192D9 /* FirebaseMainPageBtn.swift in Sources */,
+				1E60201C2AE74F6F0082F67C /* KakaoSignInModel.swift in Sources */,
+				1E6020192AE673E50082F67C /* SceneDelegate.swift in Sources */,
 				1EFFECB12AE1503A006EBD97 /* MyPage_ViewController.swift in Sources */,
 				E0BE101C2AE63FC9003192D9 /* FirebaseMainPageBtnModel.swift in Sources */,
+				1E6020222AE78D800082F67C /* FindID_ViewController.swift in Sources */,
 				1EFFEDE82AE25A9A006EBD97 /* SignIn_ViewController.swift in Sources */,
-				E0BE10182AE63447003192D9 /* AppDelegate.swift in Sources */,
 				1E79F2D32AE625A50016B226 /* SingIn.swift in Sources */,
 				1EFFEDEA2AE25BC8006EBD97 /* FirebaseSignInModel.swift in Sources */,
+				1E60201E2AE767510082F67C /* FindPassword_ViewController.swift in Sources */,
 				E0BE101A2AE63CA7003192D9 /* MainPageBtnCollectionViewCell.swift in Sources */,
 				1EFFED992AE22DBE006EBD97 /* LogIn_with_Email_ViewController.swift in Sources */,
+				1E6020202AE76B000082F67C /* Service.swift in Sources */,
+				1E60201A2AE673E50082F67C /* AppDelegate.swift in Sources */,
 				E0BE101E2AE64164003192D9 /* FirebaseMainPageBtnMessage.swift in Sources */,
-				E02EB2062AE633FC0036CB4B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +488,7 @@
 /* Begin XCBuildConfiguration section */
 		1ECD9DF22ADD34E6008DC85F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E02237FF2AE6335000665505 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -537,6 +552,7 @@
 		};
 		1ECD9DF32ADD34E6008DC85F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E02237FF2AE6335000665505 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
