@@ -36,6 +36,8 @@ class KakaoAuthVM: ObservableObject {
                 }
                 else {
                     print("loginWithKakaoTalk() success.")
+                    SignIn.logIn_Out = true
+                    
                     //do something
                     _ = oauthToken
                     continuation.resume(returning: true)
@@ -54,7 +56,7 @@ class KakaoAuthVM: ObservableObject {
                     }
                     else {
                         print("loginWithKakaoAccount() success.")
-
+                        SignIn.logIn_Out = true
                         //do something
                         _ = oauthToken
                         continuation.resume(returning: true)
@@ -64,16 +66,17 @@ class KakaoAuthVM: ObservableObject {
     }
     
     @MainActor
-    func KakaoLogin(){
-        print("KakaoAuthVM - handleKakaoLogin() called")
-        Task{
+    func KakaoLogin(completion: @escaping (Bool) -> Void) {
+        Task {
             // 카카오톡 실행 가능 여부 확인
-            if (UserApi.isKakaoTalkLoginAvailable()) {
+            if UserApi.isKakaoTalkLoginAvailable() {
                 // 카카오톡 앱으로 로그인 인증
-                isLoggedIn = await kakaoLoginwithApp()
-            }else{ // 카톡이 설치가 안되어 있으면
+                let success = await kakaoLoginwithApp()
+                completion(success)
+            } else { // 카톡이 설치가 안되어 있으면
                 // 카카오 계정으로 로그인
-                isLoggedIn = await kakaoLoginWithAccount()
+                let success = await kakaoLoginWithAccount()
+                completion(success)
             }
             // 사용자 정보 가져오기
             let (name, profileImageURL, thumbnailImageURL) = await fetchKakaoUserInfo()
@@ -91,6 +94,7 @@ class KakaoAuthVM: ObservableObject {
         Task {
             if await handlekakaoLogout() {
                 self.isLoggedIn = false
+                SignIn.logIn_Out = false
             }
         }
     }

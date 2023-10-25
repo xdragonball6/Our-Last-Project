@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E038F622AE7C29B00A54631 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E038F612AE7C29B00A54631 /* CustomTabBarController.swift */; };
+		1E3DAAEB2AE8BBB6003AB6EC /* Products_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DAAEA2AE8BBB6003AB6EC /* Products_ViewController.swift */; };
 		1E6020162AE672F90082F67C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1E49BD642AE655A100E16AF1 /* Alamofire */; };
 		1E6020192AE673E50082F67C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6020172AE673E50082F67C /* SceneDelegate.swift */; };
 		1E60201A2AE673E50082F67C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6020182AE673E50082F67C /* AppDelegate.swift */; };
@@ -76,6 +78,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E038F612AE7C29B00A54631 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		1E3DAAEA2AE8BBB6003AB6EC /* Products_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products_ViewController.swift; sourceTree = "<group>"; };
 		1E6020142AE65E890082F67C /* KakaoUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoUserResponse.swift; sourceTree = "<group>"; };
 		1E6020172AE673E50082F67C /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../../../../../Downloads/SceneDelegate.swift; sourceTree = "<group>"; };
 		1E6020182AE673E50082F67C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../../../../Downloads/AppDelegate.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 				E0BE10192AE63CA7003192D9 /* MainPageBtnCollectionViewCell.swift */,
 				1E60201D2AE767510082F67C /* FindPassword_ViewController.swift */,
 				1E6020212AE78D800082F67C /* FindID_ViewController.swift */,
+				1E3DAAEA2AE8BBB6003AB6EC /* Products_ViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 				1E75DD0A2ADD39CC0053B4EF /* Storyboard */,
 				1ECD9DE72ADD34E5008DC85F /* HomeViewController.swift */,
 				1E60201F2AE76B000082F67C /* Service.swift */,
+				1E038F612AE7C29B00A54631 /* CustomTabBarController.swift */,
 				1ECD9DEC2ADD34E6008DC85F /* Assets.xcassets */,
 				1ECD9DEE2ADD34E6008DC85F /* LaunchScreen.storyboard */,
 				1ECD9DF12ADD34E6008DC85F /* Info.plist */,
@@ -456,10 +462,12 @@
 				1E79F2D32AE625A50016B226 /* SingIn.swift in Sources */,
 				1EFFEDEA2AE25BC8006EBD97 /* FirebaseSignInModel.swift in Sources */,
 				1E60201E2AE767510082F67C /* FindPassword_ViewController.swift in Sources */,
+				1E038F622AE7C29B00A54631 /* CustomTabBarController.swift in Sources */,
 				E0BE101A2AE63CA7003192D9 /* MainPageBtnCollectionViewCell.swift in Sources */,
 				1EFFED992AE22DBE006EBD97 /* LogIn_with_Email_ViewController.swift in Sources */,
 				1E6020202AE76B000082F67C /* Service.swift in Sources */,
 				1E60201A2AE673E50082F67C /* AppDelegate.swift in Sources */,
+				1E3DAAEB2AE8BBB6003AB6EC /* Products_ViewController.swift in Sources */,
 				E0BE101E2AE64164003192D9 /* FirebaseMainPageBtnMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

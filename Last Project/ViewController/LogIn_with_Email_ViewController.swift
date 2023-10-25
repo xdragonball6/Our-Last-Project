@@ -39,15 +39,25 @@ class LogIn_with_Email_ViewController: UIViewController {
                     // 로그인 성공
                     print("log in")
                     let resultAlert = UIAlertController(title: "결과", message: "로그인 되었습니다.", preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "네", style: .default, handler: { ACTION in
-                        self.performSegue(withIdentifier: "sgLogin", sender: nil)
-                        let tabBar = self.tabBarController!.tabBar
-                        let mypage = tabBar.items![3]
-                        mypage.title = "MyPage"
+                    let okAction = UIAlertAction(title: "네", style: .default, handler: { ACTION in 
+                        SignIn.logIn_Out = true
+                        if SignIn.logIn_Out {
+                            let myPageStoryboard = UIStoryboard(name: "MyPage", bundle: nil)
+                            if let myPageViewController = myPageStoryboard.instantiateViewController(withIdentifier: "MyPage") as? MyPageViewController {
+                                myPageViewController.tabBarItem = UITabBarItem(title: "My Page", image: UIImage(named: "person.fill"), tag: 0)
+
+                                if let tabBarController = self.tabBarController {
+                                    if var viewControllers = tabBarController.viewControllers {
+                                        // Assuming "LogInViewController" is at index 3 (change the index accordingly)
+                                        viewControllers[3] = myPageViewController
+                                        tabBarController.setViewControllers(viewControllers, animated: false)
+                                    }
+                                }
+                            }
+                        }
                     })
                     resultAlert.addAction(okAction)
                     self.present(resultAlert, animated: true)
-                    SignIn.logIn_Out = true
                 }
             }
         }

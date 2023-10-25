@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5qa-QS-Uvn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AVL-Ka-DBO">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--LogIn-->
+        <!--Log In View Controller-->
         <scene sceneID="aTy-Nc-S35">
             <objects>
                 <viewController id="jQs-Mh-BRZ" customClass="LogIn_ViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,7 +71,6 @@
                         <viewLayoutGuide key="safeArea" id="Uzi-Q2-l6n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="LogIn" image="person.fill" catalog="system" id="sI3-n3-SUR"/>
                     <navigationItem key="navigationItem" id="XKU-ne-Ang"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -82,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anp-ZD-qqt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1220.6106870229007" y="-49.295774647887328"/>
+            <point key="canvasLocation" x="2330.5343511450383" y="-174.64788732394368"/>
         </scene>
         <!--이메일 회원가입-->
         <scene sceneID="p2E-G8-LU7">
@@ -336,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FTp-n0-gP5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2580.9160305343512" y="316.90140845070425"/>
+            <point key="canvasLocation" x="3507.6335877862593" y="316.90140845070425"/>
         </scene>
         <!--이메일 로그인-->
         <scene sceneID="sGX-Hp-Fft">
@@ -406,7 +405,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ig-Dp-WpX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2422.1374045801526" y="-392.25352112676057"/>
+            <point key="canvasLocation" x="3348.8549618320608" y="-392.25352112676057"/>
         </scene>
         <!--MyPage-->
         <scene sceneID="uMI-N0-fOe">
@@ -416,7 +415,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="011-O2-rCd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3397" y="-754"/>
+            <point key="canvasLocation" x="2830.5343511450383" y="-433.0985915492958"/>
         </scene>
         <!--비밀번호 찾기-->
         <scene sceneID="oGg-aA-v2a">
@@ -546,7 +545,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kud-mj-9EJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3533.5877862595416" y="-338.02816901408454"/>
+            <point key="canvasLocation" x="4460.3053435114498" y="-338.02816901408454"/>
         </scene>
         <!--아이디 찾기-->
         <scene sceneID="78i-s7-2Rd">
@@ -616,29 +615,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flu-vQ-YEx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4159.5419847328239" y="-338.02816901408454"/>
+            <point key="canvasLocation" x="5086.259541984733" y="-338.02816901408454"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="J0U-1S-FAF">
+        <!--LogIn-->
+        <scene sceneID="zsu-P4-oZU">
             <objects>
-                <navigationController storyboardIdentifier="LogIn" automaticallyAdjustsScrollViewInsets="NO" id="5qa-QS-Uvn" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LogIn" automaticallyAdjustsScrollViewInsets="NO" id="AVL-Ka-DBO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="LogIn" image="person.fill" catalog="system" id="sI3-n3-SUR"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hUw-1C-Bme">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DnN-GE-zcm">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="jQs-Mh-BRZ" kind="relationship" relationship="rootViewController" id="5cw-Bt-qme"/>
+                        <segue destination="jQs-Mh-BRZ" kind="relationship" relationship="rootViewController" id="re9-bu-AdG"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tO1-sN-tv8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="urP-BD-ySH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="293.89312977099235" y="-49.295774647887328"/>
+            <point key="canvasLocation" x="1403.8167938931297" y="-174.64788732394368"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="maj-se-GAI"/>
+        <segue reference="cQp-WD-Lt2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="checkmark.circle" catalog="system" width="128" height="123"/>
@@ -650,13 +650,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemCyanColor">
-            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

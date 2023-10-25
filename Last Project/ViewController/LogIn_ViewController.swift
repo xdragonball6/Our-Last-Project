@@ -25,12 +25,30 @@ class LogIn_ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setBindings()
-    } //viewDidLoad
+    }
     
+
     
     @IBAction func btn_KAKAO_Login(_ sender: UIButton) {
-        kakaoAuthVM.KakaoLogin()
-    }
+        kakaoAuthVM.KakaoLogin { [weak self] success in
+                if success {
+                    if SignIn.logIn_Out {
+                        let myPageStoryboard = UIStoryboard(name: "MyPage", bundle: nil)
+                        if let myPageViewController = myPageStoryboard.instantiateViewController(withIdentifier: "MyPage") as? MyPageViewController {
+                            myPageViewController.tabBarItem = UITabBarItem(title: "My Page", image: UIImage(named: "person.fill"), tag: 0)
+
+                            if let tabBarController = self?.tabBarController {
+                                if var viewControllers = tabBarController.viewControllers {
+                                    // Assuming "LogInViewController" is at index 3 (change the index accordingly)
+                                    viewControllers[3] = myPageViewController
+                                    tabBarController.setViewControllers(viewControllers, animated: false)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     	
     
     @IBAction func btn_KAKAO_Logout(_ sender: UIButton) {
@@ -39,17 +57,7 @@ class LogIn_ViewController: UIViewController {
     
     
     
-    
-    //MARK: - 버튼액션
-    @objc func loginBtnClicked() {
-        print("loginBtnClicked() called")
-        kakaoAuthVM.KakaoLogin()
-    }
-    
-    @objc func logoutBtnClicked() {
-        print("logoutBtnClicked() called")
-        kakaoAuthVM.kakaoLogout()
-    }
+
 
     
     
