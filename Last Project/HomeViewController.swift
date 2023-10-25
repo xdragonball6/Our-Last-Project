@@ -64,13 +64,13 @@ class HomeViewController: UIViewController, UIScrollViewDelegate{
 
 
     
-    @IBAction func reservationBtn(_ sender: UIBarButtonItem) {
-        
-        
-        
-        
-        
-    }
+//    @IBAction func reservationBtn(_ sender: UIBarButtonItem) {
+//        
+//        
+//        
+//        
+//        
+//    }
     
 
     override func viewWillAppear(_ animated: Bool) {
