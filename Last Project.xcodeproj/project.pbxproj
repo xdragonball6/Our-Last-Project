@@ -10,8 +10,6 @@
 		1E038F622AE7C29B00A54631 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E038F612AE7C29B00A54631 /* CustomTabBarController.swift */; };
 		1E3DAAEB2AE8BBB6003AB6EC /* Products_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DAAEA2AE8BBB6003AB6EC /* Products_ViewController.swift */; };
 		1E6020162AE672F90082F67C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1E49BD642AE655A100E16AF1 /* Alamofire */; };
-		1E6020192AE673E50082F67C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6020172AE673E50082F67C /* SceneDelegate.swift */; };
-		1E60201A2AE673E50082F67C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6020182AE673E50082F67C /* AppDelegate.swift */; };
 		1E60201C2AE74F6F0082F67C /* KakaoSignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60201B2AE74F6F0082F67C /* KakaoSignInModel.swift */; };
 		1E60201E2AE767510082F67C /* FindPassword_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60201D2AE767510082F67C /* FindPassword_ViewController.swift */; };
 		1E6020202AE76B000082F67C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60201F2AE76B000082F67C /* Service.swift */; };
@@ -62,6 +60,10 @@
 		1EFFEDE82AE25A9A006EBD97 /* SignIn_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFFEDE72AE25A9A006EBD97 /* SignIn_ViewController.swift */; };
 		1EFFEDEA2AE25BC8006EBD97 /* FirebaseSignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFFEDE92AE25BC8006EBD97 /* FirebaseSignInModel.swift */; };
 		B875A2097E15AFF1912611FA /* Pods_Last_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609BA085BC5C98558F25ADEA /* Pods_Last_Project.framework */; };
+		E00CC0C82AE9688E00F52A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00CC0C72AE9688E00F52A4F /* AppDelegate.swift */; };
+		E00CC0CA2AE9689400F52A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00CC0C92AE9689400F52A4F /* SceneDelegate.swift */; };
+		E00CC0D22AE972F800F52A4F /* MainPageReservationViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00CC0D12AE972F800F52A4F /* MainPageReservationViewViewController.swift */; };
+		E00CC0D42AE9737500F52A4F /* MainPageReservationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00CC0D32AE9737500F52A4F /* MainPageReservationCollectionViewCell.swift */; };
 		E04D21972AE242610049D6A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E04D21962AE242610049D6A3 /* GoogleService-Info.plist */; };
 		E04D219A2AE243940049D6A3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E04D21992AE243940049D6A3 /* FirebaseAnalytics */; };
 		E04D219C2AE243940049D6A3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E04D219B2AE243940049D6A3 /* FirebaseAuth */; };
@@ -81,8 +83,6 @@
 		1E038F612AE7C29B00A54631 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		1E3DAAEA2AE8BBB6003AB6EC /* Products_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products_ViewController.swift; sourceTree = "<group>"; };
 		1E6020142AE65E890082F67C /* KakaoUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoUserResponse.swift; sourceTree = "<group>"; };
-		1E6020172AE673E50082F67C /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../../../../../Downloads/SceneDelegate.swift; sourceTree = "<group>"; };
-		1E6020182AE673E50082F67C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../../../../Downloads/AppDelegate.swift; sourceTree = "<group>"; };
 		1E60201B2AE74F6F0082F67C /* KakaoSignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoSignInModel.swift; sourceTree = "<group>"; };
 		1E60201D2AE767510082F67C /* FindPassword_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPassword_ViewController.swift; sourceTree = "<group>"; };
 		1E60201F2AE76B000082F67C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -108,6 +108,10 @@
 		509E4C54CA45149765D75D9A /* Pods-Last Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Last Project.release.xcconfig"; path = "Target Support Files/Pods-Last Project/Pods-Last Project.release.xcconfig"; sourceTree = "<group>"; };
 		609BA085BC5C98558F25ADEA /* Pods_Last_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Last_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CD57A96B5913FF7F2568A8 /* Pods-Last Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Last Project.debug.xcconfig"; path = "Target Support Files/Pods-Last Project/Pods-Last Project.debug.xcconfig"; sourceTree = "<group>"; };
+		E00CC0C72AE9688E00F52A4F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../../.Trash/AppDelegate.swift; sourceTree = "<group>"; };
+		E00CC0C92AE9689400F52A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../../../.Trash/SceneDelegate.swift; sourceTree = "<group>"; };
+		E00CC0D12AE972F800F52A4F /* MainPageReservationViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageReservationViewViewController.swift; sourceTree = "<group>"; };
+		E00CC0D32AE9737500F52A4F /* MainPageReservationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageReservationCollectionViewCell.swift; sourceTree = "<group>"; };
 		E02237FF2AE6335000665505 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		E04D21962AE242610049D6A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E073F70B2AE5A4CD0064BB3F /* FirebaseMainPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMainPageModel.swift; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 				1E60201D2AE767510082F67C /* FindPassword_ViewController.swift */,
 				1E6020212AE78D800082F67C /* FindID_ViewController.swift */,
 				1E3DAAEA2AE8BBB6003AB6EC /* Products_ViewController.swift */,
+				E00CC0D12AE972F800F52A4F /* MainPageReservationViewViewController.swift */,
+				E00CC0D32AE9737500F52A4F /* MainPageReservationCollectionViewCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -205,8 +211,8 @@
 		1E75DD162ADD3FF60053B4EF /* Serviece */ = {
 			isa = PBXGroup;
 			children = (
-				1E6020182AE673E50082F67C /* AppDelegate.swift */,
-				1E6020172AE673E50082F67C /* SceneDelegate.swift */,
+				E00CC0C72AE9688E00F52A4F /* AppDelegate.swift */,
+				E00CC0C92AE9689400F52A4F /* SceneDelegate.swift */,
 			);
 			path = Serviece;
 			sourceTree = "<group>";
@@ -446,6 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E00CC0C82AE9688E00F52A4F /* AppDelegate.swift in Sources */,
 				E073F7102AE5A6D80064BB3F /* FirebaseMainPageImage.swift in Sources */,
 				E073F70E2AE5A6710064BB3F /* FirebaseMainPageMessage.swift in Sources */,
 				1EFFECA82AE14441006EBD97 /* KakaoAuthVM.swift in Sources */,
@@ -454,10 +461,11 @@
 				1EFFECAA2AE1455C006EBD97 /* LogIn_ViewController.swift in Sources */,
 				E0BE10202AE64185003192D9 /* FirebaseMainPageBtn.swift in Sources */,
 				1E60201C2AE74F6F0082F67C /* KakaoSignInModel.swift in Sources */,
-				1E6020192AE673E50082F67C /* SceneDelegate.swift in Sources */,
 				1EFFECB12AE1503A006EBD97 /* MyPage_ViewController.swift in Sources */,
+				E00CC0D42AE9737500F52A4F /* MainPageReservationCollectionViewCell.swift in Sources */,
 				E0BE101C2AE63FC9003192D9 /* FirebaseMainPageBtnModel.swift in Sources */,
 				1E6020222AE78D800082F67C /* FindID_ViewController.swift in Sources */,
+				E00CC0D22AE972F800F52A4F /* MainPageReservationViewViewController.swift in Sources */,
 				1EFFEDE82AE25A9A006EBD97 /* SignIn_ViewController.swift in Sources */,
 				1E79F2D32AE625A50016B226 /* SingIn.swift in Sources */,
 				1EFFEDEA2AE25BC8006EBD97 /* FirebaseSignInModel.swift in Sources */,
@@ -465,8 +473,8 @@
 				1E038F622AE7C29B00A54631 /* CustomTabBarController.swift in Sources */,
 				E0BE101A2AE63CA7003192D9 /* MainPageBtnCollectionViewCell.swift in Sources */,
 				1EFFED992AE22DBE006EBD97 /* LogIn_with_Email_ViewController.swift in Sources */,
+				E00CC0CA2AE9689400F52A4F /* SceneDelegate.swift in Sources */,
 				1E6020202AE76B000082F67C /* Service.swift in Sources */,
-				1E60201A2AE673E50082F67C /* AppDelegate.swift in Sources */,
 				1E3DAAEB2AE8BBB6003AB6EC /* Products_ViewController.swift in Sources */,
 				E0BE101E2AE64164003192D9 /* FirebaseMainPageBtnMessage.swift in Sources */,
 			);

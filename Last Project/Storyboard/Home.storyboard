@@ -137,6 +137,7 @@
                     <navigationItem key="navigationItem" id="aR1-fy-nKw">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="rOG-tw-8UV">
                             <connections>
+                                <action selector="reservationBtn:" destination="CHP-lP-Z86" id="WXf-bY-bsX"/>
                                 <segue destination="cuP-b7-Zt3" kind="show" id="NTq-QK-VGo"/>
                             </connections>
                         </barButtonItem>
@@ -168,10 +169,10 @@
             </objects>
             <point key="canvasLocation" x="1943" y="323"/>
         </scene>
-        <!--View Controller-->
+        <!--Main Page Reservation View View Controller-->
         <scene sceneID="z2C-pf-fV6">
             <objects>
-                <viewController id="cuP-b7-Zt3" sceneMemberID="viewController">
+                <viewController id="cuP-b7-Zt3" customClass="MainPageReservationViewViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yBd-DY-LcT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,13 +188,25 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="pWf-Rd-naW">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myCell" id="pWf-Rd-naW" customClass="MainPageReservationCollectionViewCell" customModule="Last_Project" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vpL-oN-zQJ">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WL8-xH-oD8">
+                                                    <rect key="frame" x="4" y="15" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblCalendar" destination="WL8-xH-oD8" id="b7M-oj-KY3"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
