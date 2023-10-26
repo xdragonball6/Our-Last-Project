@@ -25,6 +25,7 @@ class LogIn_ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setBindings()
+        kakaoLoginStatuslabel.isHidden = true
     }
     
 
@@ -34,13 +35,15 @@ class LogIn_ViewController: UIViewController {
                 if success {
                     if SignIn.logIn_Out {
                         let myPageStoryboard = UIStoryboard(name: "MyPage", bundle: nil)
-                        if let myPageViewController = myPageStoryboard.instantiateViewController(withIdentifier: "MyPage") as? MyPageViewController {
-                            myPageViewController.tabBarItem = UITabBarItem(title: "My Page", image: UIImage(named: "person.fill"), tag: 0)
+                        let config = UIImage.SymbolConfiguration(pointSize: 25, weight: .light, scale: .medium)
+                        let myPageImage = UIImage(systemName: "person.fill", withConfiguration: config)
+                        if let myPageNavController = myPageStoryboard.instantiateInitialViewController() as? UINavigationController {
+                            myPageNavController.tabBarItem = UITabBarItem(title: "My Page", image: myPageImage, tag: 0)
 
                             if let tabBarController = self?.tabBarController {
                                 if var viewControllers = tabBarController.viewControllers {
                                     // Assuming "LogInViewController" is at index 3 (change the index accordingly)
-                                    viewControllers[3] = myPageViewController
+                                    viewControllers[3] = myPageNavController
                                     tabBarController.setViewControllers(viewControllers, animated: false)
                                 }
                             }
@@ -51,9 +54,9 @@ class LogIn_ViewController: UIViewController {
         }
     	
     
-    @IBAction func btn_KAKAO_Logout(_ sender: UIButton) {
-        kakaoAuthVM.kakaoLogout()
-    }
+//    @IBAction func btn_KAKAO_Logout(_ sender: UIButton) {
+//        kakaoAuthVM.kakaoLogout()
+//    }
     
     
     

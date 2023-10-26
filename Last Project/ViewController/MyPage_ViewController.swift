@@ -9,11 +9,11 @@ import UIKit
 
 class MyPageViewController: UIViewController {
 
+    
     @IBOutlet weak var imgView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     
@@ -53,3 +53,6 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
     picker.dismiss(animated: true, completion: nil)
     }
 }
+
+
+

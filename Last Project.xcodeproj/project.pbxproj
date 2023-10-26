@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		1E038F622AE7C29B00A54631 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E038F612AE7C29B00A54631 /* CustomTabBarController.swift */; };
 		1E3DAAEB2AE8BBB6003AB6EC /* Products_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DAAEA2AE8BBB6003AB6EC /* Products_ViewController.swift */; };
+		1E3DAAED2AE8DE9D003AB6EC /* MyPage_Detail_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DAAEC2AE8DE9D003AB6EC /* MyPage_Detail_ViewController.swift */; };
+		1E3DAAF02AE8DF6E003AB6EC /* MyDog_CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DAAEF2AE8DF6E003AB6EC /* MyDog_CollectionViewCell.swift */; };
+		1E3DAAF22AE8F128003AB6EC /* dogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DAAF12AE8F128003AB6EC /* dogModel.swift */; };
+		1E3DAAF42AE8F3BC003AB6EC /* dogJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DAAF32AE8F3BC003AB6EC /* dogJSONModel.swift */; };
+		1E3DAAF62AE8F441003AB6EC /* dogVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DAAF52AE8F441003AB6EC /* dogVM.swift */; };
+		1E3DAAF82AE8FA17003AB6EC /* Update_Pet_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DAAF72AE8FA17003AB6EC /* Update_Pet_ViewController.swift */; };
 		1E6020162AE672F90082F67C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1E49BD642AE655A100E16AF1 /* Alamofire */; };
 		1E60201C2AE74F6F0082F67C /* KakaoSignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60201B2AE74F6F0082F67C /* KakaoSignInModel.swift */; };
 		1E60201E2AE767510082F67C /* FindPassword_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60201D2AE767510082F67C /* FindPassword_ViewController.swift */; };
@@ -86,6 +92,12 @@
 /* Begin PBXFileReference section */
 		1E038F612AE7C29B00A54631 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		1E3DAAEA2AE8BBB6003AB6EC /* Products_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products_ViewController.swift; sourceTree = "<group>"; };
+		1E3DAAEC2AE8DE9D003AB6EC /* MyPage_Detail_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage_Detail_ViewController.swift; sourceTree = "<group>"; };
+		1E3DAAEF2AE8DF6E003AB6EC /* MyDog_CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDog_CollectionViewCell.swift; sourceTree = "<group>"; };
+		1E3DAAF12AE8F128003AB6EC /* dogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogModel.swift; sourceTree = "<group>"; };
+		1E3DAAF32AE8F3BC003AB6EC /* dogJSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogJSONModel.swift; sourceTree = "<group>"; };
+		1E3DAAF52AE8F441003AB6EC /* dogVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogVM.swift; sourceTree = "<group>"; };
+		1E3DAAF72AE8FA17003AB6EC /* Update_Pet_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Update_Pet_ViewController.swift; sourceTree = "<group>"; };
 		1E6020142AE65E890082F67C /* KakaoUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoUserResponse.swift; sourceTree = "<group>"; };
 		1E60201B2AE74F6F0082F67C /* KakaoSignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoSignInModel.swift; sourceTree = "<group>"; };
 		1E60201D2AE767510082F67C /* FindPassword_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPassword_ViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +198,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1E3DAAEE2AE8DF52003AB6EC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1E3DAAEF2AE8DF6E003AB6EC /* MyDog_CollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		1E75DD0A2ADD39CC0053B4EF /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +222,7 @@
 		1E75DD152ADD3FEB0053B4EF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1E3DAAEE2AE8DF52003AB6EC /* Cell */,
 				1EFFECA92AE1455C006EBD97 /* LogIn_ViewController.swift */,
 				1EFFECB02AE1503A006EBD97 /* MyPage_ViewController.swift */,
 				1EFFED982AE22DBE006EBD97 /* LogIn_with_Email_ViewController.swift */,
@@ -250,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				1E6020142AE65E890082F67C /* KakaoUserResponse.swift */,
+				1E3DAAF32AE8F3BC003AB6EC /* dogJSONModel.swift */,
 			);
 			path = JSONModel;
 			sourceTree = "<group>";
@@ -266,6 +288,7 @@
 				E003AE1D2AEA111000F9FC95 /* FirebaseMainPageReservationListMessage.swift */,
 				1E79F2D22AE625A50016B226 /* SingIn.swift */,
 				1E60201B2AE74F6F0082F67C /* KakaoSignInModel.swift */,
+				1E3DAAF12AE8F128003AB6EC /* dogModel.swift */,
 			);
 			path = DBModel;
 			sourceTree = "<group>";
@@ -467,6 +490,8 @@
 				E00CC0C82AE9688E00F52A4F /* AppDelegate.swift in Sources */,
 				E073F7102AE5A6D80064BB3F /* FirebaseMainPageImage.swift in Sources */,
 				E073F70E2AE5A6710064BB3F /* FirebaseMainPageMessage.swift in Sources */,
+				1E3DAAF62AE8F441003AB6EC /* dogVM.swift in Sources */,
+				1E3DAAF02AE8DF6E003AB6EC /* MyDog_CollectionViewCell.swift in Sources */,
 				1EFFECA82AE14441006EBD97 /* KakaoAuthVM.swift in Sources */,
 				E003AE202AEA12A100F9FC95 /* FirebaseMainPageReservationList.swift in Sources */,
 				1ECD9DE82ADD34E5008DC85F /* HomeViewController.swift in Sources */,
@@ -488,6 +513,7 @@
 				E003AE1C2AEA109400F9FC95 /* FirebaseMainPageReservationListModel.swift in Sources */,
 				1E038F622AE7C29B00A54631 /* CustomTabBarController.swift in Sources */,
 				E0BE101A2AE63CA7003192D9 /* MainPageBtnCollectionViewCell.swift in Sources */,
+				1E3DAAF42AE8F3BC003AB6EC /* dogJSONModel.swift in Sources */,
 				1EFFED992AE22DBE006EBD97 /* LogIn_with_Email_ViewController.swift in Sources */,
 				E00CC0CA2AE9689400F52A4F /* SceneDelegate.swift in Sources */,
 				1E6020202AE76B000082F67C /* Service.swift in Sources */,
@@ -655,7 +681,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -685,7 +711,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

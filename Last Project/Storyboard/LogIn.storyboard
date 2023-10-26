@@ -4,12 +4,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Log In View Controller-->
+        <!--LogIn-->
         <scene sceneID="aTy-Nc-S35">
             <objects>
                 <viewController id="jQs-Mh-BRZ" customClass="LogIn_ViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,9 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDg-iK-U44">
-                                <rect key="frame" x="55" y="425" width="283" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDg-iK-U44">
+                                <rect key="frame" x="55" y="425" width="283" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="xPr-ah-dFl"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="카카오톡으로 시작하기">
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
@@ -29,9 +32,8 @@
                                     <action selector="btn_KAKAO_Login:" destination="jQs-Mh-BRZ" eventType="touchUpInside" id="lR1-u2-hNQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njv-vu-mMg">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njv-vu-mMg">
                                 <rect key="frame" x="59" y="546" width="132" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="이메일로 로그인">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -40,24 +42,14 @@
                                     <segue destination="4aZ-RG-qLR" kind="show" id="cQp-WD-Lt2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l58-rl-YXh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l58-rl-YXh">
                                 <rect key="frame" x="192" y="546" width="146" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="이메일로 회원가입">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="ZJG-DQ-oeM" kind="show" id="yag-18-0hc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sC0-S7-etJ">
-                                <rect key="frame" x="124" y="360" width="146" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="카카오톡 로그아웃"/>
-                                <connections>
-                                    <action selector="btn_KAKAO_Logout:" destination="jQs-Mh-BRZ" eventType="touchUpInside" id="B7u-jI-UIl"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="로그인 여부 라벨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snE-Wb-nkJ">
@@ -70,7 +62,20 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uzi-Q2-l6n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Uzi-Q2-l6n" firstAttribute="trailing" secondItem="kDg-iK-U44" secondAttribute="trailing" constant="55" id="RVV-v5-hW1"/>
+                            <constraint firstItem="l58-rl-YXh" firstAttribute="leading" secondItem="njv-vu-mMg" secondAttribute="trailing" constant="1" id="Uv6-uP-s7y"/>
+                            <constraint firstItem="l58-rl-YXh" firstAttribute="top" secondItem="kDg-iK-U44" secondAttribute="bottom" constant="76" id="eIB-7T-u8Q"/>
+                            <constraint firstItem="kDg-iK-U44" firstAttribute="top" secondItem="Uzi-Q2-l6n" secondAttribute="top" constant="322" id="gW4-Gn-S2i"/>
+                            <constraint firstItem="kDg-iK-U44" firstAttribute="leading" secondItem="Uzi-Q2-l6n" secondAttribute="leading" constant="55" id="lw7-Yb-X1v"/>
+                            <constraint firstItem="Uzi-Q2-l6n" firstAttribute="trailing" secondItem="l58-rl-YXh" secondAttribute="trailing" constant="55" id="t9Q-yX-3NR"/>
+                            <constraint firstItem="njv-vu-mMg" firstAttribute="top" secondItem="kDg-iK-U44" secondAttribute="bottom" constant="76" id="tYD-dJ-VEi"/>
+                            <constraint firstItem="njv-vu-mMg" firstAttribute="leading" secondItem="Uzi-Q2-l6n" secondAttribute="leading" constant="59" id="taE-pt-bTA"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="LogIn" id="ei8-Yj-6GZ">
+                        <imageReference key="image" image="person.fill" catalog="system" variableValue="0.0"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="XKU-ne-Ang"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>

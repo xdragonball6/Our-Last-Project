@@ -86,7 +86,7 @@ class FindPassword_ViewController: UIViewController, UITextFieldDelegate {
         func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
             // 이 메서드는 텍스트가 변경될 때 호출됩니다.
             // 라벨 텍스트에 따라 버튼을 활성화 또는 비활성화합니다.
-            let newText = (textField.text as! NSString).replacingCharacters(in: range, with: string)
+            let newText = (textField.text! as NSString).replacingCharacters(in: range, with: string)
             if !newText.isEmpty {
                 btnSend.isEnabled = true // 텍스트가 비어 있지 않으면 버튼 활성화
             } else {
