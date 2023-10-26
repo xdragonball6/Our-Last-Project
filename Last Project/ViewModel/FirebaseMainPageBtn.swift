@@ -31,6 +31,7 @@ class FirebaseMainPageBtn {
                           let name = document.data()["name"] as? String else {
                         continue
                     }
+                    // print("Image URL: \(image)")
                     let query = FirebaseMainPageBtnModel(image: image, name: name)
                     locations.append(query)
                 }

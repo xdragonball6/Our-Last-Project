@@ -25,11 +25,28 @@ class MainPageReservationViewViewController: UIViewController {
         var days: [String] = []
         var daysCountInMonth = 0
         var weekdayAdding = 0
+        var selectedDate: Int?
 
         override func viewDidLoad() {
             super.viewDidLoad()
             self.initView()
             lblDnjf.text = dateFormatter.string(from: now)
+            
+            if let imageURL = URL(string: "https://firebasestorage.googleapis.com/v0/b/lastproject-7fa23.appspot.com/o/mainLogo%2F%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9.png?alt=media&token=1cc1d45c-5af7-43bb-8de4-c88aacd2f03a&_gl=1*1i1b2jk*_ga*MTMxNjcyMzI2LjE2OTE0MjQ4MTU.*_ga_CW55HF8NVT*MTY5ODI1MTQwMS45OC4xLjE2OTgyNTIyMDMuMzguMC4w") {
+                URLSession.shared.dataTask(with: imageURL) { [weak self] (data, response, error) in
+                    if let error = error {
+                        print("Error downloading image: \(error)")
+                    } else if let data = data, let image = UIImage(data: data) {
+                        // 이미지 다운로드 완료 후 UI 업데이트는 메인 스레드에서 수행해야 합니다.
+                        DispatchQueue.main.async {
+                            // 원격 이미지를 타이틀 뷰로 설정
+                            let imageView = UIImageView(image: image)
+                            imageView.contentMode = .scaleAspectFit
+                            self?.navigationItem.titleView = imageView
+                        }
+                    }
+                }.resume()
+            }
         }
 
         private func initView() {
@@ -102,6 +119,20 @@ class MainPageReservationViewViewController: UIViewController {
                 return self.days.count
             }
         }
+        
+        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            if indexPath.section == 1 { // 날짜 셀을 선택하는 경우에만 처리
+                let selectedDay = indexPath.row - weekdayAdding + 1
+                if selectedDay >= 1 && selectedDay <= daysCountInMonth {
+                    if selectedDate == selectedDay {
+                        selectedDate = nil
+                    } else {
+                        selectedDate = selectedDay
+                    }
+                    collectionView.reloadData()
+                }
+            }
+        }
 
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! MainPageReservationCollectionViewCell
@@ -114,15 +145,26 @@ class MainPageReservationViewViewController: UIViewController {
             }
 
             if indexPath.row % 7 == 0 {
-                cell.lblCalendar.textColor = .red
+                cell.lblCalendar.textColor = .red // 일요일
             } else if indexPath.row % 7 == 6 {
-                cell.lblCalendar.textColor = .blue
+                cell.lblCalendar.textColor = .blue // 토요일
             } else {
-                cell.lblCalendar.textColor = .black
+                cell.lblCalendar.textColor = .black // 나머지 요일
+            }
+
+            if selectedDate != nil {
+                if indexPath.section == 1 {
+                    let selectedDay = indexPath.row - weekdayAdding + 1
+                    if selectedDay == selectedDate {
+                        cell.lblCalendar.textColor = .gray // 선택한 날짜는 회색으로 표시
+                    }
+                }
             }
 
             return cell
         }
+
+
     }
 
     extension MainPageReservationViewViewController: UICollectionViewDelegateFlowLayout {
