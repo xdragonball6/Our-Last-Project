@@ -157,6 +157,7 @@
                     <navigationItem key="navigationItem" id="aR1-fy-nKw">
                         <barButtonItem key="rightBarButtonItem" title="예약" id="rOG-tw-8UV">
                             <connections>
+                                <action selector="reservationBtn:" destination="CHP-lP-Z86" id="3D9-d3-D9f"/>
                                 <segue destination="cuP-b7-Zt3" kind="show" id="NTq-QK-VGo"/>
                             </connections>
                         </barButtonItem>

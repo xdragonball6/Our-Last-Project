@@ -89,17 +89,37 @@ class HomeViewController: UIViewController, UIScrollViewDelegate{
        }
 
     
+    @IBAction func reservationBtn(_ sender: UIBarButtonItem) {
+        if Auth.auth().currentUser == nil {
+            // 사용자가 로그인하지 않은 경우, 알림창을 띄우고 "확인"을 누르면 로그인 화면으로 이동
+            let alertController = UIAlertController(title: "비 로그인", message: "예약은 로그인 상태에서만 사용이 가능합니다.", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "확인", style: .default) { [weak self] (action) in
+                self?.showLogInScreen()
+            }
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
+        } else {
 
-       // 로그인 했을시만 예약 번튼 클릭 가능하게 만들 예정
-       
-   //    @IBAction func reservationBtn(_ sender: UIBarButtonItem) {
-   //
-   //
-   //
-   //
-   //
-   //    }
-       
+        }
+    }
+
+    func showLogInScreen() {
+        let logInStoryboard = UIStoryboard(name: "LogInStoryboard", bundle: nil)
+        if let logInViewController = logInStoryboard.instantiateInitialViewController() {
+            present(logInViewController, animated: true, completion: nil)
+        }
+    }
+
+
+
+
+
+
+    
+
+
+    
+       // 로그인 했을시만 예약 번튼 클릭 가능
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -173,16 +193,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate{
         }
     }
 
-
-
-
-
-
-
-
-
-
-       
        func readValues(){
            let mainbtn = FirebaseMainPageBtn()
            mainbtn.delegate = self
