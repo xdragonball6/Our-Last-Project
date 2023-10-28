@@ -38,6 +38,7 @@ class LogIn_with_Email_ViewController: UIViewController {
                 } else {
                     // 로그인 성공
                     print("log in")
+                    
                     let config = UIImage.SymbolConfiguration(pointSize: 25, weight: .light, scale: .medium)
                     let myPageImage = UIImage(systemName: "person.fill", withConfiguration: config)
                     let resultAlert = UIAlertController(title: "결과", message: "로그인 되었습니다.", preferredStyle: .alert)

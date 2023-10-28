@@ -68,6 +68,8 @@ class HomeViewController: UIViewController, UIScrollViewDelegate{
            // 유저 상태 확인
            updateUsernameLabel()
 
+           lblUser.text = ""
+           
            // 네비게이션 타이틀 이미지 다운로드 및 설정
            if let imageURL = URL(string: "https://firebasestorage.googleapis.com/v0/b/lastproject-7fa23.appspot.com/o/mainLogo%2F%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9.png?alt=media&token=1cc1d45c-5af7-43bb-8de4-c88aacd2f03a&_gl=1*1i1b2jk*_ga*MTMxNjcyMzI2LjE2OTE0MjQ4MTU.*_ga_CW55HF8NVT*MTY5ODI1MTQwMS45OC4xLjE2OTgyNTIyMDMuMzguMC4w") {
                URLSession.shared.dataTask(with: imageURL) { [weak self] (data, response, error) in
@@ -104,6 +106,12 @@ class HomeViewController: UIViewController, UIScrollViewDelegate{
         // 화면이 나타날 때마다 로그인 상태를 확인합니다.
         updateUsernameLabel()
         readValues()
+        
+        
+            if let user = Auth.auth().currentUser {
+                let userUID = user.uid
+                print("사용자 UID: \(userUID)")
+            }
     }
     
     
@@ -112,39 +120,50 @@ class HomeViewController: UIViewController, UIScrollViewDelegate{
             if let userEmail = user.email {
                 let db = Firestore.firestore()
                 let userRef = db.collection("users").whereField("userid", isEqualTo: userEmail)
-
+                
+                let group = DispatchGroup()
+                
+                group.enter()
+                
                 userRef.getDocuments { [weak self] (querySnapshot, error) in
+                    defer {
+                        group.leave()
+                    }
+                    
                     if let error = error {
                         print("사용자 문서 조회 오류: \(error)")
-                    } else if let documents = querySnapshot?.documents, !documents.isEmpty {
-                        let document = documents[0]
-                        if let userName = document["name"] as? String {
-                            if let userUID = document["uid"] as? String {
-                                print("사용자 UID: \(userUID)")
-                            } else {
-                                // 사용자 UID를 찾지 못한 경우에 대한 처리
-                                print("사용자 UID를 찾을 수 없습니다.")
-                            }
-                            
-                            if let userID = document["userid"] as? String {
-                                print("사용자 ID: \(userID)")
-                            } else {
-                                // 사용자 ID를 찾지 못한 경우에 대한 처리
-                                print("사용자 ID를 찾을 수 없습니다.")
-                            }
-                            
-                            DispatchQueue.main.async {
-                                self?.lblUser.text = "안녕하세요, \(userName) 님"
-                            }
+                        return
+                    }
+                    guard let documents = querySnapshot?.documents, !documents.isEmpty else {
+                        print("사용자 문서를 찾을 수 없습니다.")
+                        return
+                    }
+                    
+                    let document = documents[0]
+                    if let userName = document["name"] as? String {
+                        if let userUID = document["uid"] as? String {
+                            print("사용자 UID: \(userUID)")
                         } else {
-                            // 사용자 이름을 찾지 못한 경우에 대한 처리
-                            print("사용자 이름을 찾을 수 없습니다.")
-                            DispatchQueue.main.async {
-                                self?.lblUser.text = "안녕하세요, 사용자"
-                            }
+                            // 사용자 UID를 찾지 못한 경우에 대한 처리
+                            // print("사용자 UID를 찾을 수 없습니다.")
+                        }
+                        
+                        if let userID = document["userid"] as? String {
+                            print("사용자 ID: \(userID)")
+                        } else {
+                            // 사용자 ID를 찾지 못한 경우에 대한 처리
+                            print("사용자 ID를 찾을 수 없습니다.")
+                        }
+                        
+                        DispatchQueue.main.async {
+                            self?.lblUser.text = "안녕하세요, \(userName) 님"
                         }
                     } else {
-                        print("사용자 문서를 찾을 수 없습니다.")
+                        // 사용자 이름을 찾지 못한 경우에 대한 처리
+                        // print("사용자 이름을 찾을 수 없습니다.")
+                        DispatchQueue.main.async {
+                            self?.lblUser.text = ""
+                        }
                     }
                 }
             }
@@ -153,6 +172,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate{
             lblUser.text = ""
         }
     }
+
 
 
 
