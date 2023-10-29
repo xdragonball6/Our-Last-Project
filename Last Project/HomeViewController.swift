@@ -273,67 +273,82 @@ class HomeViewController: UIViewController, UIScrollViewDelegate{
        }
    }
 
-   extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-       func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-           if collectionView == MainBtnCollectionView {
-               print(mainPageData.count)
-               return mainPageData.count
-           } else if collectionView == MainReservationCollectionView {
-               print(mainPageDataDown.count)
-               return mainPageDataDown.count
-           }
-           return 0
-       }
-       
-       func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-           if collectionView == MainBtnCollectionView {
-               let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! MainPageBtnCollectionViewCell
-
-               if mainPageData.isEmpty {
-                   // 데이터가 비어 있는 경우
-                   cell.imgMainPageBtn.image = nil
-                   cell.lblMainPageBtn.text = ""
-               } else {
-                   let data = mainPageData[indexPath.item]
-                   if let imageURL = URL(string: data.image) {
-                       URLSession.shared.dataTask(with: imageURL) { (imageData, response, error) in
-                           if let error = error {
-                               print("Error downloading image: \(error)")
-                           } else if let imageData = imageData, let image = UIImage(data: imageData) {
-                               DispatchQueue.main.async {
-                                   cell.imgMainPageBtn.image = image
-                                   cell.lblMainPageBtn.text = data.name
-                               }
-                           }
-                       }.resume()
-                   }
-               }
-
-               return cell
-           } else if collectionView == MainReservationCollectionView {
-               let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! MainPageReservationListCollectionViewCell
-
-               if mainPageDataDown.isEmpty {
-                   // 데이터가 비어 있는 경우
-                   cell.imgMainPageReservationList.image = nil
-               } else {
-                   let data = mainPageDataDown[indexPath.item]
-                   if let imageURL = URL(string: data.image) {
-                       URLSession.shared.dataTask(with: imageURL) { (imageData, response, error) in
-                           if let error = error {
-                               print("Error downloading image: \(error)")
-                           } else if let imageData = imageData, let image = UIImage(data: imageData) {
-                               DispatchQueue.main.async {
-                                   cell.imgMainPageReservationList.image = image
-                               }
-                           }
-                       }.resume()
-                   }
-               }
-
-               return cell
-           } else {
-               return UICollectionViewCell()
-           }
-       }
-   }
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == MainBtnCollectionView {
+            print(mainPageData.count)
+            return mainPageData.count
+        } else if collectionView == MainReservationCollectionView {
+            print(mainPageDataDown.count)
+            return mainPageDataDown.count
+        }
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        
+        if collectionView == MainBtnCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! MainPageBtnCollectionViewCell
+            
+            if mainPageData.isEmpty {
+                // 데이터가 비어 있는 경우
+                cell.imgMainPageBtn.image = nil
+                cell.lblMainPageBtn.text = ""
+            } else {
+                let data = mainPageData[indexPath.item]
+                if let imageURL = URL(string: data.image) {
+                    URLSession.shared.dataTask(with: imageURL) { (imageData, response, error) in
+                        if let error = error {
+                            print("Error downloading image: \(error)")
+                        } else if let imageData = imageData, let image = UIImage(data: imageData) {
+                            DispatchQueue.main.async {
+                                cell.imgMainPageBtn.image = image
+                                cell.lblMainPageBtn.text = data.name
+                            }
+                        }
+                    }.resume()
+                }
+                
+                
+            }
+            
+            return cell
+        } else if collectionView == MainReservationCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! MainPageReservationListCollectionViewCell
+            
+            if mainPageDataDown.isEmpty {
+                // 데이터가 비어 있는 경우
+                cell.imgMainPageReservationList.image = nil
+            } else {
+                let data = mainPageDataDown[indexPath.item]
+                if let imageURL = URL(string: data.image) {
+                    URLSession.shared.dataTask(with: imageURL) { (imageData, response, error) in
+                        if let error = error {
+                            print("Error downloading image: \(error)")
+                        } else if let imageData = imageData, let image = UIImage(data: imageData) {
+                            DispatchQueue.main.async {
+                                cell.imgMainPageReservationList.image = image
+                            }
+                        }
+                    }.resume()
+                }
+            }
+            
+            return cell
+        } else {
+            return UICollectionViewCell()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "sgDetail" {
+           let cell = sender as! UICollectionViewCell
+            let indexPath = self.MainBtnCollectionView.indexPath(for: cell)
+            
+            FirebaseMainPageBtnMessage.name = mainPageData[indexPath!.row].name
+            FirebaseMainPageBtnMessage.image2 = mainPageData[indexPath!.row].image2
+            
+        }
+    }
+}

@@ -10,4 +10,5 @@ import Foundation
 struct FirebaseMainPageBtnMessage{
     static var image:String = ""
     static var name:String = ""
+    static var image2:String = ""
 }

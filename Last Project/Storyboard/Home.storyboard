@@ -84,7 +84,7 @@
                                         <connections>
                                             <outlet property="imgMainPageBtn" destination="flW-Tz-uO4" id="CxR-2x-4FV"/>
                                             <outlet property="lblMainPageBtn" destination="pwB-5G-0jM" id="bdK-M8-d29"/>
-                                            <segue destination="BSX-XW-5om" kind="show" id="99Y-22-lEN"/>
+                                            <segue destination="BSX-XW-5om" kind="show" identifier="sgDetail" id="99Y-22-lEN"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -137,7 +137,7 @@
                                         <size key="customSize" width="373" height="136"/>
                                         <connections>
                                             <outlet property="imgMainPageReservationList" destination="SRI-zM-s7a" id="Pq7-TJ-C5t"/>
-                                            <segue destination="IKW-6x-HCt" kind="show" id="iFO-DB-oyw"/>
+                                            <segue destination="IKW-6x-HCt" kind="show" identifier="sgDetail" id="iFO-DB-oyw"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -204,34 +204,38 @@
             </objects>
             <point key="canvasLocation" x="975" y="716"/>
         </scene>
-        <!--View Controller-->
+        <!--Main Page Reservation View View2 View Controller-->
         <scene sceneID="AN1-FU-ViQ">
             <objects>
-                <viewController id="BSX-XW-5om" sceneMemberID="viewController">
+                <viewController id="BSX-XW-5om" customClass="MainPageReservationViewView2ViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FQu-xD-mxM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UwW-aO-oC0">
-                                <rect key="frame" x="175" y="120" width="42" height="21"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MsW-0i-1qz">
+                                <rect key="frame" x="42" y="103" width="166" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UwW-aO-oC0">
+                                <rect key="frame" x="234" y="137" width="143" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MsW-0i-1qz">
-                                <rect key="frame" x="76" y="149" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tJI-fN-rHC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="25Q-z9-gd7"/>
+                    <connections>
+                        <outlet property="lblImage2" destination="MsW-0i-1qz" id="XsF-9Z-iLB"/>
+                        <outlet property="lblName" destination="UwW-aO-oC0" id="5GX-mk-fcq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JN4-b7-im2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2024" y="404"/>
+            <point key="canvasLocation" x="2023.6641221374045" y="403.52112676056339"/>
         </scene>
         <!--Main Page Reservation View View Controller-->
         <scene sceneID="z2C-pf-fV6">
@@ -319,7 +323,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="house.fill" catalog="system" width="32" height="32"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
