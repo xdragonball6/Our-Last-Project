@@ -43,6 +43,37 @@ class MyPages_Detail_ViewController: UIViewController, UICollectionViewDelegate,
     }
     
     
+    @IBAction func btnLogOut(_ sender: UIButton) {
+        SignIn.logIn_Out = false
+        SignIn.userID = ""
+        SignIn.username = ""
+        let config = UIImage.SymbolConfiguration(pointSize: 25, weight: .light, scale: .medium)
+        let myPageImage = UIImage(systemName: "person.fill", withConfiguration: config)
+        let resultAlert = UIAlertController(title: "결과", message: "로그아웃 되었습니다.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "네", style: .default, handler: { ACTION in
+            if SignIn.logIn_Out == false {
+                let myPageStoryboard = UIStoryboard(name: "LogIn", bundle: nil)
+                let config = UIImage.SymbolConfiguration(pointSize: 25, weight: .light, scale: .medium)
+                let myPageImage = UIImage(systemName: "person.fill", withConfiguration: config)
+                if let myPageNavController = myPageStoryboard.instantiateInitialViewController() as? UINavigationController {
+                    myPageNavController.tabBarItem = UITabBarItem(title: "LogIn", image: myPageImage, tag: 0)
+
+                    if let tabBarController = self.tabBarController {
+                        if var viewControllers = tabBarController.viewControllers {
+                            // Assuming "LogInViewController" is at index 3 (change the index accordingly)
+                            viewControllers[3] = myPageNavController
+                            tabBarController.setViewControllers(viewControllers, animated: false)
+                        }
+                    }
+                }
+            }
+        })
+        resultAlert.addAction(okAction)
+        self.present(resultAlert, animated: true)
+    }
+    
+    
+    
     
 //    func downloadimage(imgview:UIImageView){
 //        storage.reference(forURL: "gs://lastproject-7fa23.appspot.com/userDog/01.jpeg").downloadURL { (url, error) in
