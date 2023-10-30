@@ -17,6 +17,11 @@ class MainPageReservationViewViewController: UIViewController {
     
     @IBOutlet weak var lblDnjf: UILabel!
     
+    @IBOutlet weak var pickerReservationTime: UIPickerView!
+    
+    
+        var ReservationTime = ["10시", "10시 30분", "11시", "11시 30분", "13시", "13시 30분", "14시", "14시 30분", "15시", "15시 30분", "16시", "16시 30분"]
+    
         let now = Date()
         var cal = Calendar.current
         let dateFormatter = DateFormatter()
@@ -27,10 +32,19 @@ class MainPageReservationViewViewController: UIViewController {
         var weekdayAdding = 0
         var selectedDate: Int?
 
+    
         override func viewDidLoad() {
             super.viewDidLoad()
             self.initView()
             lblDnjf.text = dateFormatter.string(from: now)
+            
+            pickerReservationTime.dataSource = self
+            pickerReservationTime.delegate = self
+            
+//            for i in 0..<ReservationTime.count{
+//                let time = Text(named: ReservationTime[i])
+//            }
+//            
             
             if let imageURL = URL(string: "https://firebasestorage.googleapis.com/v0/b/lastproject-7fa23.appspot.com/o/mainLogo%2F%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9.png?alt=media&token=1cc1d45c-5af7-43bb-8de4-c88aacd2f03a&_gl=1*1i1b2jk*_ga*MTMxNjcyMzI2LjE2OTE0MjQ4MTU.*_ga_CW55HF8NVT*MTY5ODI1MTQwMS45OC4xLjE2OTgyNTIyMDMuMzguMC4w") {
                 URLSession.shared.dataTask(with: imageURL) { [weak self] (data, response, error) in
@@ -174,3 +188,24 @@ class MainPageReservationViewViewController: UIViewController {
             return CGSize(width: cellSize, height: cellSize)
         }
     }
+
+
+extension MainPageReservationViewViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return ReservationTime.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return ReservationTime[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+
+        _ = ReservationTime[row]
+
+    }
+}
