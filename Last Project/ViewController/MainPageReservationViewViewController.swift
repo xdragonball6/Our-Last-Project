@@ -13,7 +13,7 @@ import FirebaseAuth
 
 import FirebaseFirestore
 
-class MainPageReservationViewViewController: UIViewController {
+class MainPageReservationViewViewController: UIViewController, UITextFieldDelegate {
 
 //    @IBOutlet weak var yearMonthLabel: UILabel!
 //    @IBOutlet weak var collectionView: UICollectionView!
@@ -56,13 +56,8 @@ class MainPageReservationViewViewController: UIViewController {
             self.initView()
             lblDnjf.text = dateFormatter.string(from: now)
          
-//            if Auth.auth().currentUser != nil {
-//                if let userUID = Auth.auth().currentUser?.uid {
-//                    // userUID contains the unique identifier for the currently authenticated user
-//                    print("UID로 로그인한 사용자: \(userUID)")
-//                    self.userUID = userUID
-//                }
-//            }
+            textfieldSymptom.delegate = self
+            
             
             pickerReservationTime.dataSource = self
             pickerReservationTime.delegate = self
@@ -221,6 +216,7 @@ class MainPageReservationViewViewController: UIViewController {
         let selectedDate = selectedDate
         let selectedYearMonth = lblDnjf.text
         let symptom = textfieldSymptom.text
+        let selectedDepartment = ReservationImageDetail[pickerImageName.selectedRow(inComponent: 0)]
 
         // 이제 각 값은 옵셔널이 아니며, 옵셔널 바인딩 없이 직접 사용할 수 있습니다.
 
@@ -230,7 +226,8 @@ class MainPageReservationViewViewController: UIViewController {
             "image": selectedImageURL as Any,
             "day": selectedDate as Any,
             "year": selectedYearMonth as Any,
-            "symptom": symptom as Any
+            "symptom": symptom as Any,
+            "department": selectedDepartment as Any
         ]
         
         let db = Firestore.firestore()
