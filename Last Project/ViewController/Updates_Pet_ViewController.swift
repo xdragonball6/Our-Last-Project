@@ -2,19 +2,22 @@
 //  Update_Pet_ViewController.swift
 //  Last Project
 //
-//  Created by 박지환 on 10/25/23.
+//  Created by 박지환 on 10/30/23.
 //
 
 import UIKit
 
-class Update_Pet_ViewController: UIViewController {
+class Updates_Pet_ViewController: UIViewController {
 
+    var receivedname: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(receivedname)
         // Do any additional setup after loading the view.
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        print(receivedname)
+    }
 
     /*
     // MARK: - Navigation

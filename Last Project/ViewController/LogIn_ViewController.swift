@@ -39,7 +39,6 @@ class LogIn_ViewController: UIViewController {
                         let myPageImage = UIImage(systemName: "person.fill", withConfiguration: config)
                         if let myPageNavController = myPageStoryboard.instantiateInitialViewController() as? UINavigationController {
                             myPageNavController.tabBarItem = UITabBarItem(title: "My Page", image: myPageImage, tag: 0)
-
                             if let tabBarController = self?.tabBarController {
                                 if var viewControllers = tabBarController.viewControllers {
                                     // Assuming "LogInViewController" is at index 3 (change the index accordingly)

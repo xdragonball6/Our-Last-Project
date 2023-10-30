@@ -44,6 +44,7 @@ class LogIn_with_Email_ViewController: UIViewController {
                     let resultAlert = UIAlertController(title: "결과", message: "로그인 되었습니다.", preferredStyle: .alert)
                     let okAction = UIAlertAction(title: "네", style: .default, handler: { ACTION in 
                         SignIn.logIn_Out = true
+                        SignIn.userID = self.tfID.text!
                         if SignIn.logIn_Out {
                             let myPageStoryboard = UIStoryboard(name: "MyPage", bundle: nil)
                             let config = UIImage.SymbolConfiguration(pointSize: 25, weight: .light, scale: .medium)

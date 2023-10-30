@@ -10,4 +10,5 @@ import Foundation
 struct SignIn{
     static var logIn_Out: Bool = false
     static var username: String = ""
+    static var userID: String = ""
 }

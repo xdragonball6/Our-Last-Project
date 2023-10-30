@@ -9,11 +9,16 @@ import UIKit
 
 class MyPageViewController: UIViewController {
 
+    @IBOutlet weak var tfUserId: UITextField!
+    @IBOutlet weak var tfPassWord: UITextField!
+    @IBOutlet weak var tfAddress: UITextField!
+    @IBOutlet weak var tfPhone: UITextField!
+    
     
     @IBOutlet weak var imgView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tfUserId.text = SignIn.userID
     }
     
     

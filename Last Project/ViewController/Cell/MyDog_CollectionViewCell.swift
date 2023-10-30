@@ -14,4 +14,9 @@ class MyDog_CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lblSpecies: UILabel!
     @IBOutlet weak var lblAge: UILabel!
     
+    
+    
+
+    
+    
 }
