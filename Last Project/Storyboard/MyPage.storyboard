@@ -18,31 +18,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yv-VY-Okd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5yv-VY-Okd">
                                 <rect key="frame" x="98" y="130" width="197" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="197" id="Alr-va-TPy"/>
+                                    <constraint firstAttribute="height" constant="180" id="YfL-Vg-YIu"/>
+                                </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="강아지 이름" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Paw-Fd-VUk">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="강아지 이름" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Paw-Fd-VUk">
                                 <rect key="frame" x="59" y="387" width="276" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="종" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ele-vU-eEV">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="종" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ele-vU-eEV">
                                 <rect key="frame" x="59" y="452" width="276" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="나이" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PmG-uO-Fkj">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="나이" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PmG-uO-Fkj">
                                 <rect key="frame" x="59" y="522" width="276" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rS9-MS-oZ5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTU-BZ-wOU">
+                                <rect key="frame" x="0.0" y="694" width="393" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="저장하기"/>
+                                <connections>
+                                    <action selector="btnInsert:" destination="dWK-Bm-89r" eventType="touchUpInside" id="Ovc-8Q-Kx2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rS9-MS-oZ5">
                                 <rect key="frame" x="251" y="283" width="57" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="camera.on.rectangle" catalog="system"/>
@@ -50,23 +57,42 @@
                                     <action selector="bringImages_Btn:" destination="dWK-Bm-89r" eventType="touchUpInside" id="0sf-aR-Mho"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTU-BZ-wOU">
-                                <rect key="frame" x="0.0" y="734" width="393" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="강아지 사진을 선택해주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTO-KK-WSH">
+                                <rect key="frame" x="101" y="318" width="191" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="저장하기"/>
-                                <connections>
-                                    <action selector="btnInsert:" destination="dWK-Bm-89r" eventType="touchUpInside" id="Ovc-8Q-Kx2"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gop-nN-AL6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gop-nN-AL6" firstAttribute="trailing" secondItem="5yv-VY-Okd" secondAttribute="trailing" constant="98" id="0ZY-L1-NAb"/>
+                            <constraint firstItem="ele-vU-eEV" firstAttribute="top" secondItem="Paw-Fd-VUk" secondAttribute="bottom" constant="31" id="1Yo-5d-Dni"/>
+                            <constraint firstItem="gop-nN-AL6" firstAttribute="trailing" secondItem="Paw-Fd-VUk" secondAttribute="trailing" constant="58" id="8rI-H2-nGz"/>
+                            <constraint firstItem="Paw-Fd-VUk" firstAttribute="top" secondItem="rS9-MS-oZ5" secondAttribute="bottom" constant="69" id="Ctq-bl-yn6"/>
+                            <constraint firstItem="rS9-MS-oZ5" firstAttribute="top" secondItem="gop-nN-AL6" secondAttribute="top" constant="180" id="I94-uz-Yyg"/>
+                            <constraint firstItem="PmG-uO-Fkj" firstAttribute="top" secondItem="ele-vU-eEV" secondAttribute="bottom" constant="36" id="OU7-ir-YHw"/>
+                            <constraint firstItem="gop-nN-AL6" firstAttribute="trailing" secondItem="rS9-MS-oZ5" secondAttribute="trailing" constant="85" id="Sub-qS-oQB"/>
+                            <constraint firstItem="Paw-Fd-VUk" firstAttribute="leading" secondItem="gop-nN-AL6" secondAttribute="leading" constant="59" id="Ud0-J7-0Ck"/>
+                            <constraint firstItem="CTU-BZ-wOU" firstAttribute="trailing" secondItem="gop-nN-AL6" secondAttribute="trailing" id="cRX-rG-CPf"/>
+                            <constraint firstItem="rS9-MS-oZ5" firstAttribute="leading" secondItem="gop-nN-AL6" secondAttribute="leading" constant="251" id="fqY-Qd-ubZ"/>
+                            <constraint firstItem="gop-nN-AL6" firstAttribute="trailing" secondItem="ele-vU-eEV" secondAttribute="trailing" constant="58" id="hCD-Sy-lH8"/>
+                            <constraint firstItem="5yv-VY-Okd" firstAttribute="top" secondItem="gop-nN-AL6" secondAttribute="top" constant="27" id="hGD-Nz-53y"/>
+                            <constraint firstItem="gop-nN-AL6" firstAttribute="bottom" secondItem="CTU-BZ-wOU" secondAttribute="bottom" constant="40" id="j7p-C7-szZ"/>
+                            <constraint firstItem="PmG-uO-Fkj" firstAttribute="leading" secondItem="gop-nN-AL6" secondAttribute="leading" constant="59" id="kwj-2d-7GP"/>
+                            <constraint firstItem="ele-vU-eEV" firstAttribute="leading" secondItem="gop-nN-AL6" secondAttribute="leading" constant="59" id="rQa-N2-DRA"/>
+                            <constraint firstItem="CTU-BZ-wOU" firstAttribute="leading" secondItem="gop-nN-AL6" secondAttribute="leading" id="ruW-4c-0bz"/>
+                            <constraint firstItem="5yv-VY-Okd" firstAttribute="leading" secondItem="gop-nN-AL6" secondAttribute="leading" constant="98" id="ubn-aQ-0B5"/>
+                            <constraint firstItem="gop-nN-AL6" firstAttribute="trailing" secondItem="PmG-uO-Fkj" secondAttribute="trailing" constant="58" id="zOQ-Pe-5ch"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Dog" id="dPx-fQ-9QQ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imgView" destination="5yv-VY-Okd" id="BxN-Xp-1bW"/>
+                        <outlet property="lblWarning" destination="fTO-KK-WSH" id="Mof-aQ-wxe"/>
                         <outlet property="tfAge" destination="PmG-uO-Fkj" id="2zv-cs-xgc"/>
                         <outlet property="tfName" destination="Paw-Fd-VUk" id="rCP-lT-G9m"/>
                         <outlet property="tfSpecies" destination="ele-vU-eEV" id="89t-q7-wPc"/>

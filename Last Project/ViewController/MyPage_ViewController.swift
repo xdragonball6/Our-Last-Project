@@ -14,10 +14,23 @@ class MyPageViewController: UIViewController {
     @IBOutlet weak var tfSpecies: UITextField!
     @IBOutlet weak var tfAge: UITextField!
     @IBOutlet weak var imgView: UIImageView!
+    
+    
+    @IBOutlet weak var lblWarning: UILabel!
+    
+    let storage = Storage.storage()
     override func viewDidLoad() {
         super.viewDidLoad()
+        downloadimage(imgview: imgView)
     }
     
+    func downloadimage(imgview:UIImageView){
+            storage.reference(forURL: "gs://lastproject-7fa23.appspot.com/userDog/main.jpeg").downloadURL { (url, error) in
+                let data = NSData(contentsOf: url!)
+                let image = UIImage(data: data! as Data)
+                imgview.image = image
+            }
+        }
     
     @IBAction func bringImages_Btn(_ sender: UIButton) {
         let vc = UIImagePickerController()
@@ -125,6 +138,7 @@ extension MyPageViewController: UIImagePickerControllerDelegate, UINavigationCon
 func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
     if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage{
         imgView.image = image
+        lblWarning.text = ""
     }
         
     print("\(info)")
