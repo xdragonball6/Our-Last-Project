@@ -47,9 +47,8 @@ class HomeViewController: UIViewController, UIScrollViewDelegate{
        // 하단
        var mainPageDataDown: [FirebaseMainPageReservationListModel] = []
        var firebaseMainPageReservationList: FirebaseMainPageReservationList = FirebaseMainPageReservationList()
-
-       
-       override func viewDidLoad() {
+    
+        override func viewDidLoad() {
            super.viewDidLoad()
            startImageAutoScroll()
            downloadImages()
@@ -70,6 +69,12 @@ class HomeViewController: UIViewController, UIScrollViewDelegate{
 
            lblUser.text = ""
            
+           
+            if let user = Auth.auth().currentUser {
+                        let userUID = user.uid
+                        print("사용자 UID 123: \(userUID)")
+                    }
+           
            // 네비게이션 타이틀 이미지 다운로드 및 설정
            if let imageURL = URL(string: "https://firebasestorage.googleapis.com/v0/b/lastproject-7fa23.appspot.com/o/mainLogo%2F%E1%84%85%E1%85%A9%E1%84%80%E1%85%A9.png?alt=media&token=1cc1d45c-5af7-43bb-8de4-c88aacd2f03a&_gl=1*1i1b2jk*_ga*MTMxNjcyMzI2LjE2OTE0MjQ4MTU.*_ga_CW55HF8NVT*MTY5ODI1MTQwMS45OC4xLjE2OTgyNTIyMDMuMzguMC4w") {
                URLSession.shared.dataTask(with: imageURL) { [weak self] (data, response, error) in
@@ -89,25 +94,42 @@ class HomeViewController: UIViewController, UIScrollViewDelegate{
        }
 
     
-    @IBAction func reservationBtn(_ sender: UIBarButtonItem) {
+    @IBAction func reservationBtn(_ sender: UIBarButtonItem){
         if Auth.auth().currentUser == nil {
-            // 사용자가 로그인하지 않은 경우, 알림창을 띄우고 "확인"을 누르면 로그인 화면으로 이동
-            let alertController = UIAlertController(title: "비 로그인", message: "예약은 로그인 상태에서만 사용이 가능합니다.", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "확인", style: .default) { [weak self] (action) in
-                self?.showLogInScreen()
-            }
-            alertController.addAction(okAction)
-            present(alertController, animated: true, completion: nil)
+            
+            showReservationScreen()
+            
         } else {
+            // 사용자가 로그인하지 않은 경우, 알림창을 띄우고 "확인"을 누르면 로그인 화면으로 이동
+            showLogInScreen()
+            
+            
 
         }
     }
 
-    func showLogInScreen() {
-        let logInStoryboard = UIStoryboard(name: "LogInStoryboard", bundle: nil)
-        if let logInViewController = logInStoryboard.instantiateInitialViewController() {
-            present(logInViewController, animated: true, completion: nil)
+    func showReservationScreen() {
+        if let user = Auth.auth().currentUser, let userUID = user.email {
+            let reservationStoryboard = UIStoryboard(name: "sgDetail1", bundle: nil) // 실제 스토리보드 이름으로 교체
+            if let reservationViewController = reservationStoryboard.instantiateViewController(withIdentifier: "MainPageReservationViewViewController") as? MainPageReservationViewViewController {
+                reservationViewController.userUID = userUID // userUID 값을 설정
+                self.navigationController?.pushViewController(reservationViewController, animated: true)
+            }
         }
+    }
+
+
+
+
+
+
+    func showLogInScreen() {
+        let alertController = UIAlertController(title: "비 로그인", message: "예약은 로그인 상태에서만 사용이 가능합니다.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default) { [weak self] (action) in
+            self?.showLogInScreen()
+        }
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
 
 

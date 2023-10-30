@@ -7,6 +7,12 @@
 
 import UIKit
 
+import Firebase
+
+import FirebaseAuth
+
+import FirebaseFirestore
+
 class MainPageReservationViewViewController: UIViewController {
 
 //    @IBOutlet weak var yearMonthLabel: UILabel!
@@ -23,6 +29,9 @@ class MainPageReservationViewViewController: UIViewController {
     @IBOutlet weak var pickerImageName: UIPickerView!
     
     // 1. 건강검진    2. 피부과   3. 예방접종     4. 중성화
+    var userUID: String?
+    
+    
         var ReservationImageName = ["https://firebasestorage.googleapis.com/v0/b/lastproject-7fa23.appspot.com/o/neuteringSurgery%2FGroup%2024.png?alt=media&token=9458c583-883f-4b06-8717-4607b56bdbc5&_gl=1*1su67xh*_ga*MTMxNjcyMzI2LjE2OTE0MjQ4MTU.*_ga_CW55HF8NVT*MTY5ODYwNjA4NS4xMDkuMS4xNjk4NjA2Mjc2LjE2LjAuMA..", "https://firebasestorage.googleapis.com/v0/b/lastproject-7fa23.appspot.com/o/neuteringSurgery%2FGroup%2026.png?alt=media&token=e917d8e0-69c1-47b1-b29d-bbec86d2ebe5&_gl=1*skf9o5*_ga*MTMxNjcyMzI2LjE2OTE0MjQ4MTU.*_ga_CW55HF8NVT*MTY5ODYwNjA4NS4xMDkuMS4xNjk4NjA2MzU5LjU3LjAuMA..", "https://firebasestorage.googleapis.com/v0/b/lastproject-7fa23.appspot.com/o/neuteringSurgery%2FGroup%2025.png?alt=media&token=390d88ee-96ee-45df-a05e-069c6652cdad&_gl=1*m6ngo8*_ga*MTMxNjcyMzI2LjE2OTE0MjQ4MTU.*_ga_CW55HF8NVT*MTY5ODYwNjA4NS4xMDkuMS4xNjk4NjA2MzE3LjM4LjAuMA..", "https://firebasestorage.googleapis.com/v0/b/lastproject-7fa23.appspot.com/o/neuteringSurgery%2F%E1%84%8C%E1%85%AE%E1%86%BC%E1%84%89%E1%85%A5%E1%86%BC%E1%84%92%E1%85%AA.png?alt=media&token=b9a25875-82e3-4cc6-9480-5a02dcd87bb7&_gl=1*19e6818*_ga*MTMxNjcyMzI2LjE2OTE0MjQ4MTU.*_ga_CW55HF8NVT*MTY5ODYwNjA4NS4xMDkuMS4xNjk4NjA2MTk1LjM1LjAuMA.."]
     
         
@@ -40,11 +49,20 @@ class MainPageReservationViewViewController: UIViewController {
         var weekdayAdding = 0
         var selectedDate: Int?
 
+        var userID: String?
     
         override func viewDidLoad() {
             super.viewDidLoad()
             self.initView()
             lblDnjf.text = dateFormatter.string(from: now)
+         
+//            if Auth.auth().currentUser != nil {
+//                if let userUID = Auth.auth().currentUser?.uid {
+//                    // userUID contains the unique identifier for the currently authenticated user
+//                    print("UID로 로그인한 사용자: \(userUID)")
+//                    self.userUID = userUID
+//                }
+//            }
             
             pickerReservationTime.dataSource = self
             pickerReservationTime.delegate = self
@@ -73,6 +91,72 @@ class MainPageReservationViewViewController: UIViewController {
                 }.resume()
             }
         }
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // 화면이 나타날 때마다 로그인 상태를 확인합니다.
+        updateUsernameLabel()
+
+        
+        
+            if let user = Auth.auth().currentUser {
+                let userUID = user.uid
+                print("사용자 UID: \(userUID)")
+            }
+    }
+    
+    func updateUsernameLabel() {
+        if let user = Auth.auth().currentUser {
+            if let userEmail = user.email {
+                let db = Firestore.firestore()
+                let userRef = db.collection("users").whereField("userid", isEqualTo: userEmail)
+                
+                let group = DispatchGroup()
+                
+                group.enter()
+                
+                userRef.getDocuments { [weak self] (querySnapshot, error) in
+                    defer {
+                        group.leave()
+                    }
+                    
+                    if let error = error {
+                        print("사용자 문서 조회 오류: \(error)")
+                        return
+                    }
+                    guard let documents = querySnapshot?.documents, !documents.isEmpty else {
+                        print("사용자 문서를 찾을 수 없습니다.")
+                        return
+                    }
+                    
+                    let document = documents[0]
+                    if let userUID = document["uid"] as? String {
+                        print("사용자 UID: \(userUID)")
+                        self?.userUID = userUID
+                    } else {
+                        // print("사용자 UID를 찾을 수 없습니다.")
+                    }
+                    
+                    if let userID = document["userid"] as? String {
+                        print("사용자 ID: \(userID)")
+                        self?.userID = userID // 사용자 ID를 설정
+                    } else {
+                        print("사용자 ID를 찾을 수 없습니다.")
+                    }
+                }
+            }
+        }
+    }
+
+ 
+
+
+    
+    
+    
+    
 
         private func initView() {
             self.initCollection()
@@ -128,6 +212,83 @@ class MainPageReservationViewViewController: UIViewController {
     
     
 
+    @IBAction func BtnMakeReservation(_ sender: UIButton){
+        // Update the user ID (You can do this asynchronously, so the following code is within a callback)
+        updateUsernameLabel()
+        
+        let userID = self.userID
+        let selectedImageURL = ReservationImageName[pickerImageName.selectedRow(inComponent: 0)]
+        let selectedDate = selectedDate
+        let selectedYearMonth = lblDnjf.text
+        let symptom = textfieldSymptom.text
+
+        // 이제 각 값은 옵셔널이 아니며, 옵셔널 바인딩 없이 직접 사용할 수 있습니다.
+
+        // Prepare data to be saved to Firestore
+        let reservationData: [String: Any] = [
+            "userid": userID as Any,
+            "image": selectedImageURL as Any,
+            "day": selectedDate as Any,
+            "year": selectedYearMonth as Any,
+            "symptom": symptom as Any
+        ]
+        
+        let db = Firestore.firestore()
+        let reservationsRef = db.collection("reservation")  // "reservation"은 컬렉션 이름입니다.
+
+        let alertController = UIAlertController(title: "예약 확인", message: "예약을 생성하시겠습니까?", preferredStyle: .alert)
+        
+        let yesAction = UIAlertAction(title: "예", style: .default) { (action) in
+            // Firestore에 예약 추가
+            reservationsRef.addDocument(data: reservationData) { (error) in
+                if let error = error {
+                    print("Error adding document: \(error)")
+                } else {
+                    print("Document added successfully!")
+                    // 여기에서 다른 예약이 생성된 후에 수행할 작업을 추가할 수 있습니다.
+                }
+            }
+        }
+
+        
+        let noAction = UIAlertAction(title: "아니요", style: .cancel, handler: nil)
+        
+        alertController.addAction(yesAction)
+        alertController.addAction(noAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+//    {
+//        // updateUsernameLabel() 메서드를 호출하여 사용자 ID를 가져옵니다.
+//        updateUsernameLabel()
+//        
+//        // 사용자 ID 출력
+//        if let userID = self.userID {
+//            print("사용자 ID 1234: \(userID)")
+//            
+//            // 이제 이 사용자 ID를 사용하여 Firebase에 저장하거나 다른 작업을 수행할 수 있습니다.
+//        } else {
+//            print("사용자 ID를 찾을 수 없습니다.")
+//        }
+//    }
+
+
+
+
+
+
+
+
+    
     
     }
 
@@ -200,64 +361,6 @@ class MainPageReservationViewViewController: UIViewController {
         }
     }
 
-//extension MainPageReservationViewViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-//        return 1
-//    }
-//
-//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-//        if pickerView == pickerReservationTime {
-//            return ReservationTime.count
-//        } else if pickerView == pickerImageName {
-//            return ReservationImageName.count
-//        }
-//        return 0
-//    }
-//
-//    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-//        if pickerView == pickerImageName {
-//            // 이미지를 표시할 UIImageView 생성
-//            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-//            imageView.contentMode = .scaleAspectFit
-//            
-//            // 이미지 URL에서 이미지를 비동기로 로드
-//            if let url = URL(string: ReservationImageName[row]) {
-//                URLSession.shared.dataTask(with: url) { (data, response, error) in
-//                    if let data = data, let image = UIImage(data: data) {
-//                        DispatchQueue.main.async {
-//                            imageView.image = image
-//                        }
-//                    }
-//                }.resume()
-//            }
-//            
-//            // 텍스트를 표시할 UILabel 생성
-//            let label = UILabel(frame: CGRect(x: 60, y: 0, width: pickerView.bounds.size.width - 60, height: 50))
-//            label.text = ReservationImageDetail[row]
-//            
-//            // 이미지와 텍스트를 함께 표시할 뷰 생성
-//            let view = UIView(frame: CGRect(x: 0, y: 0, width: pickerView.bounds.size.width, height: 50))
-//            view.addSubview(imageView)
-//            view.addSubview(label)
-//            
-//            return view
-//        }
-//        return UIView() // 다른 경우에는 빈 뷰 반환
-//    }
-//
-//
-//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        if pickerView == pickerReservationTime {
-//            return ReservationTime[row]
-//        }
-//        return nil
-//    }
-//
-//    
-//
-//}
-//
-//
 extension MainPageReservationViewViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

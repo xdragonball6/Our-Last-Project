@@ -158,7 +158,7 @@
                         <barButtonItem key="rightBarButtonItem" title="예약" id="rOG-tw-8UV">
                             <connections>
                                 <action selector="reservationBtn:" destination="CHP-lP-Z86" id="3D9-d3-D9f"/>
-                                <segue destination="cuP-b7-Zt3" kind="show" id="NTq-QK-VGo"/>
+                                <segue destination="cuP-b7-Zt3" kind="show" identifier="sgDetail1" id="NTq-QK-VGo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -336,7 +336,7 @@
         <!--Main Page Reservation View View Controller-->
         <scene sceneID="z2C-pf-fV6">
             <objects>
-                <viewController id="cuP-b7-Zt3" customClass="MainPageReservationViewViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainPageReservationViewViewController" id="cuP-b7-Zt3" customClass="MainPageReservationViewViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yBd-DY-LcT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -436,6 +436,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="예약하기"/>
+                                <connections>
+                                    <action selector="BtnMakeReservation:" destination="cuP-b7-Zt3" eventType="touchUpInside" id="epX-He-vkR"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fb9-oj-Feq">
                                 <rect key="frame" x="0.0" y="103" width="396" height="118"/>
