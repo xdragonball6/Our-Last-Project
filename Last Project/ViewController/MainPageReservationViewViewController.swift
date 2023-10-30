@@ -14,11 +14,19 @@ class MainPageReservationViewViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
     @IBOutlet weak var lblDnjf: UILabel!
     
     @IBOutlet weak var pickerReservationTime: UIPickerView!
     
+    @IBOutlet weak var textfieldSymptom: UITextField!
+    
+    @IBOutlet weak var pickerImageName: UIPickerView!
+    
+    // 1. 건강검진    2. 피부과   3. 예방접종     4. 중성화
+        var ReservationImageName = ["https://firebasestorage.googleapis.com/v0/b/lastproject-7fa23.appspot.com/o/neuteringSurgery%2FGroup%2024.png?alt=media&token=9458c583-883f-4b06-8717-4607b56bdbc5&_gl=1*1su67xh*_ga*MTMxNjcyMzI2LjE2OTE0MjQ4MTU.*_ga_CW55HF8NVT*MTY5ODYwNjA4NS4xMDkuMS4xNjk4NjA2Mjc2LjE2LjAuMA..", "https://firebasestorage.googleapis.com/v0/b/lastproject-7fa23.appspot.com/o/neuteringSurgery%2FGroup%2026.png?alt=media&token=e917d8e0-69c1-47b1-b29d-bbec86d2ebe5&_gl=1*skf9o5*_ga*MTMxNjcyMzI2LjE2OTE0MjQ4MTU.*_ga_CW55HF8NVT*MTY5ODYwNjA4NS4xMDkuMS4xNjk4NjA2MzU5LjU3LjAuMA..", "https://firebasestorage.googleapis.com/v0/b/lastproject-7fa23.appspot.com/o/neuteringSurgery%2FGroup%2025.png?alt=media&token=390d88ee-96ee-45df-a05e-069c6652cdad&_gl=1*m6ngo8*_ga*MTMxNjcyMzI2LjE2OTE0MjQ4MTU.*_ga_CW55HF8NVT*MTY5ODYwNjA4NS4xMDkuMS4xNjk4NjA2MzE3LjM4LjAuMA..", "https://firebasestorage.googleapis.com/v0/b/lastproject-7fa23.appspot.com/o/neuteringSurgery%2F%E1%84%8C%E1%85%AE%E1%86%BC%E1%84%89%E1%85%A5%E1%86%BC%E1%84%92%E1%85%AA.png?alt=media&token=b9a25875-82e3-4cc6-9480-5a02dcd87bb7&_gl=1*19e6818*_ga*MTMxNjcyMzI2LjE2OTE0MjQ4MTU.*_ga_CW55HF8NVT*MTY5ODYwNjA4NS4xMDkuMS4xNjk4NjA2MTk1LjM1LjAuMA.."]
+    
+        
+        var ReservationImageDetail = ["건강검진","피부과","예방접종","중성화 수술"]
     
         var ReservationTime = ["10시", "10시 30분", "11시", "11시 30분", "13시", "13시 30분", "14시", "14시 30분", "15시", "15시 30분", "16시", "16시 30분"]
     
@@ -40,6 +48,9 @@ class MainPageReservationViewViewController: UIViewController {
             
             pickerReservationTime.dataSource = self
             pickerReservationTime.delegate = self
+            
+            pickerImageName.dataSource = self
+            pickerImageName.delegate = self
             
 //            for i in 0..<ReservationTime.count{
 //                let time = Text(named: ReservationTime[i])
@@ -189,23 +200,136 @@ class MainPageReservationViewViewController: UIViewController {
         }
     }
 
-
+//extension MainPageReservationViewViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+//        return 1
+//    }
+//
+//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+//        if pickerView == pickerReservationTime {
+//            return ReservationTime.count
+//        } else if pickerView == pickerImageName {
+//            return ReservationImageName.count
+//        }
+//        return 0
+//    }
+//
+//    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+//        if pickerView == pickerImageName {
+//            // 이미지를 표시할 UIImageView 생성
+//            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+//            imageView.contentMode = .scaleAspectFit
+//            
+//            // 이미지 URL에서 이미지를 비동기로 로드
+//            if let url = URL(string: ReservationImageName[row]) {
+//                URLSession.shared.dataTask(with: url) { (data, response, error) in
+//                    if let data = data, let image = UIImage(data: data) {
+//                        DispatchQueue.main.async {
+//                            imageView.image = image
+//                        }
+//                    }
+//                }.resume()
+//            }
+//            
+//            // 텍스트를 표시할 UILabel 생성
+//            let label = UILabel(frame: CGRect(x: 60, y: 0, width: pickerView.bounds.size.width - 60, height: 50))
+//            label.text = ReservationImageDetail[row]
+//            
+//            // 이미지와 텍스트를 함께 표시할 뷰 생성
+//            let view = UIView(frame: CGRect(x: 0, y: 0, width: pickerView.bounds.size.width, height: 50))
+//            view.addSubview(imageView)
+//            view.addSubview(label)
+//            
+//            return view
+//        }
+//        return UIView() // 다른 경우에는 빈 뷰 반환
+//    }
+//
+//
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        if pickerView == pickerReservationTime {
+//            return ReservationTime[row]
+//        }
+//        return nil
+//    }
+//
+//    
+//
+//}
+//
+//
 extension MainPageReservationViewViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
+    // pickerReservationTime 데이터 소스 및 델리게이트 메서드
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return ReservationTime.count
+        if pickerView == pickerReservationTime {
+            return ReservationTime.count
+        } else if pickerView == pickerImageName {
+            return ReservationImageName.count
+        }
+        return 0
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return ReservationTime[row]
+        if pickerView == pickerReservationTime {
+            return ReservationTime[row]
+        } else if pickerView == pickerImageName {
+            return nil  // pickerImageName에서는 텍스트가 아니라 이미지를 표시
+        }
+        return nil
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-
-        _ = ReservationTime[row]
-
+        if pickerView == pickerReservationTime {
+            _ = ReservationTime[row]
+            
+        } else if pickerView == pickerImageName {
+            
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        if pickerView == pickerImageName {
+            // 텍스트와 이미지를 함께 표시할 뷰 생성
+            let combinedView = UIView(frame: CGRect(x: 0, y: 0, width: pickerView.bounds.size.width, height: 50))
+            
+            // 이미지를 표시할 UIImageView 생성 및 이미지 로드
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50)) // 이미지 크기 설정
+            imageView.contentMode = .scaleAspectFit
+            
+            if let url = URL(string: ReservationImageName[row]) {
+                URLSession.shared.dataTask(with: url) { (data, response, error) in
+                    if let data = data, let image = UIImage(data: data) {
+                        DispatchQueue.main.async {
+                            imageView.image = image
+                        }
+                    }
+                }.resume()
+            }
+            
+            // 텍스트를 표시할 UILabel 생성
+            let label = UILabel(frame: CGRect(x: 60, y: 0, width: pickerView.bounds.size.width - 60, height: 50))
+            label.text = ReservationImageDetail[row]
+            label.font = UIFont.systemFont(ofSize: 25.0) // 글씨 크기 설정
+            label.textAlignment = .center // 가운데 정렬
+            
+            // 이미지와 텍스트를 함께 표시할 뷰에 추가
+            combinedView.addSubview(imageView)
+            combinedView.addSubview(label)
+            
+            return combinedView
+        } else if pickerView == pickerReservationTime {
+            // 텍스트를 표시할 UILabel 생성
+            let label = UILabel()
+            label.text = ReservationTime[row]
+            label.textAlignment = .center
+            label.font = UIFont.systemFont(ofSize: 25.0)
+            return label
+        }
+        
+        return UIView() // 다른 경우에는 빈 뷰 반환
     }
 }
