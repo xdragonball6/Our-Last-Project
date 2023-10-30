@@ -10,7 +10,6 @@ import Firebase
 import FirebaseStorage
 class MyPages_Detail_ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    @IBOutlet weak var testimage: UIImageView!
     var DogList: [FirebaseDogDBModel] = []
     
     @IBOutlet weak var cvMyDogListView: UICollectionView!

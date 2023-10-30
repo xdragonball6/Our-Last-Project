@@ -37,6 +37,8 @@ class LogIn_ViewController: UIViewController {
                         let myPageStoryboard = UIStoryboard(name: "MyPage", bundle: nil)
                         let config = UIImage.SymbolConfiguration(pointSize: 25, weight: .light, scale: .medium)
                         let myPageImage = UIImage(systemName: "person.fill", withConfiguration: config)
+                        let resultAlert = UIAlertController(title: "결과", message: "로그인 되었습니다.", preferredStyle: .alert)
+                        let okAction = UIAlertAction(title: "네", style: .default, handler: { ACTION in 
                         if let myPageNavController = myPageStoryboard.instantiateInitialViewController() as? UINavigationController {
                             myPageNavController.tabBarItem = UITabBarItem(title: "My Page", image: myPageImage, tag: 0)
                             if let tabBarController = self?.tabBarController {
@@ -47,6 +49,9 @@ class LogIn_ViewController: UIViewController {
                                 }
                             }
                         }
+                    })
+                        resultAlert.addAction(okAction)
+                        self!.present(resultAlert, animated: true)
                     }
                 }
             }

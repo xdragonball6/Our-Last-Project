@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Page-->
+        <!--Add Dog-->
         <scene sceneID="ya5-my-K3d">
             <objects>
                 <viewController id="dWK-Bm-89r" customClass="MyPageViewController" customModule="Last_Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,36 +22,24 @@
                                 <rect key="frame" x="98" y="130" width="197" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Id" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Paw-Fd-VUk">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="강아지 이름" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Paw-Fd-VUk">
                                 <rect key="frame" x="59" y="387" width="276" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 변경" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ele-vU-eEV">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="종" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ele-vU-eEV">
                                 <rect key="frame" x="59" y="452" width="276" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="주소" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PmG-uO-Fkj">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="나이" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PmG-uO-Fkj">
                                 <rect key="frame" x="59" y="522" width="276" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="전화번호" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sas-IS-RFX">
-                                <rect key="frame" x="59" y="592" width="276" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTU-BZ-wOU">
-                                <rect key="frame" x="158" y="667" width="78" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="수정"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rS9-MS-oZ5">
                                 <rect key="frame" x="251" y="283" width="57" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -62,23 +50,31 @@
                                     <action selector="bringImages_Btn:" destination="dWK-Bm-89r" eventType="touchUpInside" id="0sf-aR-Mho"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTU-BZ-wOU">
+                                <rect key="frame" x="0.0" y="734" width="393" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="저장하기"/>
+                                <connections>
+                                    <action selector="btnInsert:" destination="dWK-Bm-89r" eventType="touchUpInside" id="Ovc-8Q-Kx2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gop-nN-AL6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="My Page" id="dPx-fQ-9QQ"/>
+                    <navigationItem key="navigationItem" title="Add Dog" id="dPx-fQ-9QQ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imgView" destination="5yv-VY-Okd" id="BxN-Xp-1bW"/>
-                        <outlet property="tfAddress" destination="PmG-uO-Fkj" id="jkD-7u-qqD"/>
-                        <outlet property="tfPassWord" destination="ele-vU-eEV" id="rwB-GK-ymt"/>
-                        <outlet property="tfPhone" destination="sas-IS-RFX" id="Q8Q-QL-LGr"/>
-                        <outlet property="tfUserId" destination="Paw-Fd-VUk" id="omJ-Cq-tEh"/>
+                        <outlet property="tfAge" destination="PmG-uO-Fkj" id="2zv-cs-xgc"/>
+                        <outlet property="tfName" destination="Paw-Fd-VUk" id="rCP-lT-G9m"/>
+                        <outlet property="tfSpecies" destination="ele-vU-eEV" id="89t-q7-wPc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X9u-lQ-Uqz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3810" y="190"/>
+            <point key="canvasLocation" x="3809.9236641221373" y="189.43661971830986"/>
         </scene>
         <!--내 정보-->
         <scene sceneID="Jt1-1O-bzc">
@@ -92,15 +88,11 @@
                                 <rect key="frame" x="0.0" y="670" width="393" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="내 정보 변경"/>
+                                <buttonConfiguration key="configuration" style="plain" title="강아지 추가하기"/>
                                 <connections>
                                     <segue destination="dWK-Bm-89r" kind="show" identifier="sgMyPage" id="PyW-DE-0ou"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dJ-tM-bq4">
-                                <rect key="frame" x="76" y="340" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kqR-Fr-EPj">
                                 <rect key="frame" x="0.0" y="159" width="393" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -184,7 +176,6 @@
                     <navigationItem key="navigationItem" title="내 정보" id="qok-ai-qzm"/>
                     <connections>
                         <outlet property="cvMyDogListView" destination="kqR-Fr-EPj" id="8jE-dd-SzU"/>
-                        <outlet property="testimage" destination="2dJ-tM-bq4" id="1Ff-DT-Gs6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="se6-qN-DeH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

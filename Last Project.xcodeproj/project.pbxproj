@@ -21,6 +21,8 @@
 		1E6020202AE76B000082F67C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60201F2AE76B000082F67C /* Service.swift */; };
 		1E6020222AE78D800082F67C /* FindID_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6020212AE78D800082F67C /* FindID_ViewController.swift */; };
 		1E6020232AE78FD00082F67C /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD132ADD3F290053B4EF /* LogIn.storyboard */; };
+		1E65F5C52AF03CDA000C5260 /* FirebaseKAKAOSignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65F5C42AF03CDA000C5260 /* FirebaseKAKAOSignInModel.swift */; };
+		1E65F5CB2AF04EC8000C5260 /* FirebaseDogInsertVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65F5CA2AF04EC8000C5260 /* FirebaseDogInsertVM.swift */; };
 		1E67ACB82AEFC8DC002A299F /* MyPages_Detail_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E67ACB72AEFC8DB002A299F /* MyPages_Detail_ViewController.swift */; };
 		1E75DD0C2ADD3A2C0053B4EF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD0B2ADD3A2C0053B4EF /* Home.storyboard */; };
 		1E75DD0E2ADD3F000053B4EF /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD0D2ADD3F000053B4EF /* User.storyboard */; };
@@ -140,6 +142,8 @@
 		1E60201D2AE767510082F67C /* FindPassword_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPassword_ViewController.swift; sourceTree = "<group>"; };
 		1E60201F2AE76B000082F67C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		1E6020212AE78D800082F67C /* FindID_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindID_ViewController.swift; sourceTree = "<group>"; };
+		1E65F5C42AF03CDA000C5260 /* FirebaseKAKAOSignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseKAKAOSignInModel.swift; sourceTree = "<group>"; };
+		1E65F5CA2AF04EC8000C5260 /* FirebaseDogInsertVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDogInsertVM.swift; sourceTree = "<group>"; };
 		1E67ACB72AEFC8DB002A299F /* MyPages_Detail_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPages_Detail_ViewController.swift; sourceTree = "<group>"; };
 		1E75DD0B2ADD3A2C0053B4EF /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		1E75DD0D2ADD3F000053B4EF /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
@@ -343,6 +347,8 @@
 				1E4C7DF92AEA596B0077B1F6 /* dogVM.swift */,
 				1E787CF02AEFDA2A009975CC /* FirebaseDogVM.swift */,
 				1E787CF62AF0158F009975CC /* FirebaseDogUpdateVM.swift */,
+				1E65F5C42AF03CDA000C5260 /* FirebaseKAKAOSignInModel.swift */,
+				1E65F5CA2AF04EC8000C5260 /* FirebaseDogInsertVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -613,7 +619,9 @@
 				E073F70E2AE5A6710064BB3F /* FirebaseMainPageMessage.swift in Sources */,
 				1E3DAAF02AE8DF6E003AB6EC /* MyDog_CollectionViewCell.swift in Sources */,
 				1E4C7DF62AEA593A0077B1F6 /* dogModel.swift in Sources */,
+				1E65F5C52AF03CDA000C5260 /* FirebaseKAKAOSignInModel.swift in Sources */,
 				1EFFECA82AE14441006EBD97 /* KakaoAuthVM.swift in Sources */,
+				1E65F5CB2AF04EC8000C5260 /* FirebaseDogInsertVM.swift in Sources */,
 				E003AE202AEA12A100F9FC95 /* FirebaseMainPageReservationList.swift in Sources */,
 				1ECD9DE82ADD34E5008DC85F /* HomeViewController.swift in Sources */,
 				E003AE1E2AEA111000F9FC95 /* FirebaseMainPageReservationListMessage.swift in Sources */,

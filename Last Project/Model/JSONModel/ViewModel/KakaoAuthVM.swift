@@ -85,9 +85,30 @@ class KakaoAuthVM: ObservableObject {
                 // 이 예시에서는 콘솔에 출력합니다.
                 print("User Name: \(name), User profileImageURL: \(profileImageURL), User thumbnailImageURL: \(thumbnailImageURL)")
                 SignIn.username = name
-            }
-        }
-    }// login
+                SignIn.userID = name
+                let signInModel = FirebaseKAKAOSignInModel()
+                            signInModel.insertItems(name: name) { success in
+                                if success {
+                                    // Firebase에 사용자 정보가 저장된 경우
+                                    completion(true)
+                                } else {
+                                    // Firebase에 사용자 정보 저장에 실패한 경우
+                                    completion(false)
+                                }
+                            }
+                        } else {
+                            // 사용자 정보 가져오기 실패
+                            completion(false)
+                        }
+                    }
+                }
+                
+
+
+
+
+
+// login
     
     @MainActor
     func kakaoLogout(){

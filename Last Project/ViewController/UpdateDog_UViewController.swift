@@ -105,6 +105,28 @@ class UpdateDog_UViewController: UIViewController {
         }
     }
     
+    
+    // keyboard 세팅
+    func setKeyboardEvent(){
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear(_ :)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear(_ :)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    
+    @objc func keyboardWillAppear(_ sender: NotificationCenter){
+        self.view.frame.origin.y = -50 //키보드가 나타나면서 어디까지 나타날지 y의 값을 나타내는 녀석
+    }
+    
+    
+    @objc func keyboardWillDisappear(_ sender: NotificationCenter){
+        self.view.frame.origin.y = 0 // y좌표를 0으로 돌려 원래 화면 나오게 하기
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+                self.view.endEditing(true)
+            }
+    
 
     /*
     // MARK: - Navigation
