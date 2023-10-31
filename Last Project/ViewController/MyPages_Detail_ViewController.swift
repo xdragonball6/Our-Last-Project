@@ -10,18 +10,21 @@ import Firebase
 import FirebaseStorage
 class MyPages_Detail_ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    @IBOutlet weak var btnAdd: UIButton!
+    
+    
     var DogList: [FirebaseDogDBModel] = []
+    
+    
     
     @IBOutlet weak var cvMyDogListView: UICollectionView!
     let storage = Storage.storage()
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnAdd.layer.borderWidth = 0.5
+        btnAdd.layer.borderColor = UIColor.gray.cgColor
         // Do any additional setup after loading the view.
 //        downloadimage(imgview: testimage)
-        
-        
-        // 네비게이션바, 탭바 스크롤 시에도 색상 유지하는 기능
-        naviAndTabSetting()
         
         setDelegateAndDataSource(cvMyDogListView)
         // 컬렉션뷰 수평 스크롤 세팅
@@ -86,15 +89,32 @@ class MyPages_Detail_ViewController: UIViewController, UICollectionViewDelegate,
     // 셀 개수 리턴
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == cvMyDogListView {
-            return DogList.count
+            if DogList.isEmpty {
+                // DogList가 비어 있으면 하나의 셀을 표시
+                return 1
+            } else {
+                return DogList.count
+            }
         }
         return 0
     }
+
     
     // 셀별 세팅
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell: UICollectionViewCell
-            cell = cvMyDogListView.dequeueReusableCell(withReuseIdentifier: "DogCell", for: indexPath) as! MyDog_CollectionViewCell
+        if DogList.isEmpty {
+            // DogList가 비어 있을 때 빈 셀을 만들고 메시지를 표시
+            let cell = cvMyDogListView.dequeueReusableCell(withReuseIdentifier: "DogCell", for: indexPath) as! MyDog_CollectionViewCell
+            let trimmedImagePath = "cute"
+            configureCell(cell as! MyDog_CollectionViewCell, withImageURL: trimmedImagePath)
+            cell.lblName.text = ""
+            cell.lblAge.text = ""
+            cell.lblSpecies.text = "강아지를 추가해주세요"
+            cell.btnUpdates.isHidden = true
+            return cell
+        } else {
+            // DogList가 비어 있지 않으면 실제 데이터로 셀을 구성
+            let cell = cvMyDogListView.dequeueReusableCell(withReuseIdentifier: "DogCell", for: indexPath) as! MyDog_CollectionViewCell
             let dogCell = cell as! MyDog_CollectionViewCell
             dogCell.lblName.text = DogList[indexPath.row].name
             dogCell.lblAge.text = "\(DogList[indexPath.row].age)살"
@@ -102,9 +122,9 @@ class MyPages_Detail_ViewController: UIViewController, UICollectionViewDelegate,
             let imagePath = DogList[indexPath.row].imageurl
             let trimmedImagePath = imagePath.trimmingCharacters(in: .whitespacesAndNewlines)
             configureCell(cell as! MyDog_CollectionViewCell, withImageURL: trimmedImagePath)
-        print(DogList[indexPath.row].name)
-        return cell
+            return cell
         }
+    }
     
     // 셀 data 담아주기. 바로 위 셀별 세팅에서 호출해서 사용한다.
     func configureCell(_ cell: UICollectionViewCell, withImageURL imageUrlString: String) {
@@ -141,20 +161,7 @@ class MyPages_Detail_ViewController: UIViewController, UICollectionViewDelegate,
     
     
     // MARK: - ViewWillAppear Setting
-    func naviAndTabSetting(){
-        let naviAppearance = UINavigationBarAppearance()
-        naviAppearance.backgroundColor = UIColor(named: "background")
-        naviAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        let tabbarAppearance = UITabBarAppearance()
-        tabbarAppearance.backgroundColor = UIColor(named: "background")
-        
-        self.navigationController?.navigationBar.scrollEdgeAppearance = naviAppearance
-        self.navigationController?.navigationBar.standardAppearance = naviAppearance
-        self.navigationController?.navigationBar.compactAppearance = naviAppearance
 
-        self.tabBarController?.tabBar.scrollEdgeAppearance = tabbarAppearance
-        self.tabBarController?.tabBar.standardAppearance = tabbarAppearance
-    }
     
     func setDelegateAndDataSource(_ view: UICollectionView){
         view.delegate = self

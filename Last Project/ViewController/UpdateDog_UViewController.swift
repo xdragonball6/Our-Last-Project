@@ -70,6 +70,21 @@ class UpdateDog_UViewController: UIViewController {
     }
     
     
+    @IBAction func btnDelete(_ sender: UIButton) {
+        let deleteModel = FirebaseDogDeleteVM()
+        let result = deleteModel.deleteItems(name: receivedname, seq: receivedSeq)
+        let resultAlert = UIAlertController(title: "결과", message: "삭제 되었습니다", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "네, 알겠습니다", style: .default, handler: {
+            ACTION in self.navigationController?.popViewController(animated: true)
+        })
+        
+        resultAlert.addAction(okAction)
+        present(resultAlert, animated: true)
+    }
+    
+    
+    
+    
     
     
     

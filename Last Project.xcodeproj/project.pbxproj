@@ -23,6 +23,7 @@
 		1E6020232AE78FD00082F67C /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD132ADD3F290053B4EF /* LogIn.storyboard */; };
 		1E65F5C52AF03CDA000C5260 /* FirebaseKAKAOSignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65F5C42AF03CDA000C5260 /* FirebaseKAKAOSignInModel.swift */; };
 		1E65F5CB2AF04EC8000C5260 /* FirebaseDogInsertVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65F5CA2AF04EC8000C5260 /* FirebaseDogInsertVM.swift */; };
+		1E65F5CD2AF08EB1000C5260 /* FirebaseDogDeleteVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65F5CC2AF08EB1000C5260 /* FirebaseDogDeleteVM.swift */; };
 		1E67ACB82AEFC8DC002A299F /* MyPages_Detail_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E67ACB72AEFC8DB002A299F /* MyPages_Detail_ViewController.swift */; };
 		1E75DD0C2ADD3A2C0053B4EF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD0B2ADD3A2C0053B4EF /* Home.storyboard */; };
 		1E75DD0E2ADD3F000053B4EF /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD0D2ADD3F000053B4EF /* User.storyboard */; };
@@ -144,6 +145,7 @@
 		1E6020212AE78D800082F67C /* FindID_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindID_ViewController.swift; sourceTree = "<group>"; };
 		1E65F5C42AF03CDA000C5260 /* FirebaseKAKAOSignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseKAKAOSignInModel.swift; sourceTree = "<group>"; };
 		1E65F5CA2AF04EC8000C5260 /* FirebaseDogInsertVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDogInsertVM.swift; sourceTree = "<group>"; };
+		1E65F5CC2AF08EB1000C5260 /* FirebaseDogDeleteVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDogDeleteVM.swift; sourceTree = "<group>"; };
 		1E67ACB72AEFC8DB002A299F /* MyPages_Detail_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPages_Detail_ViewController.swift; sourceTree = "<group>"; };
 		1E75DD0B2ADD3A2C0053B4EF /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		1E75DD0D2ADD3F000053B4EF /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 				1E787CF62AF0158F009975CC /* FirebaseDogUpdateVM.swift */,
 				1E65F5C42AF03CDA000C5260 /* FirebaseKAKAOSignInModel.swift */,
 				1E65F5CA2AF04EC8000C5260 /* FirebaseDogInsertVM.swift */,
+				1E65F5CC2AF08EB1000C5260 /* FirebaseDogDeleteVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -646,6 +649,7 @@
 				1E4C7DF82AEA59550077B1F6 /* dogJSONModel.swift in Sources */,
 				1EFFEDE82AE25A9A006EBD97 /* SignIn_ViewController.swift in Sources */,
 				1E79F2D32AE625A50016B226 /* SingIn.swift in Sources */,
+				1E65F5CD2AF08EB1000C5260 /* FirebaseDogDeleteVM.swift in Sources */,
 				1E4C7DFA2AEA596B0077B1F6 /* dogVM.swift in Sources */,
 				1EFFEDEA2AE25BC8006EBD97 /* FirebaseSignInModel.swift in Sources */,
 				E0D243612AEEE6660032B067 /* MainPageReservationViewView2ViewController.swift in Sources */,
