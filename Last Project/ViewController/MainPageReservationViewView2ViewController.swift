@@ -236,6 +236,8 @@ class MainPageReservationViewView2ViewController: UIViewController, UITextFieldD
                 } else {
                     print("Document added successfully!")
                     // 여기에서 다른 예약이 생성된 후에 수행할 작업을 추가할 수 있습니다.
+                    
+                    self.performSegue(withIdentifier: "sgDetail", sender: self)
                 }
             }
         }
