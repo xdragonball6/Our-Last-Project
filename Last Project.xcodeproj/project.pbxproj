@@ -63,6 +63,9 @@
 		1ECD9DEB2ADD34E5008DC85F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ECD9DE92ADD34E5008DC85F /* Main.storyboard */; };
 		1ECD9DED2ADD34E6008DC85F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ECD9DEC2ADD34E6008DC85F /* Assets.xcassets */; };
 		1ECD9DF02ADD34E6008DC85F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ECD9DEE2ADD34E6008DC85F /* LaunchScreen.storyboard */; };
+		1EFF4AE42AF0B9D300A8CCB0 /* FirebaseDogDeleteVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFF4AE32AF0B9D300A8CCB0 /* FirebaseDogDeleteVM.swift */; };
+		1EFF4AE62AF0BA4900A8CCB0 /* FirebaseDogInsertVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFF4AE52AF0BA4800A8CCB0 /* FirebaseDogInsertVM.swift */; };
+		1EFF4AE82AF0BB6600A8CCB0 /* FirebaseKAKAOSignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFF4AE72AF0BB6600A8CCB0 /* FirebaseKAKAOSignInModel.swift */; };
 		1EFFEC732AE13E58006EBD97 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 1EFFEC722AE13E58006EBD97 /* KakaoSDK */; };
 		1EFFEC752AE13E58006EBD97 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1EFFEC742AE13E58006EBD97 /* KakaoSDKAuth */; };
 		1EFFEC772AE13E58006EBD97 /* KakaoSDKCert in Frameworks */ = {isa = PBXBuildFile; productRef = 1EFFEC762AE13E58006EBD97 /* KakaoSDKCert */; };
@@ -162,6 +165,9 @@
 		1ECD9DEC2ADD34E6008DC85F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1ECD9DEF2ADD34E6008DC85F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1ECD9DF12ADD34E6008DC85F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EFF4AE32AF0B9D300A8CCB0 /* FirebaseDogDeleteVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDogDeleteVM.swift; sourceTree = "<group>"; };
+		1EFF4AE52AF0BA4800A8CCB0 /* FirebaseDogInsertVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDogInsertVM.swift; sourceTree = "<group>"; };
+		1EFF4AE72AF0BB6600A8CCB0 /* FirebaseKAKAOSignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseKAKAOSignInModel.swift; sourceTree = "<group>"; };
 		1EFFECA72AE14441006EBD97 /* KakaoAuthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthVM.swift; sourceTree = "<group>"; };
 		1EFFECA92AE1455C006EBD97 /* LogIn_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn_ViewController.swift; sourceTree = "<group>"; };
 		1EFFECB02AE1503A006EBD97 /* MyPage_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage_ViewController.swift; sourceTree = "<group>"; };
@@ -354,6 +360,9 @@
 				E061CC992AF0AD1B00C89A93 /* FirebaseListDelete.swift */,
 				1E787CF02AEFDA2A009975CC /* FirebaseDogVM.swift */,
 				1E787CF62AF0158F009975CC /* FirebaseDogUpdateVM.swift */,
+				1EFF4AE32AF0B9D300A8CCB0 /* FirebaseDogDeleteVM.swift */,
+				1EFF4AE52AF0BA4800A8CCB0 /* FirebaseDogInsertVM.swift */,
+				1EFF4AE72AF0BB6600A8CCB0 /* FirebaseKAKAOSignInModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -623,6 +632,7 @@
 				E0DD7AB62AED83C80022927C /* FirebaseMainPageUserMessage.swift in Sources */,
 				E0DAA6752AF037CC008194A1 /* FirebaseMainPageReservationListListModel.swift in Sources */,
 				E073F7102AE5A6D80064BB3F /* FirebaseMainPageImage.swift in Sources */,
+				1EFF4AE62AF0BA4900A8CCB0 /* FirebaseDogInsertVM.swift in Sources */,
 				E073F70E2AE5A6710064BB3F /* FirebaseMainPageMessage.swift in Sources */,
 				1E3DAAF02AE8DF6E003AB6EC /* MyDog_CollectionViewCell.swift in Sources */,
 				1E4C7DF62AEA593A0077B1F6 /* dogModel.swift in Sources */,
@@ -634,6 +644,7 @@
 				1EFFECAA2AE1455C006EBD97 /* LogIn_ViewController.swift in Sources */,
 				E0BE10202AE64185003192D9 /* FirebaseMainPageBtn.swift in Sources */,
 				1E787CF52AF00E4D009975CC /* UpdateDog_UViewController.swift in Sources */,
+				1EFF4AE82AF0BB6600A8CCB0 /* FirebaseKAKAOSignInModel.swift in Sources */,
 				1E60201C2AE74F6F0082F67C /* KakaoSignInModel.swift in Sources */,
 				E061CC9A2AF0AD1B00C89A93 /* FirebaseListDelete.swift in Sources */,
 				1E67ACB82AEFC8DC002A299F /* MyPages_Detail_ViewController.swift in Sources */,
@@ -665,6 +676,7 @@
 				E003AE1C2AEA109400F9FC95 /* FirebaseMainPageReservationListModel.swift in Sources */,
 				1E038F622AE7C29B00A54631 /* CustomTabBarController.swift in Sources */,
 				E0BE101A2AE63CA7003192D9 /* MainPageBtnCollectionViewCell.swift in Sources */,
+				1EFF4AE42AF0B9D300A8CCB0 /* FirebaseDogDeleteVM.swift in Sources */,
 				1EFFED992AE22DBE006EBD97 /* LogIn_with_Email_ViewController.swift in Sources */,
 				1E6020202AE76B000082F67C /* Service.swift in Sources */,
 				1E3DAAEB2AE8BBB6003AB6EC /* Products_ViewController.swift in Sources */,
