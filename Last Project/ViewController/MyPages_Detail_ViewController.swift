@@ -50,7 +50,7 @@ class MyPages_Detail_ViewController: UIViewController, UICollectionViewDelegate,
         SignIn.userID = ""
         SignIn.username = ""
         let config = UIImage.SymbolConfiguration(pointSize: 25, weight: .light, scale: .medium)
-        let myPageImage = UIImage(systemName: "person.fill", withConfiguration: config)
+        _ = UIImage(systemName: "person.fill", withConfiguration: config)
         let resultAlert = UIAlertController(title: "결과", message: "로그아웃 되었습니다.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "네", style: .default, handler: { ACTION in
             if SignIn.logIn_Out == false {
@@ -110,19 +110,19 @@ class MyPages_Detail_ViewController: UIViewController, UICollectionViewDelegate,
             cell.lblAge.text = ""
             cell.lblSpecies.text = "강아지를 추가해주세요"
             cell.btnUpdates.isHidden = true
-            configureCell(cell as! MyDog_CollectionViewCell, withImageURL: trimmedImagePath)
+            configureCell(cell , withImageURL: trimmedImagePath)
             return cell
         } else {
             // DogList가 비어 있지 않으면 실제 데이터로 셀을 구성
             let cell = cvMyDogListView.dequeueReusableCell(withReuseIdentifier: "DogCell", for: indexPath) as! MyDog_CollectionViewCell
-            let dogCell = cell as! MyDog_CollectionViewCell
+            let dogCell = cell 
             dogCell.lblName.text = DogList[indexPath.row].name
             dogCell.lblAge.text = "\(DogList[indexPath.row].age)살"
             dogCell.lblSpecies.text = DogList[indexPath.row].species
             dogCell.btnUpdates.isHidden = false
             let imagePath = DogList[indexPath.row].imageurl
             let trimmedImagePath = imagePath.trimmingCharacters(in: .whitespacesAndNewlines)
-            configureCell(cell as! MyDog_CollectionViewCell, withImageURL: trimmedImagePath)
+            configureCell(cell , withImageURL: trimmedImagePath)
             return cell
         }
     }

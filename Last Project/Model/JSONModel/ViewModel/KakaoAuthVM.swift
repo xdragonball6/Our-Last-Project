@@ -10,6 +10,7 @@ import Combine
 import KakaoSDKAuth
 import KakaoSDKUser
 
+
 class KakaoAuthVM: ObservableObject {
     
     var subscriptions = Set<AnyCancellable>()
