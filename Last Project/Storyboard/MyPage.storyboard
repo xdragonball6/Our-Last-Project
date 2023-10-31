@@ -38,7 +38,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="나이" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PmG-uO-Fkj">
                                 <rect key="frame" x="59" y="522" width="276" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTU-BZ-wOU">
                                 <rect key="frame" x="0.0" y="694" width="393" height="35"/>

@@ -219,20 +219,6 @@
                                                     <action selector="btnAgreeAndSignIn:" destination="ZJG-DQ-oeM" eventType="touchUpInside" id="82i-No-3ED"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snD-XJ-PA7">
-                                                <rect key="frame" x="315" y="450" width="54" height="35"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="보기">
-                                                    <color key="baseForegroundColor" red="0.74197274319999995" green="0.74197274319999995" blue="0.74197274319999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UaK-2r-29b">
-                                                <rect key="frame" x="314.33333333333331" y="494" width="54" height="35"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="보기">
-                                                    <color key="baseForegroundColor" red="0.74197274319999995" green="0.74197274319999995" blue="0.74197274319999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </buttonConfiguration>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfa-iU-Igw">
                                                 <rect key="frame" x="47" y="345" width="121" height="35"/>
                                                 <state key="normal" title="Button"/>
@@ -252,7 +238,6 @@
                                             <constraint firstItem="lfa-iU-Igw" firstAttribute="centerY" secondItem="vPG-9L-c1O" secondAttribute="centerY" id="9Ey-CH-uIj"/>
                                             <constraint firstItem="TTI-3L-fuI" firstAttribute="leading" secondItem="2x6-v3-M9h" secondAttribute="leading" constant="22" id="Caj-aC-YQE"/>
                                             <constraint firstItem="l4G-ph-baE" firstAttribute="top" secondItem="ESe-r3-R7S" secondAttribute="bottom" constant="9" id="EGY-FF-EIa"/>
-                                            <constraint firstAttribute="trailing" secondItem="UaK-2r-29b" secondAttribute="trailing" constant="24.670000000000002" id="Fh9-ft-Q7A"/>
                                             <constraint firstItem="vPG-9L-c1O" firstAttribute="top" secondItem="T3k-k8-DMP" secondAttribute="bottom" constant="21" id="FqN-g3-ueG"/>
                                             <constraint firstItem="Awm-87-zPN" firstAttribute="top" secondItem="ibf-ME-WrI" secondAttribute="bottom" constant="40" id="GvQ-nE-YGU"/>
                                             <constraint firstAttribute="trailing" secondItem="6nW-1o-Xc1" secondAttribute="trailing" constant="22" id="HJl-cC-DUp"/>
@@ -276,8 +261,6 @@
                                             <constraint firstItem="m2A-BR-U7X" firstAttribute="leading" secondItem="2x6-v3-M9h" secondAttribute="leading" constant="22" id="bEF-fJ-iNm"/>
                                             <constraint firstAttribute="trailing" secondItem="NPb-yH-PfU" secondAttribute="trailing" constant="326" id="bKk-W2-Fih"/>
                                             <constraint firstItem="Awm-87-zPN" firstAttribute="leading" secondItem="2x6-v3-M9h" secondAttribute="leading" constant="15" id="bbs-n7-6dS"/>
-                                            <constraint firstAttribute="trailing" secondItem="snD-XJ-PA7" secondAttribute="trailing" constant="24" id="cmx-Pn-RjR"/>
-                                            <constraint firstItem="UaK-2r-29b" firstAttribute="centerY" secondItem="ibf-ME-WrI" secondAttribute="centerY" id="eCh-GD-qJa"/>
                                             <constraint firstAttribute="trailing" secondItem="uqv-7O-Oco" secondAttribute="trailing" constant="22" id="eDw-BL-6mh"/>
                                             <constraint firstItem="7Op-yO-UGe" firstAttribute="leading" secondItem="2x6-v3-M9h" secondAttribute="leading" constant="22" id="eJb-Ip-IFQ"/>
                                             <constraint firstItem="kdp-D3-r4H" firstAttribute="centerY" secondItem="7du-aC-8UE" secondAttribute="centerY" id="elt-dU-Ce0"/>
@@ -294,7 +277,6 @@
                                             <constraint firstItem="7du-aC-8UE" firstAttribute="leading" secondItem="2x6-v3-M9h" secondAttribute="leading" constant="8" id="opl-IE-lOf"/>
                                             <constraint firstItem="ESe-r3-R7S" firstAttribute="top" secondItem="7du-aC-8UE" secondAttribute="bottom" constant="9" id="rXo-tD-tjr"/>
                                             <constraint firstItem="6nW-1o-Xc1" firstAttribute="top" secondItem="TTI-3L-fuI" secondAttribute="bottom" constant="6" id="umg-D1-Etp"/>
-                                            <constraint firstItem="snD-XJ-PA7" firstAttribute="centerY" secondItem="ESe-r3-R7S" secondAttribute="centerY" id="wHO-it-CZI"/>
                                             <constraint firstAttribute="height" constant="720" id="zQW-lS-noi"/>
                                         </constraints>
                                     </view>
@@ -642,7 +624,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cQp-WD-Lt2"/>
+        <segue reference="maj-se-GAI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="checkmark.circle" catalog="system" width="128" height="123"/>
