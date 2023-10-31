@@ -63,7 +63,7 @@ class MyPages_Detail_ViewController: UIViewController, UICollectionViewDelegate,
                     if let tabBarController = self.tabBarController {
                         if var viewControllers = tabBarController.viewControllers {
                             // Assuming "LogInViewController" is at index 3 (change the index accordingly)
-                            viewControllers[3] = myPageNavController
+                            viewControllers[2] = myPageNavController
                             tabBarController.setViewControllers(viewControllers, animated: false)
                         }
                     }
@@ -106,11 +106,11 @@ class MyPages_Detail_ViewController: UIViewController, UICollectionViewDelegate,
             // DogList가 비어 있을 때 빈 셀을 만들고 메시지를 표시
             let cell = cvMyDogListView.dequeueReusableCell(withReuseIdentifier: "DogCell", for: indexPath) as! MyDog_CollectionViewCell
             let trimmedImagePath = "cute"
-            configureCell(cell as! MyDog_CollectionViewCell, withImageURL: trimmedImagePath)
             cell.lblName.text = ""
             cell.lblAge.text = ""
             cell.lblSpecies.text = "강아지를 추가해주세요"
             cell.btnUpdates.isHidden = true
+            configureCell(cell as! MyDog_CollectionViewCell, withImageURL: trimmedImagePath)
             return cell
         } else {
             // DogList가 비어 있지 않으면 실제 데이터로 셀을 구성
@@ -119,6 +119,7 @@ class MyPages_Detail_ViewController: UIViewController, UICollectionViewDelegate,
             dogCell.lblName.text = DogList[indexPath.row].name
             dogCell.lblAge.text = "\(DogList[indexPath.row].age)살"
             dogCell.lblSpecies.text = DogList[indexPath.row].species
+            dogCell.btnUpdates.isHidden = false
             let imagePath = DogList[indexPath.row].imageurl
             let trimmedImagePath = imagePath.trimmingCharacters(in: .whitespacesAndNewlines)
             configureCell(cell as! MyDog_CollectionViewCell, withImageURL: trimmedImagePath)
@@ -135,6 +136,8 @@ class MyPages_Detail_ViewController: UIViewController, UICollectionViewDelegate,
             DispatchQueue.main.async {
                 if let dogCell = cell as? MyDog_CollectionViewCell {
                     dogCell.imgDog.image = image
+                    dogCell.imgDog.layer.cornerRadius = dogCell.imgDog.frame.size.width / 2
+                                    dogCell.imgDog.clipsToBounds = true
                 }
             }
         }

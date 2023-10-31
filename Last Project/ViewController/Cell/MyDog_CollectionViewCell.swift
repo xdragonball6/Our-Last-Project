@@ -15,6 +15,7 @@ class MyDog_CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lblAge: UILabel!
     @IBOutlet weak var btnUpdates: UIButton!
     
+    
 
     
     

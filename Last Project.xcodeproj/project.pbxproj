@@ -26,7 +26,6 @@
 		1E65F5CD2AF08EB1000C5260 /* FirebaseDogDeleteVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65F5CC2AF08EB1000C5260 /* FirebaseDogDeleteVM.swift */; };
 		1E67ACB82AEFC8DC002A299F /* MyPages_Detail_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E67ACB72AEFC8DB002A299F /* MyPages_Detail_ViewController.swift */; };
 		1E75DD0C2ADD3A2C0053B4EF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD0B2ADD3A2C0053B4EF /* Home.storyboard */; };
-		1E75DD0E2ADD3F000053B4EF /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD0D2ADD3F000053B4EF /* User.storyboard */; };
 		1E75DD102ADD3F140053B4EF /* Products.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD0F2ADD3F140053B4EF /* Products.storyboard */; };
 		1E75DD122ADD3F1E0053B4EF /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD112ADD3F1E0053B4EF /* MyPage.storyboard */; };
 		1E787CB72AEFD06E009975CC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1E787CB62AEFD06E009975CC /* FirebaseAnalytics */; };
@@ -148,7 +147,6 @@
 		1E65F5CC2AF08EB1000C5260 /* FirebaseDogDeleteVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDogDeleteVM.swift; sourceTree = "<group>"; };
 		1E67ACB72AEFC8DB002A299F /* MyPages_Detail_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPages_Detail_ViewController.swift; sourceTree = "<group>"; };
 		1E75DD0B2ADD3A2C0053B4EF /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		1E75DD0D2ADD3F000053B4EF /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		1E75DD0F2ADD3F140053B4EF /* Products.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Products.storyboard; sourceTree = "<group>"; };
 		1E75DD112ADD3F1E0053B4EF /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		1E75DD132ADD3F290053B4EF /* LogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
@@ -298,7 +296,6 @@
 			children = (
 				1ECD9DE92ADD34E5008DC85F /* Main.storyboard */,
 				1E75DD0B2ADD3A2C0053B4EF /* Home.storyboard */,
-				1E75DD0D2ADD3F000053B4EF /* User.storyboard */,
 				1E75DD0F2ADD3F140053B4EF /* Products.storyboard */,
 				1E75DD112ADD3F1E0053B4EF /* MyPage.storyboard */,
 				1E75DD132ADD3F290053B4EF /* LogIn.storyboard */,
@@ -575,7 +572,6 @@
 			files = (
 				1E75DD102ADD3F140053B4EF /* Products.storyboard in Resources */,
 				1ECD9DF02ADD34E6008DC85F /* LaunchScreen.storyboard in Resources */,
-				1E75DD0E2ADD3F000053B4EF /* User.storyboard in Resources */,
 				1ECD9DED2ADD34E6008DC85F /* Assets.xcassets in Resources */,
 				1E75DD122ADD3F1E0053B4EF /* MyPage.storyboard in Resources */,
 				E04D21972AE242610049D6A3 /* GoogleService-Info.plist in Resources */,

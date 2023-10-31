@@ -54,8 +54,7 @@ class LogIn_with_Email_ViewController: UIViewController {
 
                                 if let tabBarController = self.tabBarController {
                                     if var viewControllers = tabBarController.viewControllers {
-                                        // Assuming "LogInViewController" is at index 3 (change the index accordingly)
-                                        viewControllers[3] = myPageNavController
+                                        viewControllers[2] = myPageNavController
                                         tabBarController.setViewControllers(viewControllers, animated: false)
                                     }
                                 }
