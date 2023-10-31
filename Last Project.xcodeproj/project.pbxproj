@@ -19,6 +19,8 @@
 		1E6020202AE76B000082F67C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E60201F2AE76B000082F67C /* Service.swift */; };
 		1E6020222AE78D800082F67C /* FindID_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6020212AE78D800082F67C /* FindID_ViewController.swift */; };
 		1E6020232AE78FD00082F67C /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD132ADD3F290053B4EF /* LogIn.storyboard */; };
+		1E65F5D02AF0B63B000C5260 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65F5CE2AF0B63B000C5260 /* SceneDelegate.swift */; };
+		1E65F5D12AF0B63B000C5260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65F5CF2AF0B63B000C5260 /* AppDelegate.swift */; };
 		1E67ACB82AEFC8DC002A299F /* MyPages_Detail_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E67ACB72AEFC8DB002A299F /* MyPages_Detail_ViewController.swift */; };
 		1E75DD0C2ADD3A2C0053B4EF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD0B2ADD3A2C0053B4EF /* Home.storyboard */; };
 		1E75DD102ADD3F140053B4EF /* Products.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E75DD0F2ADD3F140053B4EF /* Products.storyboard */; };
@@ -118,8 +120,6 @@
 		E0BE101E2AE64164003192D9 /* FirebaseMainPageBtnMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BE101D2AE64164003192D9 /* FirebaseMainPageBtnMessage.swift */; };
 		E0BE10202AE64185003192D9 /* FirebaseMainPageBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BE101F2AE64185003192D9 /* FirebaseMainPageBtn.swift */; };
 		E0D243612AEEE6660032B067 /* MainPageReservationViewView2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D243602AEEE6660032B067 /* MainPageReservationViewView2ViewController.swift */; };
-		E0DAA6712AF02378008194A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DAA6702AF02378008194A1 /* AppDelegate.swift */; };
-		E0DAA6732AF02382008194A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DAA6722AF02382008194A1 /* SceneDelegate.swift */; };
 		E0DAA6752AF037CC008194A1 /* FirebaseMainPageReservationListListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DAA6742AF037CC008194A1 /* FirebaseMainPageReservationListListModel.swift */; };
 		E0DAA6772AF03BDD008194A1 /* FirebaseMainPageReservationListListMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DAA6762AF03BDD008194A1 /* FirebaseMainPageReservationListListMessage.swift */; };
 		E0DAA6792AF03CAE008194A1 /* FirebaseMainPageReservationListList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DAA6782AF03CAE008194A1 /* FirebaseMainPageReservationListList.swift */; };
@@ -142,6 +142,8 @@
 		1E60201D2AE767510082F67C /* FindPassword_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPassword_ViewController.swift; sourceTree = "<group>"; };
 		1E60201F2AE76B000082F67C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		1E6020212AE78D800082F67C /* FindID_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindID_ViewController.swift; sourceTree = "<group>"; };
+		1E65F5CE2AF0B63B000C5260 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../../../../../Downloads/SceneDelegate.swift; sourceTree = "<group>"; };
+		1E65F5CF2AF0B63B000C5260 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../../../../Downloads/AppDelegate.swift; sourceTree = "<group>"; };
 		1E67ACB72AEFC8DB002A299F /* MyPages_Detail_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPages_Detail_ViewController.swift; sourceTree = "<group>"; };
 		1E75DD0B2ADD3A2C0053B4EF /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		1E75DD0F2ADD3F140053B4EF /* Products.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Products.storyboard; sourceTree = "<group>"; };
@@ -186,8 +188,6 @@
 		E0BE101D2AE64164003192D9 /* FirebaseMainPageBtnMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMainPageBtnMessage.swift; sourceTree = "<group>"; };
 		E0BE101F2AE64185003192D9 /* FirebaseMainPageBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMainPageBtn.swift; sourceTree = "<group>"; };
 		E0D243602AEEE6660032B067 /* MainPageReservationViewView2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageReservationViewView2ViewController.swift; sourceTree = "<group>"; };
-		E0DAA6702AF02378008194A1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../../.Trash/AppDelegate.swift; sourceTree = "<group>"; };
-		E0DAA6722AF02382008194A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../../../.Trash/SceneDelegate.swift; sourceTree = "<group>"; };
 		E0DAA6742AF037CC008194A1 /* FirebaseMainPageReservationListListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMainPageReservationListListModel.swift; sourceTree = "<group>"; };
 		E0DAA6762AF03BDD008194A1 /* FirebaseMainPageReservationListListMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMainPageReservationListListMessage.swift; sourceTree = "<group>"; };
 		E0DAA6782AF03CAE008194A1 /* FirebaseMainPageReservationListList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMainPageReservationListList.swift; sourceTree = "<group>"; };
@@ -336,8 +336,8 @@
 		1E75DD162ADD3FF60053B4EF /* Serviece */ = {
 			isa = PBXGroup;
 			children = (
-				E0DAA6702AF02378008194A1 /* AppDelegate.swift */,
-				E0DAA6722AF02382008194A1 /* SceneDelegate.swift */,
+				1E65F5CF2AF0B63B000C5260 /* AppDelegate.swift */,
+				1E65F5CE2AF0B63B000C5260 /* SceneDelegate.swift */,
 			);
 			path = Serviece;
 			sourceTree = "<group>";
@@ -620,7 +620,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0DAA6712AF02378008194A1 /* AppDelegate.swift in Sources */,
 				E0DD7AB62AED83C80022927C /* FirebaseMainPageUserMessage.swift in Sources */,
 				E0DAA6752AF037CC008194A1 /* FirebaseMainPageReservationListListModel.swift in Sources */,
 				E073F7102AE5A6D80064BB3F /* FirebaseMainPageImage.swift in Sources */,
@@ -628,7 +627,6 @@
 				1E3DAAF02AE8DF6E003AB6EC /* MyDog_CollectionViewCell.swift in Sources */,
 				1E4C7DF62AEA593A0077B1F6 /* dogModel.swift in Sources */,
 				1EFFECA82AE14441006EBD97 /* KakaoAuthVM.swift in Sources */,
-				E0DAA6732AF02382008194A1 /* SceneDelegate.swift in Sources */,
 				E003AE202AEA12A100F9FC95 /* FirebaseMainPageReservationList.swift in Sources */,
 				1ECD9DE82ADD34E5008DC85F /* HomeViewController.swift in Sources */,
 				E003AE1E2AEA111000F9FC95 /* FirebaseMainPageReservationListMessage.swift in Sources */,
@@ -658,7 +656,9 @@
 				1E4C7DFA2AEA596B0077B1F6 /* dogVM.swift in Sources */,
 				1EFFEDEA2AE25BC8006EBD97 /* FirebaseSignInModel.swift in Sources */,
 				E0D243612AEEE6660032B067 /* MainPageReservationViewView2ViewController.swift in Sources */,
+				1E65F5D02AF0B63B000C5260 /* SceneDelegate.swift in Sources */,
 				1E60201E2AE767510082F67C /* FindPassword_ViewController.swift in Sources */,
+				1E65F5D12AF0B63B000C5260 /* AppDelegate.swift in Sources */,
 				1E787CEF2AEFD978009975CC /* FirebaseDogDBModel.swift in Sources */,
 				E0DD7AB82AED842E0022927C /* FirebaseMainPageUser.swift in Sources */,
 				1E787CED2AEFD0A6009975CC /* FirebaseStorageManager.swift in Sources */,
