@@ -1,7 +1,6 @@
 # Last-Project
-GAN 모델을 이용한 견종 예측 &amp; 동물병원 앱(Swift)
+동물병원 앱(Swift)
 ----
-개의 얼굴 기반의 견종 추측 AI 및 동물 병원 App 
 Swift의 UIKit을 이용한 App
 <br/>
 프로젝트 기간 : 2023-10-13 ~ 2023-11-01
